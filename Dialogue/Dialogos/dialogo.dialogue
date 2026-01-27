@@ -1,0 +1,46 @@
+#Se empeiza en start
+~ start
+Jefe: Hola? probando... bien, creo que funciona.
+Jefe: Esto es un dialogo de pruebas, por lo que no hace falta que leas nada realmente.
+Jefe: Querés opciones? Acá hay un par:
+~ opciones
+- Tiene sombrero rosa?
+	Jefe: Que bien! elegiste la primera opcion :).
+- Segunda opcion
+	Jefe: La segunda opcion? Enserio?.
+- Como estuvo tu día? => otro_dialogo
+- Quiero ver los efectos de texto => personalizacion
+- Veamos si las variables funcionan => variables
+- Repetir desde el principio => start
+- Alejarce en silecio de la escena (salir) => END
+Jefe: Bueno, hasta ahí llegó el dialogo, adios.
+
+=> END
+
+#Opciones de dialogo
+~ otro_dialogo
+Jefe: Mi dia? pero si esto solo es un dialogo de prueba
+Jefe: No te distraigas 
+Jefe: Por cierto, esto es una palabra aleatoria: [[Papanatas|Kiwi|Solsticio]]
+Se puede usar para dialogos que usemos más de una vez
+=> opciones
+
+~ personalizacion
+Jefe: Ok!
+[b]Texto en negrita[/b]
+[i]Texto en cursiva[/i]
+[color=red]Texto en rojo[/color] [color=blue]...o en azul si lo preferís[/color]
+[wave amp=50 freq=2]Texto ondulado (efecto mareo)[/wave]
+[shake rate=20 level=10]Texto tembloroso (gritos)[/shake]
+Tambien se pueden hacer... [wait=2.0]silencios dramaticos
+[speed=0.1] hablar más lento[/speed]
+[speed=3]o más rapido como ahora que solo escribo más para que se note que va rapido[/speed]
+[i](siempre y cuando no saltés todos los dialogos)[/i]
+=> opciones
+
+~ variables
+if booleano_de_prueba == true:
+	no funciona
+else:
+	si, funciona
+=> opciones

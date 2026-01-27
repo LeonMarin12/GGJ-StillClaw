@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cupbigtil5r1f"
+path="res://.godot/imported/otro_dialogo.dialogue-8c52c39a0cd26d8518e18b0c32546fb1.tres"
+
+[deps]
+
+source_file="res://Dialogue/Dialogos/otro_dialogo.dialogue"
+dest_files=["res://.godot/imported/otro_dialogo.dialogue-8c52c39a0cd26d8518e18b0c32546fb1.tres"]
+
+[params]
+
+defaults=true

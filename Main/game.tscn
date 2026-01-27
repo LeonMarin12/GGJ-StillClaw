@@ -1,3 +1,14 @@
-[gd_scene format=3 uid="uid://cdombc6vbttw"]
+[gd_scene load_steps=3 format=3 uid="uid://cdombc6vbttw"]
+
+[ext_resource type="PackedScene" uid="uid://c8r5kv2wi6dxc" path="res://UI/pause_menu.tscn" id="1_geab1"]
+[ext_resource type="PackedScene" uid="uid://4x0hf881c8p1" path="res://Main/Character/character_manager.tscn" id="2_rxeat"]
 
 [node name="Game" type="Node2D"]
+
+[node name="Ui" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PauseMenu" parent="Ui" instance=ExtResource("1_geab1")]
+
+[node name="CharacterManager" parent="." instance=ExtResource("2_rxeat")]
+position = Vector2(162, 344)
