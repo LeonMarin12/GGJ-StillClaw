@@ -19,11 +19,12 @@ config/icon="res://icon.svg"
 
 GameManager="*res://GlobalScenes/game_manager.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+CharacterManager="*res://Main/Character/character_manager.tscn"
 
 [dialogue_manager]
 
 runtime/balloon_path="uid://cse2sbafobdak"
-runtime/state_autoload_shortcuts=["GameManager"]
+runtime/state_autoload_shortcuts=["GameManager", "CharacterManager"]
 editor/translations/default_csv_locale="es"
 
 [editor_plugins]
@@ -49,7 +50,7 @@ debug={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Dialogue/Dialogos/dialogo.en.translation")
+locale/translations=PackedStringArray()
 locale/translations_pot_files=PackedStringArray("res://Dialogue/Dialogos/dialogo.dialogue", "res://Dialogue/Dialogos/otro_dialogo.dialogue")
 
 [rendering]

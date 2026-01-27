@@ -11,6 +11,15 @@ Jefe: Querés opciones? Acá hay un par:
 - Como estuvo tu día? => otro_dialogo
 - Quiero ver los efectos de texto => personalizacion
 - Veamos si las variables funcionan => variables
+- Quiero probar el sprite manager
+	Jefe: Okey, podes cambiar mi sprite o ejecutar una animacion (si es que funciona)
+	- Enojar a godot
+		do change_sprite('enojado')
+		Jefe: Porque harias eso??
+	- Rebotar a godot
+		do play_animation('sorpresa')
+		Jefe: [i]*Sorpresa*[/i]
+	=> opciones
 - Repetir desde el principio => start
 - Alejarce en silecio de la escena (salir) => END
 Jefe: Bueno, hasta ahí llegó el dialogo, adios.

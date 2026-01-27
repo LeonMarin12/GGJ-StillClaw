@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://cf6l6nhwd5a1s"]
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://cf6l6nhwd5a1s"]
 
 [ext_resource type="Texture2D" uid="uid://dfn66ejnux65b" path="res://icon.svg" id="1_uug11"]
+[ext_resource type="Texture2D" uid="uid://cr18lwf5p2lst" path="res://icon_2.png" id="2_q2mrf"]
 
 [resource]
 animations = [{
@@ -10,5 +11,13 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_q2mrf")
+}],
+"loop": true,
+"name": &"enojado",
 "speed": 5.0
 }]

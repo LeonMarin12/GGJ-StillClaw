@@ -1,12 +1,63 @@
-[gd_scene load_steps=3 format=3 uid="uid://4x0hf881c8p1"]
+[gd_scene load_steps=7 format=3 uid="uid://4x0hf881c8p1"]
 
 [ext_resource type="Script" uid="uid://dwwyj4w5mkkw6" path="res://Main/Character/character_manager.gd" id="1_og7hh"]
+[ext_resource type="SpriteFrames" uid="uid://cf6l6nhwd5a1s" path="res://Resources/CharacterSpriteFrames/prueba_sprite_frames.tres" id="2_pwncb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_og7hh"]
 
+[sub_resource type="Animation" id="Animation_hqk6t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_pwncb"]
+resource_name = "rebotar"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.23333333, 0.7),
+"transitions": PackedFloat32Array(0.1707553, 0.6597548, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -30), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_brm0g"]
+_data = {
+&"RESET": SubResource("Animation_hqk6t"),
+&"sorpresa": SubResource("Animation_pwncb")
+}
+
 [node name="CharacterManager" type="Node2D"]
 script = ExtResource("1_og7hh")
+character_data = Dictionary[String, SpriteFrames]({
+"Jefe": ExtResource("2_pwncb")
+})
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_og7hh")
+
+[node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D"]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_brm0g")
+}
