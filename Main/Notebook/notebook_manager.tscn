@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cw8bgrcqh6wkg"]
+
+[ext_resource type="Script" uid="uid://xfiu7xx8vjvt" path="res://Main/Notebook/notebook_manager.gd" id="1_43afr"]
+
+[node name="NotebookManager" type="Node2D"]
+script = ExtResource("1_43afr")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1750.0
+offset_top = 968.0
+offset_right = 1845.0
+offset_bottom = 999.0
+text = "Abrir notas"

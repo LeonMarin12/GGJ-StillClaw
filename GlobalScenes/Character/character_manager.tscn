@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://4x0hf881c8p1"]
 
-[ext_resource type="Script" uid="uid://dwwyj4w5mkkw6" path="res://Main/Character/character_manager.gd" id="1_og7hh"]
+[ext_resource type="Script" uid="uid://dwwyj4w5mkkw6" path="res://GlobalScenes/Character/character_manager.gd" id="1_og7hh"]
 [ext_resource type="SpriteFrames" uid="uid://cf6l6nhwd5a1s" path="res://Resources/CharacterSpriteFrames/prueba_sprite_frames.tres" id="2_pwncb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_og7hh"]

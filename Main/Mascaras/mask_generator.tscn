@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://c066labx2jds"]
+
+[node name="MaskGenerator" type="Node2D"]

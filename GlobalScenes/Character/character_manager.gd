@@ -13,6 +13,7 @@ func _ready():
 	global_position = character_position
 	DialogueManager.got_dialogue.connect(_on_got_dialogue)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	SceneTransition.scene_changing.connect(_on_scene_changing)
 
 
 func change_sprite(sprite_name :String):
@@ -53,5 +54,9 @@ func _on_got_dialogue(line: DialogueLine):
 		_show_character(character_name)
 
 
-func _on_dialogue_ended():
+func _on_dialogue_ended(_resource: DialogueResource):
+	_hide_character()
+
+
+func _on_scene_changing():
 	_hide_character()
