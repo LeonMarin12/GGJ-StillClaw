@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://blefob0wkn1ol"]
+
+[ext_resource type="Texture2D" uid="uid://ciej0pf5xvnpf" path="res://Assets/godotarte/godot_malo.png" id="1_ne2c5"]
+[ext_resource type="Script" uid="uid://gemgixpoampf" path="res://Main/Notebook/cross_out_button.gd" id="2_p325t"]
+
+[node name="CrossOutButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture_normal = ExtResource("1_ne2c5")
+script = ExtResource("2_p325t")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

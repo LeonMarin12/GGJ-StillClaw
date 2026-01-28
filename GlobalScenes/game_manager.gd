@@ -1,6 +1,10 @@
 extends Node
 
+##tengo que hacer el sistema de dialogos
 @export var recurso_dialogo: DialogueResource
+
+#mascara que se va a tener que encontrar
+var killer_mask :Mask
 
 var booleano_de_prueba :bool = false
 var _current_dialogue_label: DialogueLabel = null

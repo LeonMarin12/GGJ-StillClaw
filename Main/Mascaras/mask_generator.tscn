@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://c066labx2jds"]
+[gd_scene load_steps=3 format=3 uid="uid://c066labx2jds"]
+
+[ext_resource type="Script" uid="uid://dacd7pyyco7pt" path="res://Main/Mascaras/mask_generator.gd" id="1_2a8l3"]
+[ext_resource type="PackedScene" uid="uid://cmowu2fq8xvvg" path="res://Main/Mascaras/mask.tscn" id="2_uumax"]
 
 [node name="MaskGenerator" type="Node2D"]
+script = ExtResource("1_2a8l3")
+mask_scene = ExtResource("2_uumax")
