@@ -5,7 +5,11 @@ extends Node2D
 @export var joker_texture :Texture
 
 @onready var v_box_container = %VBoxContainer
+@onready var timer_label = %TimerLabel
+@onready var timer = %Timer
 
+
+var time_sec :int = 0###90
 var cant_cards :int = 10
 var cant_joker :int = 2
 var texture_keys_list :Array[String] = ['ala', 'brillo', 'corazon', 'estrella', 'pluma']
@@ -23,6 +27,7 @@ func _ready():
 	GameManager.flip_card_memotec.connect(_on_flip_card_memotec)
 	create_memotec_cards()
 	set_memotec_cards()
+	update_timer_label()
 
 
 func create_memotec_cards():
@@ -74,4 +79,20 @@ func _on_found_pair_memotec(_id_card):
 
 func _on_memotec_reset():
 	pairs_found = 0
+
+
+func _on_timer_timeout():
+	time_sec += 1 ###time_sec -= 1
+	if time_sec > 0:
+		update_timer_label()
+	else:
+		print('lost')
+
+
+
+func update_timer_label():
+	var time_left = time_sec
+	var minutes = time_left / 60
+	var seconds = time_left % 60
+	timer_label.text = "%02d:%02d" % [minutes, seconds]
 	
