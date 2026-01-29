@@ -7,7 +7,7 @@ func _ready():
 	set_visible(false)
 	# Asegurar que el CanvasLayer padre esté por encima del balloon desde el inicio
 	if get_parent() is CanvasLayer:
-		get_parent().layer = 101
+		get_parent().layer = 102
 
 
 func _input(event):

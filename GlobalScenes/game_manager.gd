@@ -1,7 +1,12 @@
 extends Node
 
+signal reset_memotec
+
+
 ##tengo que hacer el sistema de dialogos
 @export var recurso_dialogo: DialogueResource
+
+var paleta_colores :Array[Color]
 
 #mascara que se va a tener que encontrar
 var killer_mask :Mask

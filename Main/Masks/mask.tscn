@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmowu2fq8xvvg"]
+
+[ext_resource type="Script" uid="uid://d35oa4svbe6l4" path="res://Main/Masks/mask.gd" id="1_santp"]
+[ext_resource type="Texture2D" uid="uid://dh6cbvk7267vb" path="res://Assets/MaskTextures/base_mascara.png" id="2_o3pgv"]
+
+[node name="Mask" type="Control"]
+custom_minimum_size = Vector2(170, 170)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_santp")
+
+[node name="Base" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 170.0
+texture = ExtResource("2_o3pgv")
+expand_mode = 1
+
+[node name="SpriteForma" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 170.0
+expand_mode = 1
+
+[node name="SpriteExpresion" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 170.0
+expand_mode = 1
+
+[node name="SpriteDetalles" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_right = 170.0
+offset_bottom = 170.0
+expand_mode = 1

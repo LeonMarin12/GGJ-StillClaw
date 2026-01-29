@@ -1,0 +1,76 @@
+[gd_scene load_steps=27 format=3 uid="uid://c066labx2jds"]
+
+[ext_resource type="Script" uid="uid://dacd7pyyco7pt" path="res://Main/Masks/mask_generator.gd" id="1_2a8l3"]
+[ext_resource type="PackedScene" uid="uid://cmowu2fq8xvvg" path="res://Main/Masks/mask.tscn" id="2_uumax"]
+[ext_resource type="Texture2D" uid="uid://dq4s4v2gg3dkg" path="res://Assets/MaskTextures/forma/forma_alas.png" id="3_x8uyj"]
+[ext_resource type="Texture2D" uid="uid://ci7xykg8ymkod" path="res://Assets/MaskTextures/forma/forma_coronadeplumas.png" id="4_qv0hl"]
+[ext_resource type="Texture2D" uid="uid://djfeijsigsdum" path="res://Assets/MaskTextures/forma/forma_estrella.png" id="5_2bw7i"]
+[ext_resource type="Texture2D" uid="uid://dtvhnon1rqn36" path="res://Assets/MaskTextures/forma/forma_luna.png" id="6_v5g3m"]
+[ext_resource type="Texture2D" uid="uid://3a1fa00rcnvy" path="res://Assets/MaskTextures/expresion/expresion_neutral.png" id="7_e13ln"]
+[ext_resource type="Texture2D" uid="uid://drkshctceebq0" path="res://Assets/MaskTextures/expresion/expresion_sinboca.png" id="8_csm52"]
+[ext_resource type="Texture2D" uid="uid://4ll33kib0dnj" path="res://Assets/MaskTextures/expresion/expresion_sonrisa.png" id="9_pyq0j"]
+[ext_resource type="Texture2D" uid="uid://p8n1fe7b8217" path="res://Assets/MaskTextures/expresion/expresion_triste.png" id="10_40nke"]
+[ext_resource type="Texture2D" uid="uid://cdmiygtmfk25b" path="res://Assets/MaskTextures/detalles/alas/detalles_corazon_alas.png" id="11_a41gr"]
+[ext_resource type="Texture2D" uid="uid://d07njb0nxbvpv" path="res://Assets/MaskTextures/detalles/alas/detalles_estrellas_alas.png" id="12_gy7rp"]
+[ext_resource type="Texture2D" uid="uid://ce1wldd4qmesy" path="res://Assets/MaskTextures/detalles/alas/detalles_gotas_alas.png" id="13_nhgmb"]
+[ext_resource type="Texture2D" uid="uid://dkwmox68ihbug" path="res://Assets/MaskTextures/detalles/alas/detalles_rombo_alas.png" id="14_ay2rj"]
+[ext_resource type="Texture2D" uid="uid://cbnnlpwbuhxtl" path="res://Assets/MaskTextures/detalles/corona/detalles_corazon_coronadeplumas.png" id="15_8t86m"]
+[ext_resource type="Texture2D" uid="uid://cnqg8u5j7hnhp" path="res://Assets/MaskTextures/detalles/corona/detalles_estrellas_coronadeplumas.png" id="16_rgove"]
+[ext_resource type="Texture2D" uid="uid://e75uf25yoi6w" path="res://Assets/MaskTextures/detalles/corona/detalles_gotas_coronadeplumas.png" id="17_kt3s1"]
+[ext_resource type="Texture2D" uid="uid://bcj8023rf0ynr" path="res://Assets/MaskTextures/detalles/corona/detalles_rombo_coronadepluma.png" id="18_g3v0e"]
+[ext_resource type="Texture2D" uid="uid://b2qd34182byjb" path="res://Assets/MaskTextures/detalles/estrella/detalles_corazon_estrella.png" id="19_7xve6"]
+[ext_resource type="Texture2D" uid="uid://pb3mue7iyvy3" path="res://Assets/MaskTextures/detalles/estrella/detalles_estrellas_estrella.png" id="20_d6q1t"]
+[ext_resource type="Texture2D" uid="uid://dnumuaghj86hj" path="res://Assets/MaskTextures/detalles/estrella/detalles_gotas_estrella.png" id="21_8402y"]
+[ext_resource type="Texture2D" uid="uid://cqkaolxua3ra5" path="res://Assets/MaskTextures/detalles/estrella/detalles_rombo_estrella.png" id="22_m8osy"]
+[ext_resource type="Texture2D" uid="uid://drvl83l6wp0bs" path="res://Assets/MaskTextures/detalles/luna/detalles_corazon_luna.png" id="23_o7rqo"]
+[ext_resource type="Texture2D" uid="uid://by5v47p87orlk" path="res://Assets/MaskTextures/detalles/luna/detalles_estrellas_luna.png" id="24_cliky"]
+[ext_resource type="Texture2D" uid="uid://b2q3t3qb0pyxc" path="res://Assets/MaskTextures/detalles/luna/detalles_gotas_luna.png" id="25_l43xm"]
+[ext_resource type="Texture2D" uid="uid://vcn125xasoj0" path="res://Assets/MaskTextures/detalles/luna/detalles_rombo_luna.png" id="26_dc6co"]
+
+[node name="MaskGenerator" type="Node2D"]
+script = ExtResource("1_2a8l3")
+mask_scene = ExtResource("2_uumax")
+forma_variations = Dictionary[String, Texture]({
+"alas": ExtResource("3_x8uyj"),
+"corona": ExtResource("4_qv0hl"),
+"estrella": ExtResource("5_2bw7i"),
+"luna": ExtResource("6_v5g3m")
+})
+color_variations = Dictionary[String, Color]({
+"amarillo": Color(0.8392157, 0.78039217, 0.38039216, 1),
+"azul": Color(0.43779945, 0.61636114, 1, 1),
+"rojo": Color(1, 0.494251, 0.42709014, 1),
+"verde": Color(0.32156864, 0.7490196, 0.40392157, 1)
+})
+expresion_variations = Dictionary[String, Texture]({
+"neutral": ExtResource("7_e13ln"),
+"sin_boca": ExtResource("8_csm52"),
+"sonrisa": ExtResource("9_pyq0j"),
+"triste": ExtResource("10_40nke")
+})
+detalles_variations = Dictionary[String, Dictionary]({
+"alas": {
+"corazon": ExtResource("11_a41gr"),
+"estrellas": ExtResource("12_gy7rp"),
+"gotas": ExtResource("13_nhgmb"),
+"rombos": ExtResource("14_ay2rj")
+},
+"corona": {
+"corazon": ExtResource("15_8t86m"),
+"estrellas": ExtResource("16_rgove"),
+"gotas": ExtResource("17_kt3s1"),
+"rombos": ExtResource("18_g3v0e")
+},
+"estrella": {
+"corazon": ExtResource("19_7xve6"),
+"estrellas": ExtResource("20_d6q1t"),
+"gotas": ExtResource("21_8402y"),
+"rombos": ExtResource("22_m8osy")
+},
+"luna": {
+"corazon": ExtResource("23_o7rqo"),
+"estrellas": ExtResource("24_cliky"),
+"gotas": ExtResource("25_l43xm"),
+"rombos": ExtResource("26_dc6co")
+}
+})

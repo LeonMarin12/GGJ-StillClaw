@@ -1,3 +1,72 @@
-[gd_scene format=3 uid="uid://bhrtamre6cf4l"]
+[gd_scene load_steps=8 format=3 uid="uid://bhrtamre6cf4l"]
 
-[node name="Minigame" type="Node2D"]
+[ext_resource type="Script" uid="uid://dy8immkj1k050" path="res://Main/MiniGame/minigame.gd" id="1_w4pnm"]
+[ext_resource type="Texture2D" uid="uid://b5bs002qtgt76" path="res://Assets/godotarte/godot_1.png" id="2_tsksr"]
+[ext_resource type="PackedScene" uid="uid://b8tq75jwxr1rq" path="res://Main/MiniGame/memotec_card.tscn" id="2_w4pnm"]
+[ext_resource type="Texture2D" uid="uid://b3q7s3vcppp4d" path="res://Assets/godotarte/godot_2.png" id="3_7nm1h"]
+[ext_resource type="Texture2D" uid="uid://6gf7e710ryku" path="res://Assets/godotarte/godot_3.png" id="4_g1cpw"]
+[ext_resource type="Texture2D" uid="uid://cgs66uisic533" path="res://Assets/godotarte/godot_4.png" id="5_6dbiy"]
+[ext_resource type="Texture2D" uid="uid://ciej0pf5xvnpf" path="res://Assets/godotarte/godot_malo.png" id="7_g1cpw"]
+
+[node name="MinigameManager" type="Node2D"]
+script = ExtResource("1_w4pnm")
+memotec_card_scene = ExtResource("2_w4pnm")
+memotec_textures = Dictionary[String, Texture2D]({
+"ala": null,
+"brillo": null,
+"corazon": ExtResource("4_g1cpw"),
+"estrella": ExtResource("3_7nm1h"),
+"gota": ExtResource("5_6dbiy"),
+"luna": ExtResource("2_tsksr"),
+"pluma": null,
+"rombo": null,
+"sol": null
+})
+joker_texture = ExtResource("7_g1cpw")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Memotec" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -507.25
+offset_right = 500.0
+offset_bottom = 507.25
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Memotec"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.18431373)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Memotec"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -100.0
+offset_right = 400.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Memotec/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
