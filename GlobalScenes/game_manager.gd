@@ -1,6 +1,9 @@
 extends Node
 
 signal reset_memotec
+signal flip_card_memotec(id_card)
+signal found_pair_memotec(id_card)
+signal hide_cards_memotec(id_card, last_flip)
 
 
 ##tengo que hacer el sistema de dialogos
