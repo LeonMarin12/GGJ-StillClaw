@@ -1,9 +1,69 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw8bgrcqh6wkg"]
+[gd_scene load_steps=8 format=3 uid="uid://cw8bgrcqh6wkg"]
 
 [ext_resource type="Script" uid="uid://xfiu7xx8vjvt" path="res://Main/Notebook/notebook_manager.gd" id="1_43afr"]
 [ext_resource type="PackedScene" uid="uid://c066labx2jds" path="res://Main/Masks/mask_generator.tscn" id="2_l2v51"]
-[ext_resource type="Texture2D" uid="uid://dxp8xj60yh1i4" path="res://Assets/BlocDeNotas.png" id="4_gcivi"]
+[ext_resource type="Texture2D" uid="uid://dxp8xj60yh1i4" path="res://Assets/Notebook/BlocDeNotas.png" id="4_gcivi"]
 [ext_resource type="PackedScene" uid="uid://blefob0wkn1ol" path="res://Main/Notebook/cross_out_button.tscn" id="7_a56kg"]
+
+[sub_resource type="Animation" id="Animation_2xqo3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotebookLayer/DisplayNotebookButton:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, 100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotebookLayer/DisplayNotebookButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gcivi"]
+resource_name = "notebook_picked"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NotebookLayer/DisplayNotebookButton:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(3.3635788, 1),
+"update": 0,
+"values": [Vector2(200, 200), Vector2(100, 100)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NotebookLayer/DisplayNotebookButton:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e4ff2"]
+_data = {
+&"RESET": SubResource("Animation_2xqo3"),
+&"notebook_picked": SubResource("Animation_gcivi")
+}
 
 [node name="NotebookManager" type="Node2D"]
 script = ExtResource("1_43afr")
@@ -40,17 +100,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -609.25
-offset_top = -281.75
-offset_right = 609.25
-offset_bottom = 281.75
+offset_left = -650.0
+offset_top = -300.0
+offset_right = 650.0
+offset_bottom = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MaskMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
@@ -63,9 +126,12 @@ theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 
 [node name="CrossMarginContainer2" type="MarginContainer" parent="NotebookLayer/Notebook/TextureRect"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 30
 theme_override_constants/margin_right = 30
@@ -74,17 +140,47 @@ theme_override_constants/margin_bottom = 30
 [node name="CrossGridContainer" type="GridContainer" parent="NotebookLayer/Notebook/TextureRect/CrossMarginContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
-theme_override_constants/h_separation = 42
-theme_override_constants/v_separation = 42
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+
+[node name="CluesMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureRect"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VScrollBar" type="ScrollContainer" parent="NotebookLayer/Notebook/TextureRect/CluesMarginContainer"]
+layout_mode = 2
+
+[node name="CluesVBoxContainer" type="VBoxContainer" parent="NotebookLayer/Notebook/TextureRect/CluesMarginContainer/VScrollBar"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
 
 [node name="DisplayNotebookButton" type="TextureButton" parent="NotebookLayer"]
-offset_left = 1771.0
-offset_top = 716.0
-offset_right = 1871.0
-offset_bottom = 816.0
+unique_name_in_owner = true
+offset_left = 1793.0
+offset_top = 747.0
+offset_right = 1893.0
+offset_bottom = 847.0
 texture_normal = ExtResource("4_gcivi")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_e4ff2")
+}
 
 [connection signal="gui_input" from="NotebookLayer/Notebook/ColorRect" to="." method="_on_color_rect_gui_input"]
 [connection signal="pressed" from="NotebookLayer/DisplayNotebookButton" to="." method="_on_button_pressed"]

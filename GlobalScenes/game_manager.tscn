@@ -1,8 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckabasjqhfmba"]
+[gd_scene load_steps=5 format=3 uid="uid://ckabasjqhfmba"]
 
 [ext_resource type="Script" uid="uid://xbl5exva2go6" path="res://GlobalScenes/game_manager.gd" id="1_swwl7"]
-[ext_resource type="Resource" uid="uid://ccayvf2au00uu" path="res://Dialogue/Dialogos/dialogue_oficina.dialogue" id="2_lenpv"]
+[ext_resource type="Resource" uid="uid://d0kjvvcooc46s" path="res://Dialogue/Dialogos/Scenes/dialogue_escena1.dialogue" id="2_ljldm"]
+[ext_resource type="Resource" uid="uid://duers2togmtl7" path="res://Dialogue/Dialogos/Scenes/dialogue_escena2.dialogue" id="3_50ojy"]
+[ext_resource type="Resource" uid="uid://cindd02h17feg" path="res://Dialogue/Dialogos/Scenes/dialogue_escena3.dialogue" id="4_j2w18"]
 
 [node name="GameManager" type="Node"]
 script = ExtResource("1_swwl7")
-recurso_dialogo = ExtResource("2_lenpv")
+dialogue_scene_1 = ExtResource("2_ljldm")
+dialogue_scene_2 = ExtResource("3_50ojy")
+dialogue_scene_3 = ExtResource("4_j2w18")

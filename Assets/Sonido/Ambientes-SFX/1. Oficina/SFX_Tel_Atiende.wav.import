@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://076378lodbfi"
+path="res://.godot/imported/SFX_Tel_Atiende.wav-fa6de9920442b362c348ae55a725b43a.sample"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Atiende.wav"
+dest_files=["res://.godot/imported/SFX_Tel_Atiende.wav-fa6de9920442b362c348ae55a725b43a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

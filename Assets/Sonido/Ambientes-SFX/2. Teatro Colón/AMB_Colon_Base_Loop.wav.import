@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bu4i3f31luxjf"
+path="res://.godot/imported/AMB_Colon_Base_Loop.wav-b46ed6a1c27dc998ab869f1ed42b625b.sample"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/2. Teatro Colón/AMB_Colon_Base_Loop.wav"
+dest_files=["res://.godot/imported/AMB_Colon_Base_Loop.wav-b46ed6a1c27dc998ab869f1ed42b625b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

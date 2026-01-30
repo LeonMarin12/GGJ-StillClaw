@@ -1,0 +1,105 @@
+~ start
+#ESCENA 3 - EL INTERROGATORIO
+#MÚSICA - De misterio? Sigue la clásica?
+if GameManager.is_first_interrogation == false:
+	#si ya tuvo este dialogo alguna vez va por aca
+	Jefe: Ya tenes al asesino?
+	- Creo que si
+		do GameManager.start_minigame()
+		=> END
+	- Aun no
+		Detective: Nesecito a hacerle unas preguntas más.
+		=> opciones_1
+else:
+	#si es la primera vez que hace este dialogo va por aca
+	do GameManager.is_first_interrogation = false
+	Detective: Bien, dígame...
+	=> opciones_1
+~ opciones_1
+- Preguntas básicas
+	~ opciones_1_1
+	do GameManager.set_clue_difficulty(1)
+	- Color
+		do GameManager.set_clue_characteristic("color")
+		Habláme sobre el color
+		- Rojo
+			do GameManager.set_clue_variety("rojo")
+			¿Era de color rojo?
+		- Azul
+			do GameManager.set_clue_variety("azul")
+			¿Era de color azul?
+		- Verde
+			do GameManager.set_clue_variety("verde")
+			¿Era de color verde?
+		- Amarillo
+			do GameManager.set_clue_variety("amarillo")
+			¿Era de color amarillo?
+		- Volver => opciones_1_1
+	- Detalles
+		do GameManager.set_clue_characteristic("detalles")
+		Hablame sobre los detalles de la mascara
+		- Corazones
+			do GameManager.set_clue_variety("corazon")
+			¿Tenía corazones?
+		- Estrellas
+			do GameManager.set_clue_variety("estrellas")
+			¿Tenía estrellas?
+		- Rombos
+			do GameManager.set_clue_variety("rombos")
+			¿Tenía rombos?
+		- Gotitas
+			do GameManager.set_clue_variety("gotas")
+			¿Tenía gotitas?
+		- Volver => opciones_1_1
+	- Forma
+		do GameManager.set_clue_characteristic("forma")
+		¿Qué tal si intenta recordar alguna forma en particular?
+		- Alas
+			do GameManager.set_clue_variety("alas")
+			¿Tenía alas?
+		- Corona
+			do GameManager.set_clue_variety("corona")
+			¿Tenía corona de plumas?
+		- Estrella
+			do GameManager.set_clue_variety("estrella")
+			¿Tenía forma de estrella?
+		- Luna
+			do GameManager.set_clue_variety("luna")
+			¿Tenía forma de luna?
+		- Volver => opciones_1_1
+	- Expresión
+		do GameManager.set_clue_characteristic("expresion")
+		¡Tal vez recuerde algo sobre la boca!
+		- Sonriente
+			do GameManager.set_clue_variety("felicidad")
+			¿Tenía una sonrisa?
+		- Triste
+			do GameManager.set_clue_variety("tristeza")
+			¿Estaba triste?
+		- Neutral
+			do GameManager.set_clue_variety("neutral")
+			¿Era neutral?
+		- Sin boca
+			do GameManager.set_clue_variety("sin_boca")
+			¿Le faltaba la boca?
+	- Volver => opciones_1
+- Preguntas especiales
+	~ opciones_1_2
+	do GameManager.set_clue_difficulty(2)
+	do GameManager.set_clue_characteristic("especial")
+	- Color calido
+		do GameManager.set_clue_variety("calido")
+		¿El tono de la máscara era cálido?
+	- Forma emplumada
+		do GameManager.set_clue_variety("plumas")
+		¿Tenía plumas?
+	- Detalles de poker
+		do GameManager.set_clue_variety("poker")
+		¿Tenía algún detalle de poker?
+	- Boca con emocion
+		do GameManager.set_clue_variety("emocion")
+		¿Mostraba alguna emoción?
+	- Volver => opciones_1
+...
+do GameManager.start_minigame()
+=> END

@@ -1,12 +1,122 @@
-[gd_scene load_steps=3 format=3 uid="uid://blefob0wkn1ol"]
+[gd_scene load_steps=18 format=3 uid="uid://blefob0wkn1ol"]
 
-[ext_resource type="Texture2D" uid="uid://ciej0pf5xvnpf" path="res://Assets/godotarte/godot_malo.png" id="1_ne2c5"]
+[ext_resource type="Texture2D" uid="uid://b25bcw4j6pf2w" path="res://Assets/Notebook/sprite_sheet_cruz.png" id="2_ne2c5"]
 [ext_resource type="Script" uid="uid://gemgixpoampf" path="res://Main/Notebook/cross_out_button.gd" id="2_p325t"]
 
-[node name="CrossOutButton" type="TextureButton"]
-offset_right = 40.0
-offset_bottom = 40.0
-texture_normal = ExtResource("1_ne2c5")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p325t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6reft"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ne2c5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne2c5"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p325t"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6reft"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(600, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snsaj"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(900, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukp21"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(0, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufx8l"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(300, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oubwe"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(600, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1ata"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(900, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxiip"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(0, 600, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axjik"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(300, 600, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46ht4"]
+atlas = ExtResource("2_ne2c5")
+region = Rect2(600, 600, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ueun3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne2c5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p325t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6reft")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snsaj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukp21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ufx8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oubwe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1ata")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxiip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axjik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46ht4")
+}],
+"loop": false,
+"name": &"cross_out",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne2c5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CrossOutButton" type="Button"]
+custom_minimum_size = Vector2(120, 120)
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 132.0
+offset_bottom = 129.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p325t")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6reft")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ne2c5")
+text = " "
 script = ExtResource("2_p325t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(67, 69)
+sprite_frames = SubResource("SpriteFrames_ueun3")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

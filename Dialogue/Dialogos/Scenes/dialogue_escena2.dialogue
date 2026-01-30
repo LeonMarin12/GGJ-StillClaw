@@ -1,0 +1,76 @@
+~ start
+#ESCENA 2 - EL TEATRO
+[wait=5]
+...
+[speed=0.1]21:23 hs[/speed]
+#SONIDO - Murmullos, sonido de gente en multitud de fondo
+#MÚSICA - Clásica de salón?
+Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personajes victorianos siendo interrogados por la policía.
+[i]Bueno, no es lo más raro que he visto en mi vida.[/i]
+#SONIDO – Teléfono suena y Detective contesta
+Jefe: ¡Al fin! ¿Por qué tardaste tanto?
+Detective: Soy de Moreno...
+Detective: Lo que me recuerda que salió algo caro el rem-
+Jefe: En fin, esta es la situación.
+Jefe: El nombre de la víctima es Osvaldo González.
+Jefe: Llegó con su mujer a la fiesta a eso de las 19:00 hs.
+Jefe: Alrededor de las 20:00 se retiró al baño. A las 20:15 encontraron su cuerpo.
+Detective: ¿Y el testigo?
+Jefe: Está ahí sentado. No vio la cara del asesino, pero sí su máscara. 
+Jefe: Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto.
+Detective: Déjemelo a mí Jefe. 
+Detective: Yo me encargo.
+Jefe: ¡Para! ¿Estás seguro que recordás como hacer esto?
+~ opciones
+- Sí (dale, ¡ya quiero jugar!)
+	Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
+- No (ayuda, no sé a dónde me estoy metiendo)
+	Jefe: El Testigo está asustado, así que solo podrás hacerle una pregunta a la vez.
+	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b]
+	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta y te responden sí o no. Cortito y al pie.
+	Jefe: La desventaja es que si te equivocás, vas a tardar más en dar con la respuesta correcta.
+	Jefe: Yo te recomiendo que vayas por las [b]PREGUNTAS ESPECIALES[/b], con estas vas a sacar más información. Te ayudarán a llegar a la conclusión más rápido, aunque no son tan precisas como una [b]BÁSICA[/b].
+	Jefe: Aún así, no te limites solo a lo básico, arriesgate un poco.
+Jefe: No te olvidaste de tu [b]libreta[/b], ¿no? La vas a necesitar para anotar todo.
+#ARTE: Detective se ve irritado.
+Detective: Pero por supuesto que tengo la libreta. Incluso ya anoté a los sospechosos.
+#ARTE: Detective vuelve a la normalidad.
+Aun así, el Detective se palmó el bolsillo para asegurarse de tener la libreta.
+do pick_notebook()
+Jefe: Bien. Ya podés empezar.
+Jefe: Y recordá no tomar decisiones por apuro.
+#SONIDO: Teléfono se corta.
+#SONIDO: Pasos (Detective se acerca a Testigo)
+Detective: Hola, Testigo, ¿no?
+#ARTE: Aparece Testigo
+Testigo: S-sí, ¿usted es?
+Detective: Soy Detective, vine para ayudar con el caso.
+#ARTE: Detective con anotador en la mano.
+Detective: Dígame qué pasó.
+Testigo: Y-yo estaba en mi descanso y me dieron ganas de ir al baño. Cuando estaba por entrar, u-una persona salió de golpe y me tiró al suelo.
+Detective: Hmm...
+Testigo: Se me quedó mirando y luego salió disparado para no sé dónde.
+Testigo: Me levanté… y cuando entré al baño…¡Ahí estaba!
+#ARTE – Testigo se dobla sobre sí mismo y llora sobre sus manos.
+Testigo: ¡El cuerpo del señor Osvaldo!
+Testigo: ¡Fue horrible!
+Detective: Entiendo la conmoción, pero necesito que coopere conmigo para poder atrapar atrapar al asesino.
+Detective: Respire profundo, y piense ¿recuerda como se veía?
+#ARTE: Testigo vuelve a la normalidad
+Testigo: ...
+Testigo: Estaba vestido como un invitado. Llevaba una máscara.
+Detective: Bien, ¿recuerda algún detalle en particular?
+Testigo: Ehm... sí... recuerdo que #RESPUESTA CORRECTA DE UNA PREGUNTA COMÚN.
+#CÓDIGO: La libreta se abre automáticamente o hay algo que la señala?
+#ARTE: Detective abre la libreta y marca las máscaras
+Detective: Perfecto, es un comienzo.
+Detective: ¿Qué más recuerda?
+Testigo: Y-yo... eh...
+#ARTE: Testigo vuelve a doblarse y llorar
+Testigo: Discúlpame, ¡soy un inutil!
+Testigo: ¡No logro recordar!
+Detective: Tranquilo, yo te voy a ayudar. Podemos empezar de a poco.
+#ARTE: Testigo vuelve a la normalidad
+Tesigo: E-está bien. 
+Con el objetivo de llevar una interrogación más tranquila, el Detective llevó al testigo a una zona menos concurrida para hacerle las preguntas.
+=> END

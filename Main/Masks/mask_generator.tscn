@@ -37,10 +37,10 @@ forma_variations = Dictionary[String, Texture]({
 "luna": ExtResource("6_v5g3m")
 })
 color_variations = Dictionary[String, Color]({
-"amarillo": Color(0.8392157, 0.78039217, 0.38039216, 1),
-"azul": Color(0.43779945, 0.61636114, 1, 1),
-"rojo": Color(1, 0.494251, 0.42709014, 1),
-"verde": Color(0.32156864, 0.7490196, 0.40392157, 1)
+"amarillo": Color(0.9843137, 0.75686276, 0.23921569, 1),
+"azul": Color(0.627451, 0.8392157, 0.87058824, 1),
+"rojo": Color(0.99215686, 0.47843137, 0.5058824, 1),
+"verde": Color(0.74509805, 0.8509804, 0.4392157, 1)
 })
 expresion_variations = Dictionary[String, Texture]({
 "neutral": ExtResource("7_e13ln"),

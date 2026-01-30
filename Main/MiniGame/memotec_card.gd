@@ -77,7 +77,7 @@ func _on_hide_card(hide_id_card, hide_last_flip):
 
 func _on_found_pair_memotec(found_id_card):
 	block_mouse_input(0.1)
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.5).timeout #tiempo que tarda la animacion de flip
 	if found_id_card == id_card:
 		animation_player.queue("found_pair")
 

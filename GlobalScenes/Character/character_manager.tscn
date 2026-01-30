@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4x0hf881c8p1"]
+[gd_scene load_steps=9 format=3 uid="uid://4x0hf881c8p1"]
 
 [ext_resource type="Script" uid="uid://dwwyj4w5mkkw6" path="res://GlobalScenes/Character/character_manager.gd" id="1_og7hh"]
-[ext_resource type="SpriteFrames" uid="uid://cf6l6nhwd5a1s" path="res://Resources/CharacterSpriteFrames/prueba_sprite_frames.tres" id="2_pwncb"]
+[ext_resource type="SpriteFrames" uid="uid://tk2otiytfarx" path="res://Resources/CharacterSpriteFrames/jefe.tres" id="2_5yaox"]
+[ext_resource type="SpriteFrames" uid="uid://bdatg3wet40qg" path="res://Resources/CharacterSpriteFrames/detective.tres" id="3_2bgq5"]
+[ext_resource type="SpriteFrames" uid="uid://e12l6jner31s" path="res://Resources/CharacterSpriteFrames/testigo.tres" id="4_u14ta"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_og7hh"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_2bgq5"]
 
 [sub_resource type="Animation" id="Animation_hqk6t"]
 length = 0.001
@@ -44,17 +46,14 @@ _data = {
 [node name="CharacterManager" type="Node2D"]
 script = ExtResource("1_og7hh")
 character_data = Dictionary[String, SpriteFrames]({
-"Jefe": ExtResource("2_pwncb")
+"Detective": ExtResource("3_2bgq5"),
+"Jefe": ExtResource("2_5yaox"),
+"Testigo": ExtResource("4_u14ta")
 })
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
-sprite_frames = SubResource("SpriteFrames_og7hh")
-
-[node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D"]
-visible = false
-offset_right = 40.0
-offset_bottom = 40.0
+sprite_frames = SubResource("SpriteFrames_2bgq5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bkpnpw06204gq"
+path="res://.godot/imported/UI_Memo_Bien.wav-65af11b25b3eff9ba43774b564654c82.sample"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/3. UI/UI_Memo_Bien.wav"
+dest_files=["res://.godot/imported/UI_Memo_Bien.wav-65af11b25b3eff9ba43774b564654c82.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

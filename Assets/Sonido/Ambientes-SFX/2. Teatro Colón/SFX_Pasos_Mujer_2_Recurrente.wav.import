@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b7d6hlkkw3kal"
+path="res://.godot/imported/SFX_Pasos_Mujer_2_Recurrente.wav-f0a1bc0f7550d85ca2218aebe65bb059.sample"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/2. Teatro Colón/SFX_Pasos_Mujer_2_Recurrente.wav"
+dest_files=["res://.godot/imported/SFX_Pasos_Mujer_2_Recurrente.wav-f0a1bc0f7550d85ca2218aebe65bb059.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

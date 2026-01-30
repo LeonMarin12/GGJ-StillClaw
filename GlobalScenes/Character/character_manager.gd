@@ -6,11 +6,10 @@ extends Node2D
 @onready var animation_player = %AnimationPlayer
 
 var current_character: String = ""
-var character_position := Vector2(162.0, 344.0 )
-
+var character_position_left := Vector2(360, 600)
+var character_position_right := Vector2(1550, 600)
 
 func _ready():
-	global_position = character_position
 	DialogueManager.got_dialogue.connect(_on_got_dialogue)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	SceneTransition.scene_changing.connect(_on_scene_changing)
@@ -29,6 +28,10 @@ func play_animation(animation_name :String):
 
 
 func _show_character(character: String):
+	if character == 'Detective':
+		global_position = character_position_right
+	else: global_position = character_position_left
+	
 	if character_data.has(character):
 		var character_sprite_frames = character_data[character]
 		character_sprite.sprite_frames = character_sprite_frames

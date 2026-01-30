@@ -1,0 +1,49 @@
+[gd_scene load_steps=11 format=3 uid="uid://da2ubmfd16syl"]
+
+[ext_resource type="Script" uid="uid://v47y1dt0dqd3" path="res://GlobalScenes/Sound/sound_manager.gd" id="1_qsijo"]
+[ext_resource type="AudioStream" uid="uid://cowuw76j24wx6" path="res://Assets/Sonido/Musicalización/Esc. Oficina - Inicio.ogg" id="2_plcli"]
+[ext_resource type="AudioStream" uid="uid://d23lk8hh815sc" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_AireAcondicionado_Loop.wav" id="2_wamcy"]
+[ext_resource type="AudioStream" uid="uid://w86kyj4wcx3d" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_AireAcondicionado_Muere.wav" id="3_d6nrx"]
+[ext_resource type="AudioStream" uid="uid://w87wu31pekgu" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Suena.wav" id="4_w28jb"]
+[ext_resource type="AudioStream" uid="uid://076378lodbfi" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Atiende.wav" id="5_6t3ct"]
+[ext_resource type="AudioStream" uid="uid://nwrojoipu4ym" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Cuelga.wav" id="6_q0x2g"]
+[ext_resource type="AudioStream" uid="uid://boqw28i8t1lo0" path="res://Assets/Sonido/Diálogos/Detective.wav" id="7_0wi4s"]
+[ext_resource type="AudioStream" uid="uid://diwssnvwsw3s8" path="res://Assets/Sonido/Diálogos/Jefe teléfono.wav" id="9_plcli"]
+[ext_resource type="AudioStream" uid="uid://cndw2hl2au54b" path="res://Assets/Sonido/Diálogos/Mujer.wav" id="9_q258e"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_qsijo")
+music_list = Dictionary[String, AudioStream]({
+"oficina_inicio": ExtResource("2_plcli")
+})
+sound_effect_list = Dictionary[String, AudioStream]({
+"aire_acondicionado_loop": ExtResource("2_wamcy"),
+"aire_acondicionado_muere": ExtResource("3_d6nrx"),
+"telefono_atiende": ExtResource("5_6t3ct"),
+"telefono_cuelga": ExtResource("6_q0x2g"),
+"telefono_suena": ExtResource("4_w28jb")
+})
+dialogue_sound_list = Dictionary[String, AudioStream]({
+"Detective": ExtResource("7_0wi4s"),
+"Jefe": ExtResource("9_plcli"),
+"Testigo": ExtResource("9_q258e")
+})
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"Music"
+
+[node name="SoundEffect" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"SoundEfect"
+
+[node name="SoundUI" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"SoundUI"
+
+[node name="Dialogue" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+bus = &"Dialogue"
+
+[connection signal="finished" from="Music" to="." method="_on_music_finished"]
+[connection signal="finished" from="SoundEffect" to="." method="_on_sound_effect_finished"]

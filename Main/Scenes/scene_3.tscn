@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cea0djo3bxlql"]
+
+[ext_resource type="PackedScene" uid="uid://c8r5kv2wi6dxc" path="res://UI/pause_menu.tscn" id="1_lxcve"]
+[ext_resource type="PackedScene" uid="uid://cw8bgrcqh6wkg" path="res://Main/Notebook/notebook_manager.tscn" id="2_2mxb6"]
+
+[node name="GameScene_3" type="Node2D"]
+
+[node name="Ui" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="PauseMenu" parent="Ui" instance=ExtResource("1_lxcve")]
+
+[node name="NotebookManager" parent="." instance=ExtResource("2_2mxb6")]

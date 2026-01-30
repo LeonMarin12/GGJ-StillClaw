@@ -1,11 +1,16 @@
-extends TextureButton
+extends Button
 
+@onready var cross = %AnimatedSprite2D
+
+var crossed := false
 
 func _ready():
-	self.modulate.a = 0.0
-
+	cross.play("default")
 
 func _on_pressed():
-	if self.modulate.a == 0.0:
-		self.modulate.a = 1.0
-	else: self.modulate.a = 0.0
+	if not crossed:
+		cross.play("cross_out")
+		crossed = true
+	else: 
+		cross.play_backwards("cross_out")
+		crossed = false

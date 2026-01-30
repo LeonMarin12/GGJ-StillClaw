@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsbdfe0bq5jpp"
+path="res://.godot/imported/AMB_Colon_GenteHabla_Loop.mp3-cb54ec2428e7d361919f64bcaa6a635f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/2. Teatro Colón/AMB_Colon_GenteHabla_Loop.mp3"
+dest_files=["res://.godot/imported/AMB_Colon_GenteHabla_Loop.mp3-cb54ec2428e7d361919f64bcaa6a635f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

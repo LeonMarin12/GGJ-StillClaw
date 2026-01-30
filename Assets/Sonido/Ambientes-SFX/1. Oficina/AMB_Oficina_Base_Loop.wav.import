@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2iulsxsausgf"
+path="res://.godot/imported/AMB_Oficina_Base_Loop.wav-c4018c7afff3c92fb64cc58a2e12f98e.sample"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/1. Oficina/AMB_Oficina_Base_Loop.wav"
+dest_files=["res://.godot/imported/AMB_Oficina_Base_Loop.wav-c4018c7afff3c92fb64cc58a2e12f98e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

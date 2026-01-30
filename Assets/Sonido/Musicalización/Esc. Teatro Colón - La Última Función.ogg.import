@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://clhfjcu3bfqs2"
+path="res://.godot/imported/Esc. Teatro Colón - La Última Función.ogg-6f7c5811a11cd90c4bed964a263b61ab.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sonido/Musicalización/Esc. Teatro Colón - La Última Función.ogg"
+dest_files=["res://.godot/imported/Esc. Teatro Colón - La Última Función.ogg-6f7c5811a11cd90c4bed964a263b61ab.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
