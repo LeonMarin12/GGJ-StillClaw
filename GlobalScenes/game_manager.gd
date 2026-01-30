@@ -8,6 +8,10 @@ signal hide_cards_memotec(id_card, last_flip)
 
 #señales de escenas
 signal notebook_picked
+signal killer_chosen
+
+#señales para notebook
+signal add_clue(clue_text)
 
 #sistema de dialogos
 @export var dialogue_scene_1: DialogueResource
@@ -18,10 +22,29 @@ signal notebook_picked
 @onready var scene_2_path :String = 'uid://h048cndi5ieo'
 @onready var scene_3_path :String = 'uid://cea0djo3bxlql'
 
-@export var minigame_path :String = 'uid://bhrtamre6cf4l'
+@onready var minigame_path :String = 'uid://bhrtamre6cf4l'
+
+@onready var final_scene :String = 'uid://bhh7qwhnh5a33'
 
 #mascara que se va a tener que encontrar
 var killer_mask :Mask
+#mascara que elegis
+var killer_mask_guess :Mask
+#resultado de si acertaste al asesino
+var guessed_correctly :bool = false
+
+#saber si tenes ya la libreta
+var have_notebook = false
+
+#guardar las mascaras generadas y el estado de las cruces
+var saved_mask_data :Array[Dictionary] = []
+var saved_cross_states :Array[bool] = []
+var saved_clues :Array[String] = []
+var saved_killer_mask_data :Dictionary = {}
+
+#variable para saber si ganaste el minijuego
+var winned_minigame :bool = false
+var finished_minigame :bool = false
 
 #variables para el sonido de dialogo
 var _current_dialogue_label: DialogueLabel = null
@@ -77,16 +100,16 @@ var all_clues :Dictionary = {
 }
 
 # Array para almacenar la pista actual [dificultad, caracteristica, variedad]
-var actual_difficulty :int = 1
+var actual_difficulty :String = 'facil'
 var actual_clue :Array = []
 
 # Variables temporales para construir la pista antes de confirmarla
-var temp_difficulty :int = 1
+var temp_difficulty :String = 'facil'
 var temp_characteristic :String = ""
 var temp_variety :String = ""
 
 # Funciones para construir la pista temporal
-func set_clue_difficulty(difficulty: int):
+func set_clue_difficulty(difficulty :String):
 	temp_difficulty = difficulty
 
 func set_clue_characteristic(characteristic: String):
@@ -107,20 +130,127 @@ func get_clue_text() -> String:
 	if temp_characteristic == "" or temp_variety == "":
 		return "Pista incompleta"
 	
+	# Debug: Verificar killer_mask
+	if killer_mask:
+		print("Killer mask: ", killer_mask.forma, " ", killer_mask.color, " ", killer_mask.expresion, " ", killer_mask.detalles)
+		print("Características especiales: ", killer_mask.caracteristicas_especiales)
+	else:
+		print("WARNING: killer_mask es null!")
+		print("Datos guardados: ", saved_killer_mask_data)
+	
+	print("Evaluando pista: ", temp_characteristic, " = ", temp_variety)
+	
 	# Buscar en el diccionario correspondiente
 	if temp_characteristic in all_clues:
 		var clue_dict = all_clues[temp_characteristic]
 		if temp_variety in clue_dict:
-			return clue_dict[temp_variety]
+			var clue_string = clue_dict[temp_variety]
+			# Verificar si la pista coincide con el asesino
+			var is_correct = is_clue_correct()
+			print("¿Pista correcta?: ", is_correct)
+			
+			if not is_correct:
+				clue_string = "no " + clue_string
+			
+			print("Texto final de pista: ", clue_string)
+			
+			#guardar la pista en GameManager
+			save_clue(clue_string)
+			#escribirla en el notebook
+			add_clue.emit(clue_string)
+			return clue_string
 	
 	return "Pista no encontrada"
-
 
 func start_minigame():
 	print("Iniciando minijuego con pista: ", actual_clue)
 	SceneTransition.change_scene(minigame_path)
 	# Aquí se puede iniciar el minijuego o cambiar de escena
 	# Por ejemplo: change_scene(scene_minigame_path)
+
+
+func is_clue_correct() -> bool:
+	# Si killer_mask es null, intentar usar los datos guardados
+	if not killer_mask:
+		if saved_killer_mask_data.is_empty():
+			return false
+		
+		# Comparar directamente con los datos guardados
+		if temp_characteristic == "color":
+			return saved_killer_mask_data.get("color", "") == temp_variety
+		elif temp_characteristic == "forma":
+			return saved_killer_mask_data.get("forma", "") == temp_variety
+		elif temp_characteristic == "detalles":
+			return saved_killer_mask_data.get("detalles", "") == temp_variety
+		elif temp_characteristic == "expresion":
+			return saved_killer_mask_data.get("expresion", "") == temp_variety
+		elif temp_characteristic == "especial":
+			var carac_especiales = saved_killer_mask_data.get("caracteristicas_especiales", [])
+			return temp_variety in carac_especiales
+		return false
+	
+	# Si killer_mask existe, comparar con el objeto
+	if temp_characteristic == "color":
+		return killer_mask.color == temp_variety
+	elif temp_characteristic == "forma":
+		return killer_mask.forma == temp_variety
+	elif temp_characteristic == "detalles":
+		return killer_mask.detalles == temp_variety
+	elif temp_characteristic == "expresion":
+		return killer_mask.expresion == temp_variety
+	elif temp_characteristic == "especial":
+		return temp_variety in killer_mask.caracteristicas_especiales
+	
+	return false
+
+
+
+func give_first_clue() -> String:
+	if not killer_mask:
+		return "No hay asesino definido"
+	
+	# Array con las características disponibles
+	var available_characteristics = ["color", "forma", "detalles", "expresion"]
+	
+	# Elegir una característica aleatoria
+	var random_characteristic = available_characteristics.pick_random()
+	
+	# Establecer temp_characteristic
+	temp_characteristic = random_characteristic
+	
+	# Obtener todas las opciones posibles para esa característica
+	var all_options = []
+	var killer_value = ""
+	
+	if random_characteristic == "color":
+		all_options = color_clues.keys()
+		killer_value = killer_mask.color
+	elif random_characteristic == "forma":
+		all_options = forma_clues.keys()
+		killer_value = killer_mask.forma
+	elif random_characteristic == "detalles":
+		all_options = detalles_clues.keys()
+		killer_value = killer_mask.detalles
+	elif random_characteristic == "expresion":
+		all_options = expresion_clues.keys()
+		killer_value = killer_mask.expresion
+	
+	# Filtrar para obtener solo las opciones que NO coinciden con el asesino
+	var wrong_options = []
+	for option in all_options:
+		if option != killer_value:
+			wrong_options.append(option)
+	
+	# Elegir una opción incorrecta aleatoria
+	if wrong_options.size() > 0:
+		temp_variety = wrong_options.pick_random()
+	else:
+		# Fallback en caso de que no haya opciones incorrectas
+		temp_variety = all_options.pick_random()
+	
+	# Retornar el texto de la pista (será incorrecta, con "no " al principio)
+	return get_clue_text()
+
 
 #endregion
 
@@ -133,7 +263,11 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed('debug'):
 		DialogueManager.show_dialogue_balloon(dialogue_scene_3, 'start')
-
+	elif event.is_action_pressed('debug_2'):
+		GameManager.winned_minigame = true
+		GameManager.finished_minigame = true
+		DialogueManager.show_dialogue_balloon(dialogue_scene_3, 'start')
+		change_scene(scene_3_path)
 
 func change_scene(target):
 	SceneTransition.change_scene(target)
@@ -150,6 +284,87 @@ func _on_scene_changing(target):
 
 func pick_notebook():
 	notebook_picked.emit()
+	have_notebook = true
+
+
+func choose_killer():
+	killer_chosen.emit()
+
+
+func save_masks_and_crosses(mask_list: Array[Mask], cross_states: Array[bool]):
+	# Guardar solo los datos de las máscaras, no los objetos
+	saved_mask_data.clear()
+	for mask in mask_list:
+		var mask_info = {
+			"forma": mask.forma,
+			"color": mask.color,
+			"expresion": mask.expresion,
+			"detalles": mask.detalles,
+			"caracteristicas_especiales": mask.caracteristicas_especiales.duplicate()
+		}
+		saved_mask_data.append(mask_info)
+	saved_cross_states = cross_states.duplicate()
+	
+	# Guardar los datos de killer_mask si existe
+	if killer_mask:
+		saved_killer_mask_data = {
+			"forma": killer_mask.forma,
+			"color": killer_mask.color,
+			"expresion": killer_mask.expresion,
+			"detalles": killer_mask.detalles,
+			"caracteristicas_especiales": killer_mask.caracteristicas_especiales.duplicate()
+		}
+
+func get_saved_mask_data() -> Array[Dictionary]:
+	return saved_mask_data
+
+func get_saved_cross_states() -> Array[bool]:
+	return saved_cross_states
+
+func has_saved_masks() -> bool:
+	return saved_mask_data.size() > 0
+
+func save_clue(clue_text: String):
+	if clue_text not in saved_clues:
+		saved_clues.append(clue_text)
+
+func get_saved_clues() -> Array[String]:
+	return saved_clues
+
+func get_saved_killer_mask_data() -> Dictionary:
+	return saved_killer_mask_data
+
+func save_killer_mask(mask: Mask):
+	if mask:
+		saved_killer_mask_data = {
+			"forma": mask.forma,
+			"color": mask.color,
+			"expresion": mask.expresion,
+			"detalles": mask.detalles,
+			"caracteristicas_especiales": mask.caracteristicas_especiales.duplicate()
+		}
+		print("Killer mask guardado: ", mask.forma, " ", mask.color)
+
+func check_killer_guess(guessed_mask: Mask) -> bool:
+	# Verificar contra el objeto killer_mask si existe
+	if killer_mask:
+		guessed_correctly = killer_mask.is_equal_to(guessed_mask)
+		print("Verificación con killer_mask: ", guessed_correctly)
+		return guessed_correctly
+	
+	# Si killer_mask es null, verificar contra los datos guardados
+	if not saved_killer_mask_data.is_empty():
+		guessed_correctly = (
+			guessed_mask.forma == saved_killer_mask_data.get("forma", "") and
+			guessed_mask.color == saved_killer_mask_data.get("color", "") and
+			guessed_mask.expresion == saved_killer_mask_data.get("expresion", "") and
+			guessed_mask.detalles == saved_killer_mask_data.get("detalles", "")
+		)
+		print("Verificación con datos guardados: ", guessed_correctly)
+		return guessed_correctly
+	
+	print("ERROR: No hay killer_mask ni datos guardados para comparar")
+	return false
 
 
 #region DialogueManager Events
@@ -181,8 +396,8 @@ func _on_passed_title(title: String):
 	pass
 
 func _on_got_dialogue(line: DialogueLine):
-	print("Línea de diálogo: ", line.text)
-	print('Perosonaje: ', line.character)
+	#print("Línea de diálogo: ", line.text)
+	#print('Perosonaje: ', line.character)
 	# Guardar el personaje actual
 	_current_character = line.character if line.character else "default"
 	# Conectar las señales del DialogueLabel cuando recibimos una nueva línea de diálogo

@@ -3,9 +3,25 @@
 #MÚSICA - De misterio? Sigue la clásica?
 if GameManager.is_first_interrogation == false:
 	#si ya tuvo este dialogo alguna vez va por aca
+	if GameManager.winned_minigame == true:
+		Testigo: S-si! ahora lo recuerdo. Recuerdo que {{get_clue_text()}}
+	else:
+		Testigo: N-no... no lo logro recordar... lo siento.
 	Jefe: Ya tenes al asesino?
 	- Creo que si
-		do GameManager.start_minigame()
+		Jefe: Ya era hora, quien es entonces?
+		~ choose_killer
+		do GameManager.choose_killer() #se abre la libreta y elegis una mascara
+		...
+		Jefe: Estas seguro que el asesino llevaba esa mascara?
+		- Si, totalmente seguro.
+			Jefe: Genial, entonces caso resuelto.
+			do change_scene(final_scene)
+		- No, dejame revisar otra vez...
+			=> choose_killer
+		- Necesito obtener mas informacion
+			Jefe: Entonces porqué me haces perder el tiempo!
+			=> opciones_1
 		=> END
 	- Aun no
 		Detective: Nesecito a hacerle unas preguntas más.
@@ -13,12 +29,13 @@ if GameManager.is_first_interrogation == false:
 else:
 	#si es la primera vez que hace este dialogo va por aca
 	do GameManager.is_first_interrogation = false
-	Detective: Bien, dígame...
+	Detective: Bien, esto va a ser rapido.
 	=> opciones_1
 ~ opciones_1
+Detective: Necesito que me hable sobre...
 - Preguntas básicas
 	~ opciones_1_1
-	do GameManager.set_clue_difficulty(1)
+	do GameManager.set_clue_difficulty('facil')
 	- Color
 		do GameManager.set_clue_characteristic("color")
 		Habláme sobre el color
@@ -84,8 +101,9 @@ else:
 			¿Le faltaba la boca?
 	- Volver => opciones_1
 - Preguntas especiales
+	
 	~ opciones_1_2
-	do GameManager.set_clue_difficulty(2)
+	do GameManager.set_clue_difficulty('dificil')
 	do GameManager.set_clue_characteristic("especial")
 	- Color calido
 		do GameManager.set_clue_variety("calido")

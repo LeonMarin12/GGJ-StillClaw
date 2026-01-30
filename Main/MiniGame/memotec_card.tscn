@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8tq75jwxr1rq"]
+[gd_scene load_steps=12 format=3 uid="uid://b8tq75jwxr1rq"]
 
 [ext_resource type="Script" uid="uid://n4snk3u4vmh6" path="res://Main/MiniGame/memotec_card.gd" id="1_le1gm"]
 [ext_resource type="Texture2D" uid="uid://kwoy1ocjrg8l" path="res://Assets/Memotec/Cartas memotest.png" id="3_bahd7"]
-[ext_resource type="Texture2D" uid="uid://ciej0pf5xvnpf" path="res://Assets/godotarte/godot_malo.png" id="4_bahd7"]
+[ext_resource type="Texture2D" uid="uid://ck3amj53x64io" path="res://Assets/Memotec/Cartas/FormasTilmap_0000_Capa-14.png" id="3_qgq8b"]
+[ext_resource type="Texture2D" uid="uid://bjfqpakypuixf" path="res://Assets/Memotec/Joker.png" id="4_bahd7"]
 
 [sub_resource type="Animation" id="Animation_ng8wv"]
 length = 0.001
@@ -29,6 +30,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(0.4, 0.4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card_front:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
 }
 
 [sub_resource type="Animation" id="Animation_le1gm"]
@@ -58,6 +71,18 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(0, 0.5), Vector2(0.4, 0.4)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("card_front:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_qgq8b"]
 resource_name = "found_pair"
@@ -80,33 +105,6 @@ _data = {
 &"RESET": SubResource("Animation_ng8wv"),
 &"flip_card": SubResource("Animation_le1gm"),
 &"found_pair": SubResource("Animation_qgq8b")
-}
-
-[sub_resource type="Animation" id="Animation_bahd7"]
-resource_name = "joker_laugh"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("joker_face:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(1e-05, 1e-05), Vector2(1, 1), Vector2(1e-05, 1e-05)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("joker_face:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
 }
 
 [sub_resource type="Animation" id="Animation_nr0io"]
@@ -134,6 +132,58 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("joker_face:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_bahd7"]
+resource_name = "joker_laugh"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("joker_face:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.4, 0.76666665, 1.5),
+"transitions": PackedFloat32Array(0.27739242, 1, 1),
+"update": 0,
+"values": [Vector2(1e-05, 1e-05), Vector2(0.5, 0.5), Vector2(1e-05, 1e-05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("joker_face:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("joker_face:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4000169, 0.5, 0.6, 0.7, 0.8, 0.900038, 1, 1.1000464, 1.2, 1.314009),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uu438"]
@@ -171,9 +221,10 @@ stretch_mode = 0
 
 [node name="card_front" type="Sprite2D" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(100, 100)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("3_bahd7")
+texture = ExtResource("3_qgq8b")
 
 [node name="card_back" type="Sprite2D" parent="."]
 position = Vector2(100, 100)

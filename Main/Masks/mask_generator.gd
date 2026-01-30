@@ -15,8 +15,8 @@ var properties = ['forma', 'expresion']
 var carac_espe_list :Dictionary = {
 	'plumas' : ['alas', 'corona'],
 	'calido' : ['rojo', 'amarillo'],
-	'poker' : ['rombos', 'corazones'],
-	'emocion' : ['sonrisa', 'triste']
+	'poker' : ['rombos', 'corazon'],
+	'emocion' : ['tristeza', 'felicidad']
 }
 
 
@@ -60,3 +60,29 @@ func _apply_special_characteristics(mask: Mask) -> void:
 			if mask.get(property_name) in carac_espe_list[caracteristica]:
 				mask.caracteristicas_especiales.append(caracteristica)
 				break
+
+
+func create_mask_from_data(mask_data: Dictionary):
+	var mask = mask_scene.instantiate()
+	
+	# Establecer los valores desde los datos guardados
+	mask.forma = mask_data["forma"]
+	mask.color = mask_data["color"]
+	mask.expresion = mask_data["expresion"]
+	mask.detalles = mask_data["detalles"]
+	mask.caracteristicas_especiales = mask_data["caracteristicas_especiales"].duplicate()
+	
+	# Aplicar las texturas correspondientes
+	if mask.forma in forma_variations:
+		mask.sprite_forma.texture = forma_variations[mask.forma]
+	
+	if mask.expresion in expresion_variations:
+		mask.sprite_expresion.texture = expresion_variations[mask.expresion]
+	
+	if mask.color in color_variations:
+		mask.detalles_color = color_variations[mask.color]
+	
+	if mask.forma in detalles_variations and mask.detalles in detalles_variations[mask.forma]:
+		mask.sprite_detalles.texture = detalles_variations[mask.forma][mask.detalles]
+	
+	return mask

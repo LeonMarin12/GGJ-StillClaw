@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cea0djo3bxlql"]
+[gd_scene load_steps=4 format=3 uid="uid://cea0djo3bxlql"]
 
+[ext_resource type="Texture2D" uid="uid://b4k7bi76uvovm" path="res://Assets/Fondos/colon.png" id="1_2mxb6"]
 [ext_resource type="PackedScene" uid="uid://c8r5kv2wi6dxc" path="res://UI/pause_menu.tscn" id="1_lxcve"]
 [ext_resource type="PackedScene" uid="uid://cw8bgrcqh6wkg" path="res://Main/Notebook/notebook_manager.tscn" id="2_2mxb6"]
 
 [node name="GameScene_3" type="Node2D"]
+
+[node name="Backgorund" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_2mxb6")
 
 [node name="Ui" type="CanvasLayer" parent="."]
 visible = false

@@ -24,7 +24,7 @@ func _ready():
 
 
 func _on_texture_button_pressed():
-	if not is_flipped:
+	if not is_flipped and not GameManager.finished_minigame:
 		flip_card(id_card)
 
 

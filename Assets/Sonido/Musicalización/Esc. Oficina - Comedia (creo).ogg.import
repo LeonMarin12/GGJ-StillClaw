@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b0by7csupqus7"
+path="res://.godot/imported/Esc. Oficina - Comedia (creo).ogg-30d136bd42e11543cd2e2cb5074d5a22.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sonido/Musicalización/Esc. Oficina - Comedia (creo).ogg"
+dest_files=["res://.godot/imported/Esc. Oficina - Comedia (creo).ogg-30d136bd42e11543cd2e2cb5074d5a22.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

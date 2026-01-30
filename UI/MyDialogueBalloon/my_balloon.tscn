@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cse2sbafobdak"]
+[gd_scene load_steps=10 format=3 uid="uid://cse2sbafobdak"]
 
 [ext_resource type="Script" uid="uid://exr71gibaetg" path="res://UI/MyDialogueBalloon/my_balloon.gd" id="1_nm00q"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ovy8p"]
 [ext_resource type="Theme" uid="uid://boefw1p2bmlf1" path="res://Resources/balloon_theme.tres" id="2_y52e4"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_npxuv"]
+[ext_resource type="FontFile" uid="uid://uhvhb0171m2b" path="res://Assets/Fonts/SilkRemington-SBold.ttf" id="3_p7ssa"]
+[ext_resource type="FontFile" uid="uid://bow7urg8v57s1" path="res://Assets/Fonts/Alegreya-VariableFont_wght.ttf" id="4_k6rsm"]
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -85,6 +87,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("3_p7ssa")
+theme_override_font_sizes/normal_font_size = 40
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -94,6 +98,8 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("4_k6rsm")
+theme_override_font_sizes/normal_font_size = 40
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]

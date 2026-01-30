@@ -1,27 +1,40 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhrtamre6cf4l"]
+[gd_scene load_steps=15 format=3 uid="uid://bhrtamre6cf4l"]
 
 [ext_resource type="Script" uid="uid://dy8immkj1k050" path="res://Main/MiniGame/minigame.gd" id="1_w4pnm"]
-[ext_resource type="Texture2D" uid="uid://b5bs002qtgt76" path="res://Assets/godotarte/godot_1.png" id="2_tsksr"]
 [ext_resource type="PackedScene" uid="uid://b8tq75jwxr1rq" path="res://Main/MiniGame/memotec_card.tscn" id="2_w4pnm"]
-[ext_resource type="Texture2D" uid="uid://b3q7s3vcppp4d" path="res://Assets/godotarte/godot_2.png" id="3_7nm1h"]
-[ext_resource type="Texture2D" uid="uid://6gf7e710ryku" path="res://Assets/godotarte/godot_3.png" id="4_g1cpw"]
-[ext_resource type="Texture2D" uid="uid://cgs66uisic533" path="res://Assets/godotarte/godot_4.png" id="5_6dbiy"]
-[ext_resource type="Texture2D" uid="uid://cr18lwf5p2lst" path="res://Assets/godotarte/icon_2.png" id="7_6dbiy"]
-[ext_resource type="Texture2D" uid="uid://ciej0pf5xvnpf" path="res://Assets/godotarte/godot_malo.png" id="7_g1cpw"]
+[ext_resource type="Texture2D" uid="uid://fq5t31rpo5e3" path="res://Assets/Memotec/Cartas/FormasTilmap_0006_Capa-9.png" id="3_4pthx"]
+[ext_resource type="Texture2D" uid="uid://x0pp7k86bgl" path="res://Assets/Memotec/Cartas/FormasTilmap_0004_Capa-10.png" id="4_1rfl0"]
+[ext_resource type="Texture2D" uid="uid://frtp5cw44dmp" path="res://Assets/Memotec/Cartas/FormasTilmap_0007_Capa-8.png" id="5_vhoar"]
+[ext_resource type="Texture2D" uid="uid://cgef7a0g2bq73" path="res://Assets/Memotec/Cartas/FormasTilmap_0001_Capa-13.png" id="6_s8pcn"]
+[ext_resource type="Texture2D" uid="uid://ilsaop2xuex2" path="res://Assets/Memotec/Cartas/FormasTilmap_0003_Capa-11.png" id="7_eayw0"]
+[ext_resource type="Texture2D" uid="uid://hlru1m7y1732" path="res://Assets/Memotec/Cartas/FormasTilmap_0005_Elipse-3.png" id="8_806ej"]
+[ext_resource type="Texture2D" uid="uid://csyg0c68qegg2" path="res://Assets/Memotec/Cartas/FormasTilmap_0002_Capa-12.png" id="9_axttl"]
+[ext_resource type="Texture2D" uid="uid://dminhrjlmaq3p" path="res://Assets/Memotec/Cartas/FormasTilmap_0008_Elipse-2.png" id="10_i1xu6"]
+[ext_resource type="Texture2D" uid="uid://ck3amj53x64io" path="res://Assets/Memotec/Cartas/FormasTilmap_0000_Capa-14.png" id="11_nw1h4"]
+[ext_resource type="Texture2D" uid="uid://b4k7bi76uvovm" path="res://Assets/Fondos/colon.png" id="12_s8pcn"]
+[ext_resource type="SpriteFrames" uid="uid://bdatg3wet40qg" path="res://Resources/CharacterSpriteFrames/detective.tres" id="13_eayw0"]
+[ext_resource type="SpriteFrames" uid="uid://e12l6jner31s" path="res://Resources/CharacterSpriteFrames/testigo.tres" id="14_806ej"]
 
 [node name="MinigameManager" type="Node2D"]
 script = ExtResource("1_w4pnm")
 memotec_card_scene = ExtResource("2_w4pnm")
 memotec_textures = Dictionary[String, Texture2D]({
-"ala": ExtResource("4_g1cpw"),
-"brillo": ExtResource("3_7nm1h"),
-"corazon": ExtResource("5_6dbiy"),
-"estrella": ExtResource("2_tsksr"),
-"pluma": ExtResource("7_6dbiy"),
-"rombo": null,
-"sol": null
+"ala": ExtResource("3_4pthx"),
+"corazon": ExtResource("4_1rfl0"),
+"estrella": ExtResource("5_vhoar"),
+"gota": ExtResource("9_axttl"),
+"luna": ExtResource("10_i1xu6"),
+"pluma": ExtResource("6_s8pcn"),
+"rombo": ExtResource("7_eayw0"),
+"sol": ExtResource("8_806ej")
 })
-joker_texture = ExtResource("7_g1cpw")
+joker_texture = ExtResource("11_nw1h4")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_s8pcn")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -73,12 +86,24 @@ offset_top = 44.0
 offset_right = 369.0
 offset_bottom = 344.0
 
-[node name="TimerLabel" type="Label" parent="CanvasLayer/Timer"]
+[node name="Panel" type="Panel" parent="CanvasLayer/Timer"]
+custom_minimum_size = Vector2(300, 200)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TimerLabel" type="Label" parent="CanvasLayer/Timer/Panel"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -68.5
+offset_right = 128.0
+offset_bottom = 68.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
@@ -88,6 +113,19 @@ vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="CanvasLayer/Timer"]
 unique_name_in_owner = true
-autostart = true
+
+[node name="DetectiveStrite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1790, 738)
+scale = Vector2(0.9, 0.9)
+sprite_frames = ExtResource("13_eayw0")
+animation = &"pensando"
+
+[node name="TestigoSprite" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(237.00002, 725)
+scale = Vector2(0.9, 0.9)
+sprite_frames = ExtResource("14_806ej")
+animation = &"sorprendido"
 
 [connection signal="timeout" from="CanvasLayer/Timer/Timer" to="." method="_on_timer_timeout"]

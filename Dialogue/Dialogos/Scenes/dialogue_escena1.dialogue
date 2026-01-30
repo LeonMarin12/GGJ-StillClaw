@@ -17,17 +17,17 @@ do stop_music()
 ¡Crack!
 Detective: ...No puede ser.
 #EXPRESIÓN - Detective enojado
-###
-#MÚSICA - Comienza tono más relajado o gracioso? ###
-do play_music('oficina_inicio')
+do change_sprite('enojado')
+#MÚSICA - Comienza tono más relajado o gracioso
+do play_music('comic_sans')
 Detective: [shake rate=20 level=10]¡¿Ya se rompió!?[/shake]
 En efecto, se rompió.
 #EXPRESIÓN - Detective sigue enojado
-###
+do change_sprite('enojado')
 Detective: ¡Pero todavía no terminé de pagar todas las cuotas!
 Detective: ¡Y ya no me queda un mango para comprar uno mejor!
 #EXPRESIÓN - Detective vuelve a la normalidad
-###
+do change_sprite('default')
 En ese instante, por lo menos por un momento, el deseo de que algo pasara en las inseguras calles de Buenos Aires se coló en su inconsciente.
 Sacudió la cabeza. Era un montón, incluso para él.
 #SONIDO - Teléfono suena

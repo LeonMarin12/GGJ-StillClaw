@@ -1,10 +1,13 @@
 ~ start
 #ESCENA 2 - EL TEATRO
+#SONIDO - Murmullos, sonido de gente en multitud de fondo
+do play_sound_effect('gente_hablando')
 [wait=5]
 ...
 [speed=0.1]21:23 hs[/speed]
-#SONIDO - Murmullos, sonido de gente en multitud de fondo
-#MÚSICA - Clásica de salón?
+
+#MÚSICA - Clásica de salón
+do play_music('teatro_colon')
 Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personajes victorianos siendo interrogados por la policía.
 [i]Bueno, no es lo más raro que he visto en mi vida.[/i]
 #SONIDO – Teléfono suena y Detective contesta
@@ -60,7 +63,7 @@ Detective: Respire profundo, y piense ¿recuerda como se veía?
 Testigo: ...
 Testigo: Estaba vestido como un invitado. Llevaba una máscara.
 Detective: Bien, ¿recuerda algún detalle en particular?
-Testigo: Ehm... sí... recuerdo que #RESPUESTA CORRECTA DE UNA PREGUNTA COMÚN.
+Testigo: Ehm... sí... recuerdo que {{give_first_clue()}}
 #CÓDIGO: La libreta se abre automáticamente o hay algo que la señala?
 #ARTE: Detective abre la libreta y marca las máscaras
 Detective: Perfecto, es un comienzo.
@@ -71,6 +74,7 @@ Testigo: Discúlpame, ¡soy un inutil!
 Testigo: ¡No logro recordar!
 Detective: Tranquilo, yo te voy a ayudar. Podemos empezar de a poco.
 #ARTE: Testigo vuelve a la normalidad
-Tesigo: E-está bien. 
+Testigo: E-está bien. 
 Con el objetivo de llevar una interrogación más tranquila, el Detective llevó al testigo a una zona menos concurrida para hacerle las preguntas.
+do change_scene(scene_3_path)
 => END

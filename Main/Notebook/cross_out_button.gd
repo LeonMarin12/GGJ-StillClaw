@@ -8,6 +8,8 @@ func _ready():
 	cross.play("default")
 
 func _on_pressed():
+	
+	
 	if not crossed:
 		cross.play("cross_out")
 		crossed = true

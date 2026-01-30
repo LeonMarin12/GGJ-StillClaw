@@ -1,14 +1,54 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://tk2otiytfarx"]
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://tk2otiytfarx"]
 
-[ext_resource type="Texture2D" uid="uid://8d62qg3eem6f" path="res://Assets/Characters/jefe asset 1.png" id="1_sw0og"]
+[ext_resource type="Texture2D" uid="uid://cky4i2wtsmd7k" path="res://Assets/Characters/SpriteSheets/sprite_jefe.png" id="1_sw0og"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w4386"]
+atlas = ExtResource("1_sw0og")
+region = Rect2(0, 567, 465, 567)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npyyc"]
+atlas = ExtResource("1_sw0og")
+region = Rect2(0, 0, 465, 567)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ke7x"]
+atlas = ExtResource("1_sw0og")
+region = Rect2(465, 0, 465, 567)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7qek"]
+atlas = ExtResource("1_sw0og")
+region = Rect2(465, 567, 465, 567)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_sw0og")
+"texture": SubResource("AtlasTexture_w4386")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_npyyc")
+}],
+"loop": true,
+"name": &"enojado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ke7x")
+}],
+"loop": true,
+"name": &"exclamacion",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7qek")
+}],
+"loop": true,
+"name": &"pregunta",
 "speed": 5.0
 }]

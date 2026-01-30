@@ -1,14 +1,42 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://bdatg3wet40qg"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bdatg3wet40qg"]
 
-[ext_resource type="Texture2D" uid="uid://3y27mtbiqnck" path="res://Assets/Characters/DETECTIVE ASSET PRUEBA.png" id="1_s2qtr"]
+[ext_resource type="Texture2D" uid="uid://d1jf5xwamo3pe" path="res://Assets/Characters/SpriteSheets/sprite_sheet_detective.png" id="1_s2qtr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4p2m"]
+atlas = ExtResource("1_s2qtr")
+region = Rect2(1460, 0, 730, 981)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5j01s"]
+atlas = ExtResource("1_s2qtr")
+region = Rect2(730, 0, 730, 981)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2o560"]
+atlas = ExtResource("1_s2qtr")
+region = Rect2(0, 0, 730, 981)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_s2qtr")
+"texture": SubResource("AtlasTexture_n4p2m")
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5j01s")
+}],
+"loop": true,
+"name": &"enojado",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2o560")
+}],
+"loop": true,
+"name": &"pensando",
 "speed": 5.0
 }]

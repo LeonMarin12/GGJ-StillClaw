@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://djibr3xu56lqn"]
+
+[ext_resource type="FontFile" uid="uid://uhvhb0171m2b" path="res://Assets/Fonts/SilkRemington-SBold.ttf" id="1_ilecb"]
+
+[resource]
+default_font = ExtResource("1_ilecb")
+default_font_size = 30
