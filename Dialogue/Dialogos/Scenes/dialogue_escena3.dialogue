@@ -1,6 +1,7 @@
 ~ start
 #ESCENA 3 - EL INTERROGATORIO
 #MÚSICA - De misterio? Sigue la clásica?
+do play_music('teatro_colon')
 if GameManager.is_first_interrogation == false:
 	#si ya tuvo este dialogo alguna vez va por aca
 	if GameManager.winned_minigame == true:
@@ -99,6 +100,7 @@ Detective: Necesito que me hable sobre...
 		- Sin boca
 			do GameManager.set_clue_variety("sin_boca")
 			¿Le faltaba la boca?
+		- Volver => opciones_1
 	- Volver => opciones_1
 - Preguntas especiales
 	

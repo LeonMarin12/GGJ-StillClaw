@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cse2sbafobdak"]
+[gd_scene load_steps=13 format=3 uid="uid://cse2sbafobdak"]
 
 [ext_resource type="Script" uid="uid://exr71gibaetg" path="res://UI/MyDialogueBalloon/my_balloon.gd" id="1_nm00q"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_ovy8p"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_npxuv"]
 [ext_resource type="FontFile" uid="uid://uhvhb0171m2b" path="res://Assets/Fonts/SilkRemington-SBold.ttf" id="3_p7ssa"]
 [ext_resource type="FontFile" uid="uid://bow7urg8v57s1" path="res://Assets/Fonts/Alegreya-VariableFont_wght.ttf" id="4_k6rsm"]
+[ext_resource type="FontFile" uid="uid://bam7vyr27h10c" path="res://Assets/Fonts/Alegreya/Alegreya-Bold.ttf" id="6_flra5"]
+[ext_resource type="FontFile" uid="uid://cx0067tuhwd62" path="res://Assets/Fonts/Alegreya/Alegreya-BoldItalic.ttf" id="7_a5p2i"]
+[ext_resource type="FontFile" path="res://Assets/Fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf" id="8_jnqg2"]
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001
@@ -88,7 +91,7 @@ modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
 theme_override_fonts/normal_font = ExtResource("3_p7ssa")
-theme_override_font_sizes/normal_font_size = 40
+theme_override_font_sizes/normal_font_size = 30
 bbcode_enabled = true
 text = "Character"
 fit_content = true
@@ -99,7 +102,10 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_fonts/normal_font = ExtResource("4_k6rsm")
-theme_override_font_sizes/normal_font_size = 40
+theme_override_fonts/bold_font = ExtResource("6_flra5")
+theme_override_fonts/bold_italics_font = ExtResource("7_a5p2i")
+theme_override_fonts/italics_font = ExtResource("8_jnqg2")
+theme_override_fonts/mono_font = ExtResource("6_flra5")
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer"]

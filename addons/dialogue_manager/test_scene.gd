@@ -31,7 +31,8 @@ func _enter_tree() -> void:
 
 
 func _on_dialogue_ended(_resource: DialogueResource):
-	get_tree().quit()
+	if is_instance_valid(self) and get_tree():
+		get_tree().quit()
 
 
 #endregion

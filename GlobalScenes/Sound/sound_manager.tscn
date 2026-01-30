@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://da2ubmfd16syl"]
+[gd_scene load_steps=15 format=3 uid="uid://da2ubmfd16syl"]
 
 [ext_resource type="Script" uid="uid://v47y1dt0dqd3" path="res://GlobalScenes/Sound/sound_manager.gd" id="1_qsijo"]
 [ext_resource type="AudioStream" uid="uid://cowuw76j24wx6" path="res://Assets/Sonido/Musicalización/Esc. Oficina - Inicio.ogg" id="2_plcli"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://boqw28i8t1lo0" path="res://Assets/Sonido/Diálogos/Detective.wav" id="7_0wi4s"]
 [ext_resource type="AudioStream" uid="uid://diwssnvwsw3s8" path="res://Assets/Sonido/Diálogos/Jefe teléfono.wav" id="9_plcli"]
 [ext_resource type="AudioStream" uid="uid://bsbdfe0bq5jpp" path="res://Assets/Sonido/Ambientes-SFX/2. Teatro Colón/AMB_Colon_GenteHabla_Loop.mp3" id="10_01g12"]
+[ext_resource type="AudioStream" uid="uid://bb2cn6p1n6fy2" path="res://Assets/Sonido/Ambientes-SFX/2. Teatro Colón/SFX_Pasos_Detective.wav" id="11_dqvhb"]
 [ext_resource type="AudioStream" uid="uid://c0ch8perihrpj" path="res://Assets/Sonido/Diálogos/Testigos.wav" id="13_2idke"]
 
 [node name="SoundManager" type="Node"]
@@ -25,6 +26,7 @@ sound_effect_list = Dictionary[String, AudioStream]({
 "aire_acondicionado_loop": ExtResource("2_wamcy"),
 "aire_acondicionado_muere": ExtResource("3_d6nrx"),
 "gente_hablando": ExtResource("10_01g12"),
+"pasos_detective": ExtResource("11_dqvhb"),
 "telefono_atiende": ExtResource("5_6t3ct"),
 "telefono_cuelga": ExtResource("6_q0x2g"),
 "telefono_suena": ExtResource("4_w28jb")
