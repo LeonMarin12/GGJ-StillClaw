@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://csyg0c68qegg2" path="res://Assets/Memotec/Cartas/FormasTilmap_0002_Capa-12.png" id="9_axttl"]
 [ext_resource type="Texture2D" uid="uid://dminhrjlmaq3p" path="res://Assets/Memotec/Cartas/FormasTilmap_0008_Elipse-2.png" id="10_i1xu6"]
 [ext_resource type="Texture2D" uid="uid://ck3amj53x64io" path="res://Assets/Memotec/Cartas/FormasTilmap_0000_Capa-14.png" id="11_nw1h4"]
-[ext_resource type="Texture2D" uid="uid://b4k7bi76uvovm" path="res://Assets/Fondos/colon.png" id="12_s8pcn"]
+[ext_resource type="Texture2D" uid="uid://cet5n6t6a4ac4" path="res://Assets/Fondos/colon editado.png" id="12_s8pcn"]
 [ext_resource type="SpriteFrames" uid="uid://bdatg3wet40qg" path="res://Resources/CharacterSpriteFrames/detective.tres" id="13_eayw0"]
 [ext_resource type="SpriteFrames" uid="uid://e12l6jner31s" path="res://Resources/CharacterSpriteFrames/testigo.tres" id="14_806ej"]
 
@@ -30,7 +30,7 @@ memotec_textures = Dictionary[String, Texture2D]({
 })
 joker_texture = ExtResource("11_nw1h4")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 z_index = -1
 offset_right = 40.0
 offset_bottom = 40.0

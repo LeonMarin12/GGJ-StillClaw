@@ -1,24 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://clgdf4ttnppb8"]
 
-[ext_resource type="Theme" uid="uid://bvsxgceutslrd" path="res://Resources/general_theme.tres" id="1_hrc50"]
 [ext_resource type="Script" uid="uid://dm5mcmy4emb66" path="res://UI/options_menu.gd" id="1_onhes"]
 [ext_resource type="Script" uid="uid://r42q4tm72e36" path="res://UI/volume_slider.gd" id="1_q6x1i"]
+[ext_resource type="Theme" uid="uid://bvsxgceutslrd" path="res://Resources/general_theme.tres" id="2_hrc50"]
 [ext_resource type="Script" uid="uid://di7311bk4thsv" path="res://UI/full_screen_control.gd" id="2_onhes"]
 
-[node name="OptionsMenu" type="Control"]
-layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-grow_horizontal = 2
-grow_vertical = 2
-theme = ExtResource("1_hrc50")
+[node name="OptionsMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 120
 script = ExtResource("1_onhes")
 
 [node name="Panel" type="Panel" parent="."]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -30,6 +22,7 @@ offset_right = 241.125
 offset_bottom = 307.3125
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_hrc50")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
@@ -99,7 +92,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.05
-value = 0.5
+value = 1.0
 script = ExtResource("1_q6x1i")
 audio_bus_name = "Master"
 
@@ -119,7 +112,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.05
-value = 0.5
+value = 1.0
 script = ExtResource("1_q6x1i")
 audio_bus_name = "Music"
 
@@ -139,7 +132,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.05
-value = 0.5
+value = 1.0
 script = ExtResource("1_q6x1i")
 audio_bus_name = "Dialogue"
 
@@ -159,7 +152,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.05
-value = 0.5
+value = 1.0
 script = ExtResource("1_q6x1i")
 audio_bus_name = "SoundEffect"
 
@@ -179,7 +172,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.05
-value = 0.5
+value = 1.0
 script = ExtResource("1_q6x1i")
 audio_bus_name = "SoundUI"
 

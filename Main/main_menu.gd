@@ -1,7 +1,6 @@
 extends Control
 
 @onready var game_path :String = 'uid://cdombc6vbttw'
-@onready var options_menu = %OptionsMenu
 
 
 func _ready():
@@ -9,7 +8,6 @@ func _ready():
 	CharacterManager.restart()
 	SoundManager.restart()
 	
-	options_menu.visible = false
 	SoundManager.play_music('oficina_inicio')
 
 
@@ -22,4 +20,4 @@ func _on_exit_button_pressed():
 
 
 func _on_options_button_pressed():
-	options_menu.visible = true
+	OptionsMenu.visible = true

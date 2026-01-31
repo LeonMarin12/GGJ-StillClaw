@@ -22,6 +22,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 CharacterManager="*res://GlobalScenes/Character/character_manager.tscn"
 SceneTransition="*res://GlobalScenes/SceneTransition/scene_transition.tscn"
 SoundManager="*res://GlobalScenes/Sound/sound_manager.tscn"
+OptionsMenu="*res://UI/options_menu.tscn"
 
 [dialogue_manager]
 

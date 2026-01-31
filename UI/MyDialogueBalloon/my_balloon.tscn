@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://bow7urg8v57s1" path="res://Assets/Fonts/Alegreya-VariableFont_wght.ttf" id="4_k6rsm"]
 [ext_resource type="FontFile" uid="uid://bam7vyr27h10c" path="res://Assets/Fonts/Alegreya/Alegreya-Bold.ttf" id="6_flra5"]
 [ext_resource type="FontFile" uid="uid://cx0067tuhwd62" path="res://Assets/Fonts/Alegreya/Alegreya-BoldItalic.ttf" id="7_a5p2i"]
-[ext_resource type="FontFile" path="res://Assets/Fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf" id="8_jnqg2"]
+[ext_resource type="FontFile" uid="uid://c8je2sj6ybg5f" path="res://Assets/Fonts/Alegreya/Alegreya-Italic-VariableFont_wght.ttf" id="8_jnqg2"]
 
 [sub_resource type="Animation" id="Animation_nlsx6"]
 length = 0.001

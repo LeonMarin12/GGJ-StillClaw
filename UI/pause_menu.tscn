@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c8r5kv2wi6dxc"]
+[gd_scene load_steps=3 format=3 uid="uid://c8r5kv2wi6dxc"]
 
 [ext_resource type="Theme" uid="uid://bvsxgceutslrd" path="res://Resources/general_theme.tres" id="1_jfm1e"]
 [ext_resource type="Script" uid="uid://d27c7erpvuppo" path="res://UI/pause_menu.gd" id="2_03fe5"]
-[ext_resource type="PackedScene" uid="uid://clgdf4ttnppb8" path="res://UI/options_menu.tscn" id="3_03fe5"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -53,10 +52,6 @@ text = "Opciones"
 layout_mode = 2
 text = "Menú Principal"
 icon_alignment = 1
-
-[node name="OptionsMenu" parent="." instance=ExtResource("3_03fe5")]
-visible = false
-layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

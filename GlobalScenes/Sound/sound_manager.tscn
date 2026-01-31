@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://c0ch8perihrpj" path="res://Assets/Sonido/Diálogos/Testigos.wav" id="13_2idke"]
 
 [node name="SoundManager" type="Node"]
+process_mode = 3
 script = ExtResource("1_qsijo")
 music_list = Dictionary[String, AudioStream]({
 "comic_sans": ExtResource("3_no7ko"),
@@ -43,7 +44,6 @@ bus = &"Music"
 
 [node name="SoundEffect" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
-bus = &"SoundEfect"
 
 [node name="SoundUI" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true

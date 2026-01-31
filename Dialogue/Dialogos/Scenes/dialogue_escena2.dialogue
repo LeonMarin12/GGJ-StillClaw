@@ -88,7 +88,7 @@ do change_sprite('sorprendido')
 Testigo: ¡Sí! {{give_first_clue()}}
 ###CÓDIGO: La libreta se abre automáticamente o hay algo que la señala?
 do change_sprite('pensando')
-Detective: Espere, dejeme que lo anote...
+Detective: Espere, déjeme que lo anote...
 #ARTE: Detective abre la libreta y marca las máscaras
 Detective: Perfecto, es un comienzo.
 Detective: ¿Qué más recuerda?

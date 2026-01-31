@@ -2,6 +2,7 @@ extends Control
 
 @onready var main_menu_path :String = 'uid://b7glknau0bbwt'
 
+
 func _ready():
 	get_parent().visible = true
 	set_visible(false)
@@ -48,7 +49,7 @@ func _on_resume_button_pressed():
 
 
 func _on_options_button_pressed():
-	pass # Replace with function body.
+	OptionsMenu.visible = true
 
 
 func _on_main_menu_button_pressed():

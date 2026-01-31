@@ -1,24 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhh7qwhnh5a33"]
 
 [ext_resource type="Script" uid="uid://c8st4jo6ikb2q" path="res://Main/Scenes/final_scene.gd" id="1_a8ylj"]
-[ext_resource type="Texture2D" uid="uid://0060m27uogk7" path="res://Assets/Fondos/final1.png" id="2_ed0al"]
-[ext_resource type="Texture2D" uid="uid://cp4rw2s4qxmsq" path="res://Assets/Fondos/final2.png" id="3_c4i2u"]
-
-[sub_resource type="Animation" id="Animation_a8ylj"]
-resource_name = "dolly_out"
-length = 10.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Backgorund:size")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 10),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1920, 1080), Vector2(1960, 1120)]
-}
+[ext_resource type="Texture2D" uid="uid://m70drdtpg5kt" path="res://Assets/Fondos/final atrapado.png" id="2_a8ylj"]
+[ext_resource type="Texture2D" uid="uid://btinlwwju6jxe" path="res://Assets/Fondos/final profugo.png" id="3_ed0al"]
 
 [sub_resource type="Animation" id="Animation_ed0al"]
 length = 0.001
@@ -35,6 +19,22 @@ tracks/0/keys = {
 "values": [Vector2(1920, 1080)]
 }
 
+[sub_resource type="Animation" id="Animation_a8ylj"]
+resource_name = "dolly_out"
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Backgorund:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 20),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1920, 1080), Vector2(2000, 1180)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_c4i2u"]
 _data = {
 &"RESET": SubResource("Animation_ed0al"),
@@ -43,14 +43,14 @@ _data = {
 
 [node name="FinalScene" type="Node2D"]
 script = ExtResource("1_a8ylj")
-good_ending = ExtResource("2_ed0al")
-bad_ending = ExtResource("3_c4i2u")
+good_ending = ExtResource("2_a8ylj")
+bad_ending = ExtResource("3_ed0al")
 
 [node name="Backgorund" type="TextureRect" parent="."]
 z_index = -1
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_ed0al")
+texture = ExtResource("2_a8ylj")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
