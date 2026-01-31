@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdombc6vbttw"]
+[gd_scene load_steps=3 format=3 uid="uid://cdombc6vbttw"]
 
 [ext_resource type="PackedScene" uid="uid://c8r5kv2wi6dxc" path="res://UI/pause_menu.tscn" id="1_geab1"]
-[ext_resource type="Texture2D" uid="uid://dr3a3ycv80m82" path="res://Assets/Fondos/oficinaFondo.png" id="1_nexdw"]
-[ext_resource type="SpriteFrames" uid="uid://bdatg3wet40qg" path="res://Resources/CharacterSpriteFrames/detective.tres" id="3_nkbmr"]
+[ext_resource type="Texture2D" uid="uid://bflkdgurvcve2" path="res://Assets/Fondos/oficina_azul.png" id="1_nexdw"]
 
 [node name="GameScene_1" type="Node2D"]
 
@@ -16,8 +15,3 @@ texture = ExtResource("1_nexdw")
 visible = false
 
 [node name="PauseMenu" parent="Ui" instance=ExtResource("1_geab1")]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(650, 556)
-sprite_frames = ExtResource("3_nkbmr")
-animation = &"default_oscuro"
