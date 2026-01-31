@@ -7,7 +7,8 @@
 #SONIDO - Aire acondicionado andando
 do play_sound_effect('aire_acondicionado_loop', true)
 Era de noche y el frío se colaba entre las persianas. El ambiente estaba quieto y silencioso, solo lo acompañaba el susurro del aire acondicionado que hacía poco y nada por calentar el pequeño monoambiente.
-do change_sprite('enojado')
+do change_sprite('default_oscuro')
+do change_sprite('enojado_oscuro')
 Detective: “Llévese este aire" decía, " le aseguro que no se arrepentirá” decía.
 Detective: Ya me lo voy a cruzar y se lo voy a revolear por la cabeza.
 #SONIDO - Aire acondicionado se empieza a apagar
@@ -17,19 +18,20 @@ do play_sound_effect('aire_acondicionado_muere')
 do stop_music()
 ¡Clack!
 ¡Crack!
+do change_sprite('default_oscuro')
 Detective: ...No puede ser.
 #EXPRESIÓN - Detective enojado
-do change_sprite('enojado')
+do change_sprite('enojado_oscuro')
 #MÚSICA - Comienza tono más relajado o gracioso
 do play_music('comic_sans')
 Detective: [shake rate=20 level=10]¡¿Ya se rompió!?[/shake]
 En efecto, se rompió.
 #EXPRESIÓN - Detective sigue enojado
-do change_sprite('enojado')
+do change_sprite('enojado_oscuro')
 Detective: ¡Pero todavía no terminé de pagar todas las cuotas!
 Detective: ¡Y ya no me queda un mango para comprar uno mejor!
 #EXPRESIÓN - Detective vuelve a la normalidad
-do change_sprite('default')
+do change_sprite('default_oscuro')
 do stop_music()
 do play_music('oficina_inicio')
 En ese instante, por lo menos por un momento, el deseo de que algo pasara en las inseguras calles de Buenos Aires se coló en su inconsciente.
@@ -37,28 +39,45 @@ Sacudió la cabeza.
 Era un montón, incluso para él.
 #SONIDO - Teléfono suena
 do play_sound_effect('telefono_suena')
+...
 #SONIDO - Detective contesta
 do play_sound_effect('telefono_atiende')
+do change_sprite('default_oscuro')
 Detective: ¿Sí?
+...
+do change_sprite('default_oscuro')
 Jefe: Venite para el Teatro Colón ya.
+El Detective estaba sorprendido.
+do change_sprite('default_oscuro')
 Detective: ¿El Teatro?
 ~ opciones
 - ¿Qué pasó?
-	Detective: Decime los detalles.
-	Jefe: Solo salí rajando para acá. Te vas a enterar cuando llegues.
+	do change_sprite('default_oscuro')
+	Detective: ¿Pero qué pasó?
+	Detective: ¡No me deje con la intriga Jefe!
+	...
+	do change_sprite('default_oscuro')
+	Jefe: No hay tiempo para explicaciones. ¡Solo salí rajando para acá!
 - ¿Es una cita?
+	do change_sprite('default_oscuro')
 	Detective: Si me iba a invitar a una cita por lo menos podría ser más amable.
-	Jefe: ...
-	do change_sprite('enojado')
+	do change_sprite('default_oscuro')
+	...
+	do change_sprite('enojado_oscuro')
 	Jefe: Dejá de decir pelotudeces.
-	do change_sprite('default')
+	do change_sprite('default_oscuro')
 	Jefe: Esto es serio... Mataron a alguien.
-	[i]Ups[/i]
+	...[i]Ups[/i].
 - ¡Modales!
+	do change_sprite('default_oscuro')
 	Detective: Hola jefe, ¿cómo va su día? Yo me estoy cagando de frío.
+	...
+	do change_sprite('default_oscuro')
 	Jefe: De mil colores.
-	do change_sprite('enojado')
+	do change_sprite('enojado_oscuro')
 	Jefe: ¡Vení ya!
+Un poco de mala gana, el Detective fue por su libreta.
+do change_sprite('default_oscuro')
 Detective: Bien. Ahí salgo.
 do play_sound_effect('telefono_cuelga')
 do change_scene(scene_2_path)

@@ -36,7 +36,6 @@ Jefe: ¿Estás seguro que recordás como hacer esto?
 - Sí (dale, ¡ya quiero jugar!)
 	Detective: Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
 - No (ayuda, no sé a dónde me estoy metiendo)
-	do change_sprite('default')
 	Jefe: El Testigo está asustado, así que no lo abrumes con las preguntas.
 	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b]
 	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta directa y te responden sí o no. Cortito y al pie.

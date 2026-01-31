@@ -7,6 +7,8 @@ extends Node2D
 @onready var v_box_container = %VBoxContainer
 @onready var timer_label = %TimerLabel
 @onready var timer = %Timer
+@onready var testigo_sprite = %TestigoSprite
+@onready var detective_strite = %DetectiveStrite
 
 
 #{'dificultad' : [time, cant_cards, cant_joker]}
@@ -83,6 +85,8 @@ func set_memotec_cards():
 
 
 func _on_flip_card_memotec(_id_card):
+	testigo_sprite.play('default')
+	detective_strite.play('pensando')
 	if not first_card_fliped:
 		timer.start()
 		first_card_fliped = true
@@ -90,6 +94,7 @@ func _on_flip_card_memotec(_id_card):
 
 func _on_found_pair_memotec(_id_card):
 	pairs_found += 1
+	testigo_sprite.play('sorprendido')
 	if pairs_found >= float(cant_cards)/2:
 		GameManager.winned_minigame = true
 		GameManager.finished_minigame = true
@@ -98,6 +103,8 @@ func _on_found_pair_memotec(_id_card):
 
 
 func _on_memotec_reset():
+	testigo_sprite.play('triste')
+	detective_strite.play('enojado')
 	pairs_found = 0
 
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0xg1yc707lvr"
-path="res://.godot/imported/sprite_sheet_testigo triste(1).png-d7e43e7e1a7cc768447b39d8e1df9f33.ctex"
+uid="uid://6nr53nvo3teg"
+path="res://.godot/imported/libreta 1300x700.png-42ce6f67bc97fe10f3589fe675f351bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/SpriteSheets/sprites animacion/sprite_sheet_testigo triste(1).png"
-dest_files=["res://.godot/imported/sprite_sheet_testigo triste(1).png-d7e43e7e1a7cc768447b39d8e1df9f33.ctex"]
+source_file="res://Assets/Notebook/libreta 1300x700.png"
+dest_files=["res://.godot/imported/libreta 1300x700.png-42ce6f67bc97fe10f3589fe675f351bb.ctex"]
 
 [params]
 

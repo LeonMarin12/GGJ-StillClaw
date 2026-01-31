@@ -5,3 +5,4 @@
 [resource]
 default_font = ExtResource("1_ilecb")
 default_font_size = 30
+Label/colors/font_color = Color(0.3647059, 0.1882353, 0.105882354, 0.8627451)

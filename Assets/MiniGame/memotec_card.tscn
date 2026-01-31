@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://b8tq75jwxr1rq"]
 
-[ext_resource type="Script" uid="uid://n4snk3u4vmh6" path="res://Main/MiniGame/memotec_card.gd" id="1_le1gm"]
+[ext_resource type="Script" uid="uid://n4snk3u4vmh6" path="res://Assets/MiniGame/memotec_card.gd" id="1_le1gm"]
 [ext_resource type="Texture2D" uid="uid://kwoy1ocjrg8l" path="res://Assets/Memotec/Cartas memotest.png" id="3_bahd7"]
 [ext_resource type="Texture2D" uid="uid://ck3amj53x64io" path="res://Assets/Memotec/Cartas/FormasTilmap_0000_Capa-14.png" id="3_qgq8b"]
 [ext_resource type="Texture2D" uid="uid://bjfqpakypuixf" path="res://Assets/Memotec/Joker.png" id="4_bahd7"]

@@ -95,10 +95,10 @@ Detective: Necesito que me hable sobre...
 		do GameManager.set_clue_characteristic("expresion")
 		¡Tal vez recuerde algo sobre la boca!
 		- Sonriente
-			do GameManager.set_clue_variety("sonrisa")
+			do GameManager.set_clue_variety("felicidad")
 			¿Tenía una sonrisa?
 		- Triste
-			do GameManager.set_clue_variety("triste")
+			do GameManager.set_clue_variety("tristeza")
 			¿Estaba triste?
 		- Neutral
 			do GameManager.set_clue_variety("neutral")

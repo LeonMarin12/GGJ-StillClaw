@@ -47,6 +47,10 @@ func _on_resume_button_pressed():
 	handle_pause()
 
 
+func _on_options_button_pressed():
+	pass # Replace with function body.
+
+
 func _on_main_menu_button_pressed():
 	get_tree().paused = false
 	SceneTransition.change_scene(main_menu_path)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cw8bgrcqh6wkg"]
+[gd_scene load_steps=10 format=3 uid="uid://cw8bgrcqh6wkg"]
 
 [ext_resource type="Script" uid="uid://xfiu7xx8vjvt" path="res://Main/Notebook/notebook_manager.gd" id="1_43afr"]
 [ext_resource type="PackedScene" uid="uid://c066labx2jds" path="res://Main/Masks/mask_generator.tscn" id="2_l2v51"]
 [ext_resource type="Theme" uid="uid://djibr3xu56lqn" path="res://Resources/notebook.tres" id="4_2xqo3"]
 [ext_resource type="Texture2D" uid="uid://dxp8xj60yh1i4" path="res://Assets/Notebook/BlocDeNotas.png" id="4_gcivi"]
+[ext_resource type="Texture2D" uid="uid://6nr53nvo3teg" path="res://Assets/Notebook/libreta 1300x700.png" id="5_74ocg"]
 [ext_resource type="PackedScene" uid="uid://blefob0wkn1ol" path="res://Main/Notebook/cross_out_button.tscn" id="7_a56kg"]
 
 [sub_resource type="Animation" id="Animation_2xqo3"]
@@ -95,21 +96,23 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.14509805)
 
-[node name="TextureRect" type="TextureRect" parent="NotebookLayer/Notebook"]
+[node name="TextureLibreta" type="TextureRect" parent="NotebookLayer/Notebook"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -650.0
-offset_top = -350.0
-offset_right = 650.0
-offset_bottom = 350.0
+offset_left = -750.0
+offset_top = -450.0
+offset_right = 750.0
+offset_bottom = 450.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("5_74ocg")
+expand_mode = 1
 
-[node name="MaskMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureRect"]
+[node name="MaskMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureLibreta"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -117,19 +120,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
+theme_override_constants/margin_left = 160
+theme_override_constants/margin_top = 50
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 30
 
-[node name="MaskGridContainer" type="GridContainer" parent="NotebookLayer/Notebook/TextureRect/MaskMarginContainer"]
+[node name="MaskGridContainer" type="GridContainer" parent="NotebookLayer/Notebook/TextureLibreta/MaskMarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 6
 
-[node name="CrossMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureRect"]
+[node name="CrossMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureLibreta"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -137,19 +140,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 65
-theme_override_constants/margin_top = 65
+theme_override_constants/margin_left = 195
+theme_override_constants/margin_top = 85
 theme_override_constants/margin_right = 65
 theme_override_constants/margin_bottom = 65
 
-[node name="CrossGridContainer" type="GridContainer" parent="NotebookLayer/Notebook/TextureRect/CrossMarginContainer"]
+[node name="CrossGridContainer" type="GridContainer" parent="NotebookLayer/Notebook/TextureLibreta/CrossMarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_constants/h_separation = 70
 theme_override_constants/v_separation = 70
 columns = 6
 
-[node name="CluesMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureRect"]
+[node name="CluesMarginContainer" type="MarginContainer" parent="NotebookLayer/Notebook/TextureLibreta"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
@@ -157,20 +160,24 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
-theme_override_constants/margin_right = 50
-theme_override_constants/margin_bottom = 50
+theme_override_constants/margin_left = 820
+theme_override_constants/margin_top = 110
+theme_override_constants/margin_right = 140
+theme_override_constants/margin_bottom = 70
 
-[node name="VScrollBar" type="ScrollContainer" parent="NotebookLayer/Notebook/TextureRect/CluesMarginContainer"]
+[node name="VScrollBar" type="ScrollContainer" parent="NotebookLayer/Notebook/TextureLibreta/CluesMarginContainer"]
 layout_mode = 2
 
-[node name="CluesVBoxContainer" type="VBoxContainer" parent="NotebookLayer/Notebook/TextureRect/CluesMarginContainer/VScrollBar"]
+[node name="CluesVBoxContainer" type="VBoxContainer" parent="NotebookLayer/Notebook/TextureLibreta/CluesMarginContainer/VScrollBar"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_constants/separation = 10
+theme_override_constants/separation = 20
+
+[node name="Pistas" type="Label" parent="NotebookLayer/Notebook/TextureLibreta/CluesMarginContainer/VScrollBar/CluesVBoxContainer"]
+layout_mode = 2
+text = "- Pistas:"
 
 [node name="DisplayNotebookButton" type="TextureButton" parent="NotebookLayer"]
 unique_name_in_owner = true
@@ -184,10 +191,10 @@ stretch_mode = 0
 
 [node name="ChangePageButton" type="Button" parent="NotebookLayer"]
 unique_name_in_owner = true
-offset_left = 1759.0
-offset_top = 663.0
-offset_right = 1889.0
-offset_bottom = 694.0
+offset_left = 1422.0
+offset_top = 912.0
+offset_right = 1552.0
+offset_bottom = 943.0
 text = "Cambiar pagina"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

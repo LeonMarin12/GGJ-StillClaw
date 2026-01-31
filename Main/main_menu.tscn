@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7glknau0bbwt"]
+[gd_scene load_steps=4 format=3 uid="uid://b7glknau0bbwt"]
 
 [ext_resource type="Theme" uid="uid://bvsxgceutslrd" path="res://Resources/general_theme.tres" id="1_vrvlg"]
 [ext_resource type="Script" uid="uid://b5hlkfx2m6f8y" path="res://Main/main_menu.gd" id="2_vw6x6"]
+[ext_resource type="PackedScene" uid="uid://clgdf4ttnppb8" path="res://UI/options_menu.tscn" id="3_vw6x6"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -37,17 +38,25 @@ horizontal_alignment = 1
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Start"
+text = "Empezar"
 icon_alignment = 1
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Options"
+text = "Opciones"
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Creditos"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Exit"
+text = "Salir"
 icon_alignment = 1
+
+[node name="OptionsMenu" parent="." instance=ExtResource("3_vw6x6")]
+unique_name_in_owner = true
+layout_mode = 1
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
