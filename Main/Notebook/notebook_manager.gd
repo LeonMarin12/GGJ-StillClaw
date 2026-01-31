@@ -17,8 +17,8 @@ extends Node2D
 @export var cross_scene :PackedScene
 
 
-var mask_cant :int = 32
-var length := 8
+var mask_cant :int = 24
+var length := 6
 var mask_list :Array[Mask]
 var choose_killer = false
 var chosen_killer_mask: Mask = null
@@ -26,6 +26,7 @@ var chosen_killer_mask: Mask = null
 
 func _ready():
 	if not GameManager.have_notebook:
+		print('a')
 		display_notebook_button.visible = false
 	notebook.visible = false
 	change_page_button.visible = false

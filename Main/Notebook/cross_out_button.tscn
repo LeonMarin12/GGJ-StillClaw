@@ -103,7 +103,7 @@ animations = [{
 }]
 
 [node name="CrossOutButton" type="Button"]
-custom_minimum_size = Vector2(120, 120)
+custom_minimum_size = Vector2(130, 130)
 offset_left = 4.0
 offset_top = 1.0
 offset_right = 132.0

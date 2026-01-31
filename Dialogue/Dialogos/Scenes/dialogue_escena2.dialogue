@@ -62,7 +62,7 @@ do change_sprite('pensando')
 Detective: Dígame qué pasó.
 Testigo: Y-yo estaba en mi descanso y me dieron ganas de ir al baño. Cuando estaba por entrar, u-una persona salió de golpe y me tiró al suelo.
 do change_sprite('pensando')
-Detective: Hmm...
+Detective: Hmm... 
 Testigo: Se me quedó mirando y luego salió disparado para no sé dónde.
 Testigo: Me levanté… y cuando entré al baño…¡Ahí estaba!
 #ARTE – Testigo se dobla sobre sí mismo y llora sobre sus manos.

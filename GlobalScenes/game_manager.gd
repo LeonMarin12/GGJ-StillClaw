@@ -57,10 +57,10 @@ var is_first_interrogation: bool = true
 
 # Diccionarios de pistas organizadas por categoría
 var color_clues :Dictionary[String, String] = {
-	"rojo": "era color rojizo",
-	"azul": "era color azulado",
+	"rojo": "era de color rojo",
+	"azul": "era de color azul",
 	"verde": "era color verde",
-	"amarillo": "era color amarillento"
+	"amarillo": "era de color amarillo"
 }
 
 var forma_clues :Dictionary[String, String] = {
@@ -81,7 +81,7 @@ var expresion_clues :Dictionary[String, String] = {
 	"felicidad": "mostraba una expresión de felicidad",
 	"tristeza": "mostraba una expresión de tristeza",
 	"neutral": "mostraba una expresión neutral",
-	"sin_boca": "no tenía boca"
+	"sin_boca": "le faltaba la boca"
 }
 
 var especial_clues :Dictionary[String, String] = {
@@ -150,7 +150,7 @@ func get_clue_text() -> String:
 			print("¿Pista correcta?: ", is_correct)
 			
 			if not is_correct:
-				clue_string = "no " + clue_string
+				clue_string = "estoy seguro que no " + clue_string
 			
 			print("Texto final de pista: ", clue_string)
 			
@@ -253,6 +253,40 @@ func give_first_clue() -> String:
 
 
 #endregion
+
+
+func restart():
+	# Reiniciar killer_mask y guess
+	killer_mask = null
+	killer_mask_guess = null
+	guessed_correctly = false
+	
+	# Reiniciar notebook
+	have_notebook = false
+	
+	# Reiniciar máscaras y cruces guardadas
+	saved_mask_data.clear()
+	saved_cross_states.clear()
+	saved_clues.clear()
+	saved_killer_mask_data.clear()
+	
+	# Reiniciar minijuego
+	winned_minigame = false
+	finished_minigame = false
+	
+	# Reiniciar pistas
+	is_first_interrogation = true
+	actual_difficulty = 'facil'
+	actual_clue.clear()
+	temp_difficulty = 'facil'
+	temp_characteristic = ""
+	temp_variety = ""
+	
+	# Reiniciar variables de diálogo
+	_current_dialogue_label = null
+	_current_character = ""
+	
+	print("GameManager reiniciado")
 
 
 func _ready():

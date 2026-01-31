@@ -17,6 +17,20 @@ extends Node
 
 var sound_effect_looping :bool = false
 
+
+func restart():
+	# Detener toda la música y efectos de sonido
+	music.stop()
+	sound_effect.stop()
+	sound_ui.stop()
+	dialogue.stop()
+	
+	# Reiniciar flag de loop
+	sound_effect_looping = false
+	
+	print("SoundManager reiniciado")
+
+
 #region SoundEffect
 
 func play_sound_effect(key :String, loop :bool = false):

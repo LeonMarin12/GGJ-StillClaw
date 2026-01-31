@@ -10,6 +10,18 @@ var character_position_left := Vector2(360, 600)
 var character_position_right := Vector2(1550, 600)
 var pending_sprite: String = ""
 
+
+func restart():
+	# Reiniciar personaje actual
+	current_character = ""
+	pending_sprite = ""
+	
+	# Ocultar sprite
+	character_sprite.visible = false
+	
+	print("CharacterManager reiniciado")
+
+
 func _ready():
 	DialogueManager.got_dialogue.connect(_on_got_dialogue)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
