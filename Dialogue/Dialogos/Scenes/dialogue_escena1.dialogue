@@ -68,9 +68,9 @@ Detective: ¿El Teatro?
 	do change_sprite('default_oscuro')
 	Jefe: Esto es serio... Mataron a alguien.
 	...[i]Ups[/i].
-- ¡Modales!
+- ¡¡Modales!
 	do change_sprite('default_oscuro')
-	Detective: Hola jefe, ¿cómo va su día? Yo me estoy cagando de frío.
+	Detective: Hola, Jefe, ¿cómo va su día? Yo me estoy cagando de frío.
 	...
 	do change_sprite('default_oscuro')
 	Jefe: De mil colores.

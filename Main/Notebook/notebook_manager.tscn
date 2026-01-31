@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://xfiu7xx8vjvt" path="res://Main/Notebook/notebook_manager.gd" id="1_43afr"]
 [ext_resource type="PackedScene" uid="uid://c066labx2jds" path="res://Main/Masks/mask_generator.tscn" id="2_l2v51"]
 [ext_resource type="Theme" uid="uid://djibr3xu56lqn" path="res://Resources/notebook.tres" id="4_2xqo3"]
-[ext_resource type="Texture2D" uid="uid://dxp8xj60yh1i4" path="res://Assets/Notebook/BlocDeNotas.png" id="4_gcivi"]
 [ext_resource type="Texture2D" uid="uid://6nr53nvo3teg" path="res://Assets/Notebook/libreta 1300x700.png" id="5_74ocg"]
+[ext_resource type="Texture2D" uid="uid://vkjckb2aotrh" path="res://Assets/Notebook/libreta v2.png" id="6_e4ff2"]
 [ext_resource type="PackedScene" uid="uid://blefob0wkn1ol" path="res://Main/Notebook/cross_out_button.tscn" id="7_a56kg"]
 
 [sub_resource type="Animation" id="Animation_2xqo3"]
@@ -181,11 +181,11 @@ text = "- Pistas:"
 
 [node name="DisplayNotebookButton" type="TextureButton" parent="NotebookLayer"]
 unique_name_in_owner = true
-offset_left = 1793.0
-offset_top = 747.0
-offset_right = 1893.0
-offset_bottom = 847.0
-texture_normal = ExtResource("4_gcivi")
+offset_left = 1757.0
+offset_top = 728.0
+offset_right = 1857.0
+offset_bottom = 828.0
+texture_normal = ExtResource("6_e4ff2")
 ignore_texture_size = true
 stretch_mode = 0
 

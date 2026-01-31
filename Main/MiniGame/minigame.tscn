@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://bhrtamre6cf4l"]
 
-[ext_resource type="Script" uid="uid://dy8immkj1k050" path="res://Assets/MiniGame/minigame.gd" id="1_w4pnm"]
-[ext_resource type="PackedScene" uid="uid://b8tq75jwxr1rq" path="res://Assets/MiniGame/memotec_card.tscn" id="2_w4pnm"]
+[ext_resource type="Script" uid="uid://dy8immkj1k050" path="res://Main/MiniGame/minigame.gd" id="1_w4pnm"]
+[ext_resource type="PackedScene" uid="uid://b8tq75jwxr1rq" path="res://Main/MiniGame/memotec_card.tscn" id="2_w4pnm"]
 [ext_resource type="Texture2D" uid="uid://fq5t31rpo5e3" path="res://Assets/Memotec/Cartas/FormasTilmap_0006_Capa-9.png" id="3_4pthx"]
 [ext_resource type="Texture2D" uid="uid://x0pp7k86bgl" path="res://Assets/Memotec/Cartas/FormasTilmap_0004_Capa-10.png" id="4_1rfl0"]
 [ext_resource type="Texture2D" uid="uid://frtp5cw44dmp" path="res://Assets/Memotec/Cartas/FormasTilmap_0007_Capa-8.png" id="5_vhoar"]
