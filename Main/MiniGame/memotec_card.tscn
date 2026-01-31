@@ -1,16 +1,19 @@
-[gd_scene load_steps=12 format=3 uid="uid://b8tq75jwxr1rq"]
+[gd_scene load_steps=16 format=3 uid="uid://b8tq75jwxr1rq"]
 
 [ext_resource type="Script" uid="uid://n4snk3u4vmh6" path="res://Main/MiniGame/memotec_card.gd" id="1_le1gm"]
 [ext_resource type="Texture2D" uid="uid://kwoy1ocjrg8l" path="res://Assets/Memotec/Cartas memotest.png" id="3_bahd7"]
 [ext_resource type="Texture2D" uid="uid://ck3amj53x64io" path="res://Assets/Memotec/Cartas/FormasTilmap_0000_Capa-14.png" id="3_qgq8b"]
 [ext_resource type="Texture2D" uid="uid://bjfqpakypuixf" path="res://Assets/Memotec/Joker.png" id="4_bahd7"]
+[ext_resource type="AudioStream" uid="uid://cwywie3ryy5ey" path="res://Assets/Sonido/Ambientes-SFX/3. UI/jajas_1.wav" id="5_nr0io"]
+[ext_resource type="AudioStream" uid="uid://dl7kgcj3i6y7m" path="res://Assets/Sonido/Ambientes-SFX/3. UI/UI_Carta_GiraFrente.wav" id="6_uu438"]
+[ext_resource type="AudioStream" uid="uid://bkpnpw06204gq" path="res://Assets/Sonido/Ambientes-SFX/3. UI/UI_Memo_Bien.wav" id="7_o8sdk"]
 
 [sub_resource type="Animation" id="Animation_ng8wv"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("card_back:scale")
+tracks/0/path = NodePath("Sprites/card_back:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -22,7 +25,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("card_front:scale")
+tracks/1/path = NodePath("Sprites/card_front:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -34,10 +37,22 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("card_front:visible")
+tracks/2/path = NodePath("Sprites/card_front:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/CartaGiraFrente:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -50,7 +65,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("card_back:scale")
+tracks/0/path = NodePath("Sprites/card_back:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -62,7 +77,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("card_front:scale")
+tracks/1/path = NodePath("Sprites/card_front:scale")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -74,10 +89,22 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("card_front:visible")
+tracks/2/path = NodePath("Sprites/card_front:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/CartaGiraFrente:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -90,7 +117,7 @@ length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("card_front:scale")
+tracks/0/path = NodePath("Sprites/card_front:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -100,10 +127,63 @@ tracks/0/keys = {
 "values": [Vector2(0.4, 0.4), Vector2(0.5, 0.5), Vector2(0.4, 0.4)]
 }
 
+[sub_resource type="Animation" id="Animation_8v8l8"]
+resource_name = "flip_card_2"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprites/card_back:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.25, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0.5), Vector2(0.4, 0.4)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprites/card_front:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.4, 0.4), Vector2(0, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprites/card_front:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/CartaGiraFrente:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nr0io"]
 _data = {
 &"RESET": SubResource("Animation_ng8wv"),
 &"flip_card": SubResource("Animation_le1gm"),
+&"flip_card_backwards": SubResource("Animation_8v8l8"),
 &"found_pair": SubResource("Animation_qgq8b")
 }
 
@@ -112,7 +192,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("joker_face:scale")
+tracks/0/path = NodePath("Sprites/joker_face:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -124,7 +204,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("joker_face:visible")
+tracks/1/path = NodePath("Sprites/joker_face:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -136,7 +216,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("joker_face:rotation")
+tracks/2/path = NodePath("Sprites/joker_face:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -145,6 +225,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/JokerLaugh:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_bahd7"]
 resource_name = "joker_laugh"
@@ -152,7 +244,7 @@ length = 1.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("joker_face:scale")
+tracks/0/path = NodePath("Sprites/joker_face:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -164,7 +256,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("joker_face:visible")
+tracks/1/path = NodePath("Sprites/joker_face:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -176,7 +268,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("joker_face:rotation")
+tracks/2/path = NodePath("Sprites/joker_face:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -184,6 +276,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
 "values": [-0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988, -0.5235987755982988, 0.5235988]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sounds/JokerLaugh:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.36666667),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_uu438"]
@@ -219,23 +323,40 @@ texture_normal = ExtResource("3_bahd7")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="card_front" type="Sprite2D" parent="."]
+[node name="Sprites" type="Node2D" parent="."]
+
+[node name="card_front" type="Sprite2D" parent="Sprites"]
 unique_name_in_owner = true
 visible = false
 position = Vector2(100, 100)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_qgq8b")
 
-[node name="card_back" type="Sprite2D" parent="."]
+[node name="card_back" type="Sprite2D" parent="Sprites"]
 position = Vector2(100, 100)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("3_bahd7")
 
-[node name="joker_face" type="Sprite2D" parent="."]
+[node name="joker_face" type="Sprite2D" parent="Sprites"]
 visible = false
 position = Vector2(100, 100)
 scale = Vector2(1e-05, 1e-05)
 texture = ExtResource("4_bahd7")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="JokerLaugh" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("5_nr0io")
+bus = &"SoundUI"
+
+[node name="CartaGiraFrente" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("6_uu438")
+bus = &"SoundUI"
+
+[node name="MemoBien" type="AudioStreamPlayer" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("7_o8sdk")
+bus = &"SoundUI"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true

@@ -45,7 +45,6 @@ text = "Resume"
 icon_alignment = 1
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
-visible = false
 layout_mode = 2
 text = "Main Menu"
 icon_alignment = 1

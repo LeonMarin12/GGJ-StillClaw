@@ -1,17 +1,30 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bdatg3wet40qg"]
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bdatg3wet40qg"]
 
 [ext_resource type="Texture2D" uid="uid://d1jf5xwamo3pe" path="res://Assets/Characters/SpriteSheets/sprite_sheet_detective.png" id="1_s2qtr"]
+[ext_resource type="Texture2D" uid="uid://cmhpsuhh0dqiw" path="res://Assets/Characters/SpriteSheets/sprites_escena_oficina_oscuros/sprite_sheet_detective_oficina.png" id="2_n4p2m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n4p2m"]
 atlas = ExtResource("1_s2qtr")
+region = Rect2(1460, 0, 730, 981)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87n3o"]
+atlas = ExtResource("2_n4p2m")
 region = Rect2(1460, 0, 730, 981)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j01s"]
 atlas = ExtResource("1_s2qtr")
 region = Rect2(730, 0, 730, 981)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_f80fa"]
+atlas = ExtResource("2_n4p2m")
+region = Rect2(730, 0, 730, 981)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_2o560"]
 atlas = ExtResource("1_s2qtr")
+region = Rect2(0, 0, 730, 981)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etbq3"]
+atlas = ExtResource("2_n4p2m")
 region = Rect2(0, 0, 730, 981)
 
 [resource]
@@ -26,6 +39,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_87n3o")
+}],
+"loop": true,
+"name": &"default_oscuro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5j01s")
 }],
 "loop": true,
@@ -34,9 +55,25 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_f80fa")
+}],
+"loop": true,
+"name": &"enojado_oscuro",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2o560")
 }],
 "loop": true,
 "name": &"pensando",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etbq3")
+}],
+"loop": true,
+"name": &"pensando_oscuro",
 "speed": 5.0
 }]

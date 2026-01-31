@@ -78,8 +78,8 @@ var detalles_clues :Dictionary[String, String] = {
 }
 
 var expresion_clues :Dictionary[String, String] = {
-	"felicidad": "mostraba una expresión de felicidad",
-	"tristeza": "mostraba una expresión de tristeza",
+	"sonrisa": "mostraba una expresión de felicidad",
+	"triste": "mostraba una expresión de tristeza",
 	"neutral": "mostraba una expresión neutral",
 	"sin_boca": "le faltaba la boca"
 }
@@ -150,7 +150,7 @@ func get_clue_text() -> String:
 			print("¿Pista correcta?: ", is_correct)
 			
 			if not is_correct:
-				clue_string = "estoy seguro que no " + clue_string
+				clue_string = "Estoy seguro que no " + clue_string
 			
 			print("Texto final de pista: ", clue_string)
 			
@@ -282,11 +282,22 @@ func restart():
 	temp_characteristic = ""
 	temp_variety = ""
 	
+	# Cerrar diálogos activos
+	close_active_dialogues()
+	
 	# Reiniciar variables de diálogo
 	_current_dialogue_label = null
 	_current_character = ""
 	
 	print("GameManager reiniciado")
+
+
+func close_active_dialogues():
+	# Obtener todos los balloons de diálogo activos
+	var balloons = get_tree().get_nodes_in_group("dialogue_balloon")
+	for balloon in balloons:
+		# Cerrar el balloon (queue_free lo eliminará de la escena)
+		balloon.queue_free()
 
 
 func _ready():
@@ -348,6 +359,8 @@ func save_masks_and_crosses(mask_list: Array[Mask], cross_states: Array[bool]):
 			"detalles": killer_mask.detalles,
 			"caracteristicas_especiales": killer_mask.caracteristicas_especiales.duplicate()
 		}
+	else:
+		print("WARNING en save_masks_and_crosses: killer_mask es null!")
 
 func get_saved_mask_data() -> Array[Dictionary]:
 	return saved_mask_data
@@ -377,7 +390,6 @@ func save_killer_mask(mask: Mask):
 			"detalles": mask.detalles,
 			"caracteristicas_especiales": mask.caracteristicas_especiales.duplicate()
 		}
-		print("Killer mask guardado: ", mask.forma, " ", mask.color)
 
 func check_killer_guess(guessed_mask: Mask) -> bool:
 	# Verificar contra el objeto killer_mask si existe

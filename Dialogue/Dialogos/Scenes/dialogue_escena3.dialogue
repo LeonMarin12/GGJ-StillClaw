@@ -5,32 +5,38 @@ do play_music('teatro_colon')
 if GameManager.is_first_interrogation == false:
 	#si ya tuvo este dialogo alguna vez va por aca
 	if GameManager.winned_minigame == true:
-		Testigo: S-si! ahora lo recuerdo. Recuerdo que {{get_clue_text()}}
+		Testigo: Y-yo...
+		do change_sprite('sorprendido')
+		Testigo: ¡S-si! ahora lo recuerdo. {{get_clue_text()}}
 	else:
+		Testigo: Y-yo...
+		do change_sprite('triste')
 		Testigo: N-no... no lo logro recordar... lo siento.
 	Jefe: Ya tenes al asesino?
 	- Creo que si
-		Jefe: Ya era hora, quien es entonces?
+		Jefe: Al fin, ¿quién es entonces?
 		~ choose_killer
 		do GameManager.choose_killer() #se abre la libreta y elegis una mascara
 		...
-		Jefe: Estas seguro que el asesino llevaba esa mascara?
-		- Si, totalmente seguro.
-			Jefe: Genial, entonces caso resuelto.
+		Jefe: ¿Estas seguro que el asesino llevaba esa máscara?
+		- Sí, totalmente seguro.
+			Jefe: Genial, hacé el arresto entonces.
 			do change_scene(final_scene)
 		- No, dejame revisar otra vez...
 			=> choose_killer
-		- Necesito obtener mas informacion
-			Jefe: Entonces porqué me haces perder el tiempo!
+		- Necesito obtener más informacion.
+			Jefe:...
+			do change_sprite('enojado')
+			Jefe: ¿¡Entonces por qué me haces perder el tiempo!?
 			=> opciones_1
 		=> END
-	- Aun no
-		Detective: Nesecito a hacerle unas preguntas más.
+	- Aún no.
+		Detective: Necesito hacerle unas preguntas más.
 		=> opciones_1
 else:
 	#si es la primera vez que hace este dialogo va por aca
 	do GameManager.is_first_interrogation = false
-	Detective: Bien, esto va a ser rapido.
+	Detective: Bien, esto va a ser rápido.
 	=> opciones_1
 ~ opciones_1
 Detective: Necesito que me hable sobre...
@@ -39,7 +45,7 @@ Detective: Necesito que me hable sobre...
 	do GameManager.set_clue_difficulty('facil')
 	- Color
 		do GameManager.set_clue_characteristic("color")
-		Habláme sobre el color
+		Hablame sobre el color
 		- Rojo
 			do GameManager.set_clue_variety("rojo")
 			¿Era de color rojo?
@@ -77,7 +83,7 @@ Detective: Necesito que me hable sobre...
 			¿Tenía alas?
 		- Corona
 			do GameManager.set_clue_variety("corona")
-			¿Tenía corona de plumas?
+			¿Tenía una corona de plumas?
 		- Estrella
 			do GameManager.set_clue_variety("estrella")
 			¿Tenía forma de estrella?
@@ -89,10 +95,10 @@ Detective: Necesito que me hable sobre...
 		do GameManager.set_clue_characteristic("expresion")
 		¡Tal vez recuerde algo sobre la boca!
 		- Sonriente
-			do GameManager.set_clue_variety("felicidad")
+			do GameManager.set_clue_variety("sonrisa")
 			¿Tenía una sonrisa?
 		- Triste
-			do GameManager.set_clue_variety("tristeza")
+			do GameManager.set_clue_variety("triste")
 			¿Estaba triste?
 		- Neutral
 			do GameManager.set_clue_variety("neutral")

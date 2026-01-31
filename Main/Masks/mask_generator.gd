@@ -16,7 +16,7 @@ var carac_espe_list :Dictionary = {
 	'plumas' : ['alas', 'corona'],
 	'calido' : ['rojo', 'amarillo'],
 	'poker' : ['rombos', 'corazon'],
-	'emocion' : ['tristeza', 'felicidad']
+	'emocion' : ['triste', 'sonrisa']
 }
 
 

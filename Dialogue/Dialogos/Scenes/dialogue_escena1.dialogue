@@ -1,13 +1,15 @@
 ~ start
 #ESCENA 1 - OFICINA DEL DETECTIVE
 #MÚSICA - Tema misterioso
-do play_music('oficina_inicio')
-[speed=0.3]Julio - 20XX[/speed]
-[speed=0.3]20:32 hs[/speed]
+#do play_music('oficina_inicio') #se empeiza a repoducir en el menu de inicio
+[speed=0.2]Julio - 20XX[/speed]
+[speed=0.2]20:32 hs[/speed]
 #SONIDO - Aire acondicionado andando
 do play_sound_effect('aire_acondicionado_loop', true)
 Era de noche y el frío se colaba entre las persianas. El ambiente estaba quieto y silencioso, solo lo acompañaba el susurro del aire acondicionado que hacía poco y nada por calentar el pequeño monoambiente.
-Detective: “Llévese este aire" decía, " le aseguro que no se arrepentirá” decía. Ya me lo voy a cruzar y se lo voy a revolear por la cabeza.
+do change_sprite('enojado')
+Detective: “Llévese este aire" decía, " le aseguro que no se arrepentirá” decía.
+Detective: Ya me lo voy a cruzar y se lo voy a revolear por la cabeza.
 #SONIDO - Aire acondicionado se empieza a apagar
 do stop_sound_effect_loop()
 do play_sound_effect('aire_acondicionado_muere')
@@ -28,11 +30,13 @@ Detective: ¡Pero todavía no terminé de pagar todas las cuotas!
 Detective: ¡Y ya no me queda un mango para comprar uno mejor!
 #EXPRESIÓN - Detective vuelve a la normalidad
 do change_sprite('default')
+do stop_music()
+do play_music('oficina_inicio')
 En ese instante, por lo menos por un momento, el deseo de que algo pasara en las inseguras calles de Buenos Aires se coló en su inconsciente.
-Sacudió la cabeza. Era un montón, incluso para él.
+Sacudió la cabeza.
+Era un montón, incluso para él.
 #SONIDO - Teléfono suena
 do play_sound_effect('telefono_suena')
-...
 #SONIDO - Detective contesta
 do play_sound_effect('telefono_atiende')
 Detective: ¿Sí?
@@ -44,13 +48,18 @@ Detective: ¿El Teatro?
 	Jefe: Solo salí rajando para acá. Te vas a enterar cuando llegues.
 - ¿Es una cita?
 	Detective: Si me iba a invitar a una cita por lo menos podría ser más amable.
-	Jefe: Dejá de decir pelotudeces. Esto es serio... Mataron a alguien.
+	Jefe: ...
+	do change_sprite('enojado')
+	Jefe: Dejá de decir pelotudeces.
+	do change_sprite('default')
+	Jefe: Esto es serio... Mataron a alguien.
 	[i]Ups[/i]
 - ¡Modales!
 	Detective: Hola jefe, ¿cómo va su día? Yo me estoy cagando de frío.
-	Jefe: De mil colores. ¡Vení ya!
+	Jefe: De mil colores.
+	do change_sprite('enojado')
+	Jefe: ¡Vení ya!
 Detective: Bien. Ahí salgo.
 do play_sound_effect('telefono_cuelga')
-...
 do change_scene(scene_2_path)
 => END

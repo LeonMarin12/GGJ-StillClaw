@@ -3,6 +3,14 @@ extends Control
 @onready var game_path :String = 'uid://cdombc6vbttw'
 
 
+func _ready():
+	GameManager.restart()
+	CharacterManager.restart()
+	SoundManager.restart()
+	
+	SoundManager.play_music('oficina_inicio')
+
+
 func _on_start_button_pressed():
 	SceneTransition.change_scene(game_path)
 

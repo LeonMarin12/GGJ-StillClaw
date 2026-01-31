@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cwywie3ryy5ey"
+path="res://.godot/imported/jajas_1.wav-6853153831e8fd07de04d64a279b2352.sample"
+
+[deps]
+
+source_file="res://Assets/Sonido/Ambientes-SFX/3. UI/jajas_1.wav"
+dest_files=["res://.godot/imported/jajas_1.wav-6853153831e8fd07de04d64a279b2352.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

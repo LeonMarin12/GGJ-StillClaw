@@ -5,11 +5,12 @@ do stop_music()
 do play_sound_effect('gente_hablando')
 [wait=5]
 ...
-[speed=0.1]21:23 hs[/speed]
+[speed=0.2]21:23 hs[/speed]
 #MÚSICA - Clásica de salón
 do play_music('teatro_colon')
-Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personajes victorianos siendo interrogados por la policía.
-[i]Bueno, no es lo más raro que he visto en mi vida.[/i]
+Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personas con máscaras venecianas siendo interrogadas por la policía.
+Detective: ...
+Detective: [i]Bueno, no es lo más raro que he visto en mi vida.[/i]
 #SONIDO – Teléfono suena y Detective contesta
 do play_sound_effect('telefono_suena')
 ...
@@ -18,6 +19,8 @@ Jefe: ¡Al fin! ¿Por qué tardaste tanto?
 Detective: Soy de Moreno...
 Detective: Lo que me recuerda que salió algo caro el rem-
 Jefe: En fin. Esta es la situación.
+Jefe: Me contactó un cliente anónimo que necesita que esto se resuelva de inmediato.
+Jefe: Para el final de la noche, el culpable debe estar tras las rejas.
 Jefe: El nombre de la víctima es Osvaldo González.
 Jefe: Llegó con su mujer a la fiesta a eso de las 19:00 hs.
 Jefe: Alrededor de las 20:00 se retiró al baño. A las 20:15 encontraron su cuerpo.
@@ -26,11 +29,14 @@ Jefe: Está ahí sentado. No vio la cara del asesino, pero sí su máscara.
 Jefe: Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto.
 Detective: Déjemelo a mí Jefe. 
 Detective: Yo me encargo.
-Jefe: ¡Para! ¿Estás seguro que recordás como hacer esto?
+Jefe: ¡Para!
+do change_sprite('pregunta')
+Jefe: ¿Estás seguro que recordás como hacer esto?
 ~ opciones
 - Sí (dale, ¡ya quiero jugar!)
-	Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
+	Detective: Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
 - No (ayuda, no sé a dónde me estoy metiendo)
+	do change_sprite('default')
 	Jefe: El Testigo está asustado, así que no lo abrumes con las preguntas.
 	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b]
 	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta directa y te responden sí o no. Cortito y al pie.
@@ -44,16 +50,18 @@ Detective: Pero por supuesto que tengo mi libreta.
 #ARTE: Detective vuelve a la normalidad.
 Aun así, el Detective se palmó el bolsillo para asegurarse de tener la libreta.
 do pick_notebook()
-Detective: En una página voy a tener un recuento de las [b]máscaras[/b] de los sospechosos, puedo ir tachando las que me parezcan inocentes. 
-Detective: En otra página voy a ir anotando las [b]pistas[/b] que consiga.
+Jefe: Y la dividiste bien, ¿no?
+Detective: Sí, Jefe. 
+Detective: En una página están las [b]máscaras[/b] de los sospechosos. Iré tachando las que parezcan inocentes. 
+Detective: En la otra anotaré las [b]pistas[/b] que consiga.
 Jefe: Bien. Entonces ya podés empezar.
-Jefe: Y recordá no tomar decisiones por apuro.
+Jefe: Y recordá... tomate tu tiempo. No te apures.
 #SONIDO: Teléfono se corta.
 do play_sound_effect('telefono_cuelga')
 #SONIDO: Pasos (Detective se acerca a Testigo)
-do play_sound_effect('pasos_detective', true)
 ...
-Detective: Hola, Testigo, ¿no?
+do play_sound_effect('pasos_detective', true)
+Detective: Hola, Testigo ¿no?
 do stop_sound_effect_loop()
 Testigo: S-sí, ¿usted es?
 Detective: Soy Detective, vine para ayudar con el caso.
@@ -62,7 +70,7 @@ do change_sprite('pensando')
 Detective: Dígame qué pasó.
 Testigo: Y-yo estaba en mi descanso y me dieron ganas de ir al baño. Cuando estaba por entrar, u-una persona salió de golpe y me tiró al suelo.
 do change_sprite('pensando')
-Detective: Hmm... 
+Detective: Hmm...
 Testigo: Se me quedó mirando y luego salió disparado para no sé dónde.
 Testigo: Me levanté… y cuando entré al baño…¡Ahí estaba!
 #ARTE – Testigo se dobla sobre sí mismo y llora sobre sus manos.
@@ -76,7 +84,9 @@ do change_sprite('default')
 Testigo: ...
 Testigo: Estaba vestido como un invitado. Llevaba una máscara.
 Detective: Bien, ¿recuerda algún detalle en particular?
-Testigo: Ehm... sí... recuerdo que {{give_first_clue()}}
+Testigo: Ehm...
+do change_sprite('sorprendido')
+Testigo: ¡Sí! {{give_first_clue()}}
 ###CÓDIGO: La libreta se abre automáticamente o hay algo que la señala?
 do change_sprite('pensando')
 Detective: Espere, dejeme que lo anote...
@@ -86,7 +96,7 @@ Detective: ¿Qué más recuerda?
 Testigo: Y-yo... eh...
 #ARTE: Testigo vuelve a doblarse y llorar
 do change_sprite('triste')
-Testigo: Discúlpame, ¡soy un inutil!
+Testigo: Discúlpeme, ¡soy un inutil!
 Testigo: ¡No logro recordar!
 Detective: Tranquilo, yo te voy a ayudar. Podemos empezar de a poco.
 #ARTE: Testigo vuelve a la normalidad

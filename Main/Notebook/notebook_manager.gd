@@ -26,7 +26,6 @@ var chosen_killer_mask: Mask = null
 
 func _ready():
 	if not GameManager.have_notebook:
-		print('a')
 		display_notebook_button.visible = false
 	notebook.visible = false
 	change_page_button.visible = false
@@ -55,7 +54,7 @@ func _on_add_clue(clue_text):
 	var clue = Label.new()
 	clue.add_theme_font_size_override("font_size", 30)
 	clue.add_theme_constant_override("line_spacing", -5)
-	clue.text = clue_text
+	clue.text = ('"' + clue_text + '"') #le agrego comillas
 	clue.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	clue.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	clues_v_box_container.add_child(clue)
@@ -109,10 +108,15 @@ func _create_unique_mask() -> Mask:
 
 
 func load_saved_masks_and_crosses():
+	# Limpiar la lista de máscaras antes de cargar
+	mask_list.clear()
+	
 	# Cargar los datos de las máscaras guardadas y recrearlas
 	var mask_data_list = GameManager.get_saved_mask_data()
 	var cross_states = GameManager.get_saved_cross_states()
 	var killer_mask_data = GameManager.get_saved_killer_mask_data()
+	
+	print("Cargando máscaras guardadas. Total: ", mask_data_list.size())
 	
 	for i in range(mask_data_list.size()):
 		# Recrear la máscara desde los datos guardados
@@ -143,7 +147,7 @@ func load_saved_masks_and_crosses():
 		var clue = Label.new()
 		clue.add_theme_font_size_override("font_size", 30)
 		clue.add_theme_constant_override("line_spacing", -5)
-		clue.text = clue_text
+		clue.text = ('"' + clue_text + '"') #le agrego comillas
 		clue.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		clue.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		clues_v_box_container.add_child(clue)

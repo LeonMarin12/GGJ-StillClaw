@@ -4,6 +4,7 @@ extends Control
 @onready var animation_player = %AnimationPlayer
 @onready var joker_animation_player = %JokerAnimationPlayer
 @onready var card_front = %card_front
+@onready var memo_bien_sound = %MemoBien
 
 var texture :Texture2D
 var id_card :String
@@ -80,6 +81,7 @@ func _on_found_pair_memotec(found_id_card):
 	await get_tree().create_timer(0.5).timeout #tiempo que tarda la animacion de flip
 	if found_id_card == id_card:
 		animation_player.queue("found_pair")
+		memo_bien_sound.play()
 
 
 func _on_reset_memotec():

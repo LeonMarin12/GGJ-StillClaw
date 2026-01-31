@@ -57,7 +57,7 @@ func play_dialogue_sound(letter: String, character: String = "default"):
 		if sound_key in dialogue_sound_list:
 			dialogue.stream = dialogue_sound_list[sound_key]
 			# Variar ligeramente el tono para que no sea monótono
-			dialogue.pitch_scale = randf_range(0.9, 1.1)
+			dialogue.pitch_scale = randf_range(0.8, 1.2)
 			dialogue.play()
 
 #endregion
