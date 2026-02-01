@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://da2ubmfd16syl"]
+[gd_scene load_steps=16 format=3 uid="uid://da2ubmfd16syl"]
 
 [ext_resource type="Script" uid="uid://v47y1dt0dqd3" path="res://GlobalScenes/Sound/sound_manager.gd" id="1_qsijo"]
 [ext_resource type="AudioStream" uid="uid://cowuw76j24wx6" path="res://Assets/Sonido/Musicalización/Esc. Oficina - Inicio.ogg" id="2_plcli"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://b0by7csupqus7" path="res://Assets/Sonido/Musicalización/Esc. Oficina - Comedia (creo).ogg" id="3_no7ko"]
 [ext_resource type="AudioStream" uid="uid://clhfjcu3bfqs2" path="res://Assets/Sonido/Musicalización/Esc. Teatro Colón - La Última Función.ogg" id="4_dqvhb"]
 [ext_resource type="AudioStream" uid="uid://w87wu31pekgu" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Suena.wav" id="4_w28jb"]
+[ext_resource type="AudioStream" uid="uid://bpbu484stwvqy" path="res://Assets/Sonido/Musicalización/Minijuego_MUSICA.ogg" id="5_01g12"]
 [ext_resource type="AudioStream" uid="uid://076378lodbfi" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Atiende.wav" id="5_6t3ct"]
 [ext_resource type="AudioStream" uid="uid://nwrojoipu4ym" path="res://Assets/Sonido/Ambientes-SFX/1. Oficina/SFX_Tel_Cuelga.wav" id="6_q0x2g"]
 [ext_resource type="AudioStream" uid="uid://boqw28i8t1lo0" path="res://Assets/Sonido/Diálogos/Detective.wav" id="7_0wi4s"]
@@ -20,6 +21,7 @@ process_mode = 3
 script = ExtResource("1_qsijo")
 music_list = Dictionary[String, AudioStream]({
 "comic_sans": ExtResource("3_no7ko"),
+"minijuego": ExtResource("5_01g12"),
 "oficina_inicio": ExtResource("2_plcli"),
 "teatro_colon": ExtResource("4_dqvhb")
 })

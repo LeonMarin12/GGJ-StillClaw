@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://clgdf4ttnppb8"]
+[gd_scene load_steps=4 format=3 uid="uid://clgdf4ttnppb8"]
 
 [ext_resource type="Script" uid="uid://dm5mcmy4emb66" path="res://UI/options_menu.gd" id="1_onhes"]
 [ext_resource type="Script" uid="uid://r42q4tm72e36" path="res://UI/volume_slider.gd" id="1_q6x1i"]
-[ext_resource type="Theme" uid="uid://bvsxgceutslrd" path="res://Resources/general_theme.tres" id="2_hrc50"]
 [ext_resource type="Script" uid="uid://di7311bk4thsv" path="res://UI/full_screen_control.gd" id="2_onhes"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
@@ -22,7 +21,6 @@ offset_right = 241.125
 offset_bottom = 307.3125
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("2_hrc50")
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1

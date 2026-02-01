@@ -14,7 +14,7 @@ extends Node2D
 #{'dificultad' : [time, cant_cards, cant_joker]}
 var difficulty_list :Dictionary = {
 	'facil' : [60, 10, 2],
-	'dificil' : [60, 12, 4]
+	'dificil' : [120, 12, 4]
 }
 
 var time_sec :int = 0###90
@@ -34,6 +34,7 @@ func _ready():
 	GameManager.reset_memotec.connect(_on_memotec_reset)
 	GameManager.found_pair_memotec.connect(_on_found_pair_memotec)
 	GameManager.flip_card_memotec.connect(_on_flip_card_memotec)
+	SoundManager.play_music('minijuego')
 	create_memotec_cards()
 	set_memotec_cards()
 	update_timer_label()
@@ -110,7 +111,7 @@ func _on_memotec_reset():
 
 func _on_timer_timeout():
 	if GameManager.finished_minigame: return
-	time_sec += 1 ###time_sec -= 1
+	time_sec -= 1
 	if time_sec >= 0:
 		update_timer_label()
 	else:

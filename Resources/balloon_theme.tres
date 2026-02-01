@@ -1,6 +1,5 @@
-[gd_resource type="Theme" load_steps=22 format=4 uid="uid://boefw1p2bmlf1"]
+[gd_resource type="Theme" load_steps=20 format=4 uid="uid://boefw1p2bmlf1"]
 
-[ext_resource type="Texture2D" uid="uid://byymt84enq5kt" path="res://Assets/placeholder caja texto.png" id="1_m8bgy"]
 [ext_resource type="FontFile" uid="uid://bow7urg8v57s1" path="res://Assets/Fonts/Alegreya-VariableFont_wght.ttf" id="1_u0cyx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -38,13 +37,6 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1hkt2"]
-texture = ExtResource("1_m8bgy")
-texture_margin_left = 30.0
-texture_margin_top = 15.0
-texture_margin_right = 30.0
-texture_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmqt"]
 bg_color = Color(0, 0, 0, 1)
@@ -1854,11 +1846,10 @@ content_margin_bottom = 0.0
 [resource]
 default_font = ExtResource("1_u0cyx")
 default_font_size = 30
-Button/colors/font_color = Color(0.3589576, 0.26359874, 0.20083126, 1)
+Button/colors/font_color = Color(1, 1, 1, 1)
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
-Button/styles/normal = SubResource("StyleBoxTexture_1hkt2")
 MarginContainer/constants/margin_bottom = 15
 MarginContainer/constants/margin_left = 30
 MarginContainer/constants/margin_right = 30

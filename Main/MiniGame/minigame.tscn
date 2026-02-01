@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bhrtamre6cf4l"]
+[gd_scene load_steps=16 format=3 uid="uid://bhrtamre6cf4l"]
 
 [ext_resource type="Script" uid="uid://dy8immkj1k050" path="res://Main/MiniGame/minigame.gd" id="1_w4pnm"]
 [ext_resource type="PackedScene" uid="uid://b8tq75jwxr1rq" path="res://Main/MiniGame/memotec_card.tscn" id="2_w4pnm"]
@@ -12,6 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://dminhrjlmaq3p" path="res://Assets/Memotec/Cartas/FormasTilmap_0008_Elipse-2.png" id="10_i1xu6"]
 [ext_resource type="Texture2D" uid="uid://ck3amj53x64io" path="res://Assets/Memotec/Cartas/FormasTilmap_0000_Capa-14.png" id="11_nw1h4"]
 [ext_resource type="Texture2D" uid="uid://cet5n6t6a4ac4" path="res://Assets/Fondos/colon editado.png" id="12_s8pcn"]
+[ext_resource type="Texture2D" uid="uid://bjfkcu1sketn2" path="res://Assets/Memotec/caja memotest final.png" id="13_806ej"]
 [ext_resource type="SpriteFrames" uid="uid://bdatg3wet40qg" path="res://Resources/CharacterSpriteFrames/detective.tres" id="13_eayw0"]
 [ext_resource type="SpriteFrames" uid="uid://e12l6jner31s" path="res://Resources/CharacterSpriteFrames/testigo.tres" id="14_806ej"]
 
@@ -60,6 +61,21 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.18431373)
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Memotec"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -532.0
+offset_top = -540.0
+offset_right = 532.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("13_806ej")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Memotec"]
 unique_name_in_owner = true
