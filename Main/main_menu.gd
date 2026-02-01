@@ -1,9 +1,11 @@
 extends Control
 
 @onready var game_path :String = 'uid://cdombc6vbttw'
+@onready var credits = %Credits
 
 
 func _ready():
+	credits.visible = false
 	GameManager.restart()
 	CharacterManager.restart()
 	SoundManager.restart()
@@ -21,3 +23,7 @@ func _on_exit_button_pressed():
 
 func _on_options_button_pressed():
 	OptionsMenu.visible = true
+
+
+func _on_credits_button_pressed():
+	credits.visible = true
