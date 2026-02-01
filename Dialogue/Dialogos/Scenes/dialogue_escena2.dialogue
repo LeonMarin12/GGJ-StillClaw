@@ -19,13 +19,18 @@ Jefe: ¡Al fin! ¿Por qué tardaste tanto?
 Detective: Soy de Moreno...
 Detective: Lo que me recuerda que salió algo caro el rem-
 Jefe: En fin. Esta es la situación.
-Jefe: Me contactó un cliente anónimo que necesita que esto se resuelva de inmediato.
-Jefe: Para el final de la noche, el culpable debe estar tras las rejas.
+Jefe: Me contactó un cliente anónimo que necesita que este caso se resuelva de inmediato.
+Detective: Ah, ¿sí? ¿Quién?
+Jefe: ...
+do change_sprite('enojado')
+Jefe: ¡Es anónimo por algo, tonto!
+do change_sprite('default')
+Jefe: Lo único que debe importarte es que, para el final de la noche, el culpable debe estar tras las rejas.
 Jefe: El nombre de la víctima es Osvaldo González.
 Jefe: Llegó con su mujer a la fiesta a eso de las 19:00 hs.
-Jefe: Alrededor de las 20:00 se retiró al baño. A las 20:15 encontraron su cuerpo.
-Detective: ¿Y el testigo?
-Jefe: Está ahí sentado. No vio la cara del asesino, pero sí su máscara. 
+Jefe: Alrededor de las 20:00 hs se retiró al baño. A las 20:15 hs encontraron su cuerpo.
+Detective: ¿Quién lo encontró?
+Jefe: Uno de los mozos contratados para el evento. Parece que no le vió la cara, pero sí la máscara.
 Jefe: Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto.
 Detective: Déjemelo a mí Jefe. 
 Detective: Yo me encargo.
@@ -33,21 +38,22 @@ Jefe: ¡Para!
 do change_sprite('pregunta')
 Jefe: ¿Estás seguro que recordás como hacer esto?
 ~ opciones
-- Sí (dale, ¡ya quiero jugar!)
+- Sí (Dale, ¡ya quiero jugar!)
 	Detective: Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
-- No (ayuda, no sé a dónde me estoy metiendo)
+- No (Ayuda, no sé a donde me estoy metiendo)
+	do change_sprite('default')
 	Jefe: El Testigo está asustado, así que no lo abrumes con las preguntas.
 	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b]
-	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta directa y te responden sí o no. Cortito y al pie.
+	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta y te responden sí o no. Cortito y al pie.
 	Jefe: La desventaja es que generalmente vas a tardar más en dar con la pregunta correcta.
-	Jefe: Yo te recomiendo que vayas por las [b]PREGUNTAS ESPECIALES[/b], con estas vas a sacar información más interesante. Aunque requieren cierta habilidad.
-	Jefe: A final de cuenta tus métodos no me incumben. Interrogá al testigo, econtrá al asesino, caso resuelto.
+	Jefe: Yo te recomiendo que vayas por las [b]PREGUNTAS ESPECIALES[/b], con estas vas a sacar información más interesante. Aunque requieren un razonamiento más profundo.
+	Jefe: Bueno, la verdad no me interesa los métodos que utilices. Interrogá al testigo, encontrá al asesino, resolvé el caso.
 Jefe: No te olvidaste de tu [b]libreta[/b], ¿no? La vas a necesitar para anotar todo.
 #ARTE: Detective se ve irritado.
 do change_sprite('enojado')
 Detective: Pero por supuesto que tengo mi libreta.
 #ARTE: Detective vuelve a la normalidad.
-Aun así, el Detective se palmó el bolsillo para asegurarse de tener la libreta.
+Aun así, el Detective se palmó el bolsillo para asegurarse de que tenía la libreta.
 do pick_notebook()
 Jefe: Y la dividiste bien, ¿no?
 Detective: Sí, Jefe. 
@@ -58,7 +64,7 @@ Jefe: Y recordá... tomate tu tiempo. No te apures.
 #SONIDO: Teléfono se corta.
 do play_sound_effect('telefono_cuelga')
 #SONIDO: Pasos (Detective se acerca a Testigo)
-...
+Siguiendo las órdenes de su jefe, Detective se acercó a la figura vestida de mozo.
 do play_sound_effect('pasos_detective', true)
 Detective: Hola, Testigo ¿no?
 do stop_sound_effect_loop()
@@ -66,18 +72,18 @@ Testigo: S-sí, ¿usted es?
 Detective: Soy Detective, vine para ayudar con el caso.
 #ARTE: Detective con anotador en la mano.
 do change_sprite('pensando')
-Detective: Dígame qué pasó.
+Detective: Dígame, ¿qué pasó?
 Testigo: Y-yo estaba en mi descanso y me dieron ganas de ir al baño. Cuando estaba por entrar, u-una persona salió de golpe y me tiró al suelo.
 do change_sprite('pensando')
-Detective: Hmm...
+Detective: Ajá... ¿Y?
 Testigo: Se me quedó mirando y luego salió disparado para no sé dónde.
-Testigo: Me levanté… y cuando entré al baño…¡Ahí estaba!
+Testigo: Me levanté... y cuando entré al baño... ¡Ahí estaba!
 #ARTE – Testigo se dobla sobre sí mismo y llora sobre sus manos.
 do change_sprite('triste')
 Testigo: ¡El cuerpo del señor Osvaldo!
 Testigo: ¡Fue horrible!
-Detective: Entiendo la conmoción, pero necesito que coopere conmigo para poder atrapar atrapar al asesino.
-Detective: Respire profundo, y piense ¿recuerda como se veía?
+Detective: Entiendo la conmoción, pero necesito que coopere conmigo para poder atrapar al asesino.
+Detective: Respire profundo, y piense ¿recuerda cómo se veía?
 #ARTE: Testigo vuelve a la normalidad
 do change_sprite('default')
 Testigo: ...
@@ -85,22 +91,22 @@ Testigo: Estaba vestido como un invitado. Llevaba una máscara.
 Detective: Bien, ¿recuerda algún detalle en particular?
 Testigo: Ehm...
 do change_sprite('sorprendido')
-Testigo: ¡Sí! {{give_first_clue()}}
+Testigo: ¡Sí! {{give_first_clue()}}.
 ###CÓDIGO: La libreta se abre automáticamente o hay algo que la señala?
 do change_sprite('pensando')
-Detective: Espere, déjeme que lo anote...
+Detective: Espere, lo voy a anotar...
 #ARTE: Detective abre la libreta y marca las máscaras
-Detective: Perfecto, es un comienzo.
+Detective: Muy bien.
 Detective: ¿Qué más recuerda?
 Testigo: Y-yo... eh...
 #ARTE: Testigo vuelve a doblarse y llorar
 do change_sprite('triste')
-Testigo: Discúlpeme, ¡soy un inutil!
+Testigo: Discúlpeme, ¡soy un inútil!
 Testigo: ¡No logro recordar!
-Detective: Tranquilo, yo te voy a ayudar. Podemos empezar de a poco.
+Detective: Tranquilo, yo lo voy a ayudar. Podemos empezar de a poco.
 #ARTE: Testigo vuelve a la normalidad
 do change_sprite('default')
 Testigo: E-está bien. 
-Con el objetivo de llevar una interrogación más tranquila, el Detective llevó al testigo a una zona menos concurrida para hacerle las preguntas.
+Con el objetivo de llevar una interrogación más tranquila, Detective llevó a Testigo a una zona menos concurrida para hacerle las preguntas.
 do change_scene(scene_3_path)
 => END

@@ -17,7 +17,7 @@ var difficulty_list :Dictionary = {
 	'dificil' : [120, 12, 4]
 }
 
-var time_sec :int = 0###90
+var time_sec :int = 0###120
 var cant_cards :int = 12
 var cant_joker :int = 4
 var texture_keys_list :Array[String] = ['ala', 'corazon', 'estrella', 'pluma', 'rombo', 'sol', 'gota', 'luna']

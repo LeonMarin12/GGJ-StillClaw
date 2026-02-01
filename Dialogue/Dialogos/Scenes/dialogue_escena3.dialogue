@@ -7,25 +7,25 @@ if GameManager.is_first_interrogation == false:
 	if GameManager.winned_minigame == true:
 		Testigo: Y-yo...
 		do change_sprite('sorprendido')
-		Testigo: ¡S-si! ahora lo recuerdo. {{get_clue_text()}}
+		Testigo: ¡S-sí! Ahora lo recuerdo. {{get_clue_text()}}.
 	else:
 		Testigo: Y-yo...
 		do change_sprite('triste')
-		Testigo: N-no... no lo logro recordar... lo siento.
-	Jefe: Ya tenes al asesino?
-	- Creo que si
-		Jefe: Al fin, ¿quién es entonces?
+		Testigo: N-no... no logro recordar... lo siento.
+	Jefe: ¿Ya tenés al asesino?
+	- Creo que sí...
+		Jefe: ¡Al fin! Entonces, ¿quién es?
 		~ choose_killer
 		do GameManager.choose_killer() #se abre la libreta y elegis una mascara
 		...
-		Jefe: ¿Estas seguro que el asesino llevaba esa máscara?
+		Jefe: ¿Estás seguro que el asesino llevaba esa máscara?
 		- Sí, totalmente seguro.
 			Jefe: Genial, hacé el arresto entonces.
 			do change_scene(final_scene)
-		- No, dejame revisar otra vez...
+		- Espere, déjeme revisar otra vez...
 			=> choose_killer
-		- Necesito obtener más informacion.
-			Jefe:...
+		- No, necesito más informacion.
+			Jefe: ...
 			do change_sprite('enojado')
 			Jefe: ¿¡Entonces por qué me haces perder el tiempo!?
 			=> opciones_1
@@ -45,7 +45,7 @@ Detective: Necesito que me hable sobre...
 	do GameManager.set_clue_difficulty('facil')
 	- Color
 		do GameManager.set_clue_characteristic("color")
-		Hablame sobre el color
+		Hábleme sobre el color.
 		- Rojo
 			do GameManager.set_clue_variety("rojo")
 			¿Era de color rojo?
@@ -61,7 +61,7 @@ Detective: Necesito que me hable sobre...
 		- Volver => opciones_1_1
 	- Detalles
 		do GameManager.set_clue_characteristic("detalles")
-		Hablame sobre los detalles de la mascara
+		Hábleme sobre los detalles de la mascara.
 		- Corazones
 			do GameManager.set_clue_variety("corazon")
 			¿Tenía corazones?
@@ -95,10 +95,10 @@ Detective: Necesito que me hable sobre...
 		do GameManager.set_clue_characteristic("expresion")
 		¡Tal vez recuerde algo sobre la boca!
 		- Sonriente
-			do GameManager.set_clue_variety("felicidad")
+			do GameManager.set_clue_variety("sonrisa")
 			¿Tenía una sonrisa?
 		- Triste
-			do GameManager.set_clue_variety("tristeza")
+			do GameManager.set_clue_variety("triste")
 			¿Estaba triste?
 		- Neutral
 			do GameManager.set_clue_variety("neutral")
@@ -113,7 +113,7 @@ Detective: Necesito que me hable sobre...
 	~ opciones_1_2
 	do GameManager.set_clue_difficulty('dificil')
 	do GameManager.set_clue_characteristic("especial")
-	- Color calido
+	- Color cálido
 		do GameManager.set_clue_variety("calido")
 		¿El tono de la máscara era cálido?
 	- Forma emplumada
