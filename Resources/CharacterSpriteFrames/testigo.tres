@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=53 format=3 uid="uid://e12l6jner31s"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://e12l6jner31s"]
 
 [ext_resource type="Texture2D" uid="uid://brpy6wn280nu1" path="res://Assets/Characters/SpriteSheets/sprite_sheet_testigo.png" id="1_m5ubb"]
 [ext_resource type="Texture2D" uid="uid://c2pkm14endxje" path="res://Assets/Characters/SpriteSheets/sprites animacion/sprite_sheet_testigo sorprendido.png" id="2_csgtp"]

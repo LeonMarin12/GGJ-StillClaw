@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b87cfwvl27v2p"]
+[gd_scene format=3 uid="uid://b87cfwvl27v2p"]
 
 [ext_resource type="Texture2D" uid="uid://6brofbww4qbe" path="res://Assets/libreta credito.png" id="1_ng644"]
 [ext_resource type="Script" uid="uid://r2aq5ghq0fyp" path="res://UI/credits.gd" id="1_uuuvy"]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" unique_id=1303889498]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -12,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uuuvy")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=412752099]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ng644")
 
-[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect" unique_id=454820594]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -39,33 +39,33 @@ theme_override_constants/margin_top = 70
 theme_override_constants/margin_right = 70
 theme_override_constants/margin_bottom = 60
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer" unique_id=411458015]
 layout_mode = 2
 theme_override_constants/separation = 60
 
-[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer"]
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=953702758]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2901961, 0.12156863, 0.043137256, 1)
 text = "- Créditos -
 
 ARTE
-Malena G.
-Agus
-Charo D.
+Malena Gareis
+Agustín Soto
+Charo D'Ercole
 
 MÚSICA y SONIDOS
-Agus S.
+Agus Suarez
 
 NARRATIVA
-Paloma B.
+Paloma Bujalesky
 
 PROGRAMACIÓN
-Principal: Leon M.
-Colaborador: Paloma B.
+Principal: Leon Marín
+Colaborador: Paloma Bujalesky
 "
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="TextureRect/MarginContainer/VBoxContainer"]
+[node name="Button" type="Button" parent="TextureRect/MarginContainer/VBoxContainer" unique_id=1369671092]
 layout_mode = 2
 size_flags_vertical = 8
 text = "Volver"

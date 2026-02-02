@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=153 format=3 uid="uid://tk2otiytfarx"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://tk2otiytfarx"]
 
 [ext_resource type="Texture2D" uid="uid://j3hqsyen3e58" path="res://Assets/Characters/SpriteSheets/jefe normal_0000.png" id="1_3hify"]
 [ext_resource type="Texture2D" uid="uid://gw32u57q13q2" path="res://Assets/Characters/SpriteSheets/sprites animacion/sprite_sheet_jefe.png" id="2_vgipo"]
