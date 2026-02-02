@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bo8xw561jyop3"
+path="res://.godot/imported/dialogue_finalmalo.dialogue-5198589b78680e09384b1303e5416707.tres"
+
+[deps]
+
+source_file="res://Dialogue/Dialogos/Endings/dialogue_finalmalo.dialogue"
+dest_files=["res://.godot/imported/dialogue_finalmalo.dialogue-5198589b78680e09384b1303e5416707.tres"]
+
+[params]
+
+defaults=true

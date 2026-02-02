@@ -40,7 +40,7 @@ Jefe: ¿Estás seguro que recordás como hacer esto?
 ~ opciones
 - Sí (Dale, ¡ya quiero jugar!)
 	Detective: Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
-- No (Ayuda, no sé a donde me estoy metiendo)
+- No (Recomendado si nunca jugaste)
 	do change_sprite('default')
 	Jefe: El Testigo está asustado, así que no lo abrumes con las preguntas.
 	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b]

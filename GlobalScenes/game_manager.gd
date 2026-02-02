@@ -17,6 +17,8 @@ signal add_clue(clue_text)
 @export var dialogue_scene_1: DialogueResource
 @export var dialogue_scene_2: DialogueResource
 @export var dialogue_scene_3: DialogueResource
+@export var dialogue_good_ending: DialogueResource
+@export var dialogue_bad_ending: DialogueResource
 
 @onready var scene_1_path :String = 'uid://cdombc6vbttw'
 @onready var scene_2_path :String = 'uid://h048cndi5ieo'
@@ -325,6 +327,11 @@ func _on_scene_changing(target):
 		DialogueManager.show_dialogue_balloon(dialogue_scene_2, 'start')
 	elif target == scene_3_path:
 		DialogueManager.show_dialogue_balloon(dialogue_scene_3, 'start')
+	elif target == final_scene:
+		if guessed_correctly:
+			DialogueManager.show_dialogue_balloon(dialogue_good_ending, 'start')
+		else:
+			DialogueManager.show_dialogue_balloon(dialogue_bad_ending, 'start')
 
 
 func pick_notebook():
@@ -413,7 +420,10 @@ func check_killer_guess(guessed_mask: Mask) -> bool:
 	return false
 
 
+
 #region DialogueManager Events
+
+
 
 func connect_dialogue_manager_signals():
 	# dialogue_started: Se emite cuando se crea un balloon de diálogo y el diálogo comienza

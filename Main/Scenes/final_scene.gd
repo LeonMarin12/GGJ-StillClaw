@@ -28,7 +28,7 @@ func _input(_event):
 
 
 func _on_backgorund_gui_input(event):
-	await get_tree().create_timer(3).timeout
+	await get_tree().create_timer(1).timeout
 	if (event is InputEventMouseButton) and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			go_to_main_menu()
