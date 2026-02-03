@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6brofbww4qbe"
-path="res://.godot/imported/libreta credito.png-3b3f917b888a3a49e88f2fd9f1f2d063.ctex"
+uid="uid://bmip5k41s6r4m"
+path="res://.godot/imported/libreta_normal.png-ca1f41e28747a39a5f27517c058b7da8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/libreta credito.png"
-dest_files=["res://.godot/imported/libreta credito.png-3b3f917b888a3a49e88f2fd9f1f2d063.ctex"]
+source_file="res://Assets/UI/libreta_normal.png"
+dest_files=["res://.godot/imported/libreta_normal.png-ca1f41e28747a39a5f27517c058b7da8.ctex"]
 
 [params]
 

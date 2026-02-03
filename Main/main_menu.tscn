@@ -1,8 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7glknau0bbwt"]
+[gd_scene load_steps=11 format=3 uid="uid://b7glknau0bbwt"]
 
+[ext_resource type="Theme" uid="uid://bjw00yir5fuui" path="res://Resources/menu_theme.tres" id="1_bprq1"]
 [ext_resource type="Script" uid="uid://b5hlkfx2m6f8y" path="res://Main/main_menu.gd" id="2_vw6x6"]
 [ext_resource type="PackedScene" uid="uid://b87cfwvl27v2p" path="res://UI/credits.tscn" id="3_bprq1"]
 [ext_resource type="Texture2D" uid="uid://bue6nvrft516h" path="res://Assets/Menu_inicio/FondoMenú.png" id="3_vw6x6"]
+[ext_resource type="Texture2D" uid="uid://cjsua6nx5kr3s" path="res://Assets/UI/sprite_sheet_boton papel 1.png" id="5_l00uc"]
+[ext_resource type="Script" uid="uid://belqycgngwli0" path="res://UI/MenuButtons/start_button.gd" id="6_3mueg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mueg"]
+atlas = ExtResource("5_l00uc")
+region = Rect2(0, 0, 570, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooiy0"]
+atlas = ExtResource("5_l00uc")
+region = Rect2(1140, 0, 570, 136)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7lqxf"]
+atlas = ExtResource("5_l00uc")
+region = Rect2(570, 0, 570, 136)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63ly2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mueg")
+}],
+"loop": true,
+"name": &"click",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooiy0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7lqxf")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_bprq1")
 script = ExtResource("2_vw6x6")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -22,45 +65,91 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_vw6x6")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -140.5
-offset_top = -39.0
-offset_right = 140.5
-offset_bottom = 190.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 20
-alignment = 1
+[node name="StartButton" type="AnimatedSprite2D" parent="."]
+position = Vector2(983, 530)
+rotation = -0.016189467
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_63ly2")
+script = ExtResource("6_3mueg")
 
-[node name="StartButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="StartButton" type="Button" parent="StartButton"]
+offset_left = -240.0
+offset_top = -51.0
+offset_right = 242.0
+offset_bottom = 49.0
+theme = ExtResource("1_bprq1")
 text = "Empezar"
-icon_alignment = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="OptionsButton" type="AnimatedSprite2D" parent="."]
+position = Vector2(977, 663.00006)
+rotation = 0.06932905
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_63ly2")
+script = ExtResource("6_3mueg")
+
+[node name="OptionsButton" type="Button" parent="OptionsButton"]
+offset_left = -240.0
+offset_top = -51.0
+offset_right = 242.0
+offset_bottom = 49.0
+theme = ExtResource("1_bprq1")
 text = "Opciones"
+metadata/_edit_use_anchors_ = true
 
-[node name="CreditsButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="CreditsButton" type="AnimatedSprite2D" parent="."]
+position = Vector2(968.99994, 804.00006)
+rotation = -0.04750416
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_63ly2")
+script = ExtResource("6_3mueg")
+
+[node name="CreditsButton" type="Button" parent="CreditsButton"]
+offset_left = -240.0
+offset_top = -51.0
+offset_right = 242.0
+offset_bottom = 49.0
+theme = ExtResource("1_bprq1")
 text = "Creditos"
+metadata/_edit_use_anchors_ = true
 
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
+[node name="ExitButton" type="AnimatedSprite2D" parent="."]
+position = Vector2(983.00006, 954.99994)
+rotation = 0.13054079
+scale = Vector2(0.8, 0.8)
+sprite_frames = SubResource("SpriteFrames_63ly2")
+script = ExtResource("6_3mueg")
+
+[node name="ExitButton" type="Button" parent="ExitButton"]
+offset_left = -240.0
+offset_top = -51.0
+offset_right = 242.0
+offset_bottom = 49.0
+theme = ExtResource("1_bprq1")
 text = "Salir"
-icon_alignment = 1
 
 [node name="Credits" parent="." instance=ExtResource("3_bprq1")]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="button_down" from="StartButton/StartButton" to="StartButton" method="_on_button_button_down"]
+[connection signal="button_up" from="StartButton/StartButton" to="StartButton" method="_on_button_button_up"]
+[connection signal="mouse_entered" from="StartButton/StartButton" to="StartButton" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="StartButton/StartButton" to="StartButton" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="StartButton/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="button_down" from="OptionsButton/OptionsButton" to="OptionsButton" method="_on_button_button_down"]
+[connection signal="button_up" from="OptionsButton/OptionsButton" to="OptionsButton" method="_on_button_button_up"]
+[connection signal="mouse_entered" from="OptionsButton/OptionsButton" to="OptionsButton" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="OptionsButton/OptionsButton" to="OptionsButton" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="OptionsButton/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="button_down" from="CreditsButton/CreditsButton" to="CreditsButton" method="_on_button_button_down"]
+[connection signal="button_up" from="CreditsButton/CreditsButton" to="CreditsButton" method="_on_button_button_up"]
+[connection signal="mouse_entered" from="CreditsButton/CreditsButton" to="CreditsButton" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="CreditsButton/CreditsButton" to="CreditsButton" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="CreditsButton/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="button_down" from="ExitButton/ExitButton" to="ExitButton" method="_on_button_button_down"]
+[connection signal="button_up" from="ExitButton/ExitButton" to="ExitButton" method="_on_button_button_up"]
+[connection signal="mouse_entered" from="ExitButton/ExitButton" to="ExitButton" method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="ExitButton/ExitButton" to="ExitButton" method="_on_button_mouse_exited"]
+[connection signal="pressed" from="ExitButton/ExitButton" to="." method="_on_exit_button_pressed"]

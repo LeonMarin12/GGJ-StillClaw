@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" format=3 uid="uid://bdatg3wet40qg"]
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://bdatg3wet40qg"]
 
 [ext_resource type="Texture2D" uid="uid://d1jf5xwamo3pe" path="res://Assets/Characters/SpriteSheets/sprite_sheet_detective.png" id="1_s2qtr"]
 [ext_resource type="Texture2D" uid="uid://cmhpsuhh0dqiw" path="res://Assets/Characters/SpriteSheets/sprites_escena_oficina_oscuros/sprite_sheet_detective_oficina.png" id="2_n4p2m"]

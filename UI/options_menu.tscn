@@ -1,15 +1,191 @@
-[gd_scene load_steps=4 format=3 uid="uid://clgdf4ttnppb8"]
+[gd_scene load_steps=7 format=3 uid="uid://clgdf4ttnppb8"]
 
 [ext_resource type="Script" uid="uid://dm5mcmy4emb66" path="res://UI/options_menu.gd" id="1_onhes"]
 [ext_resource type="Script" uid="uid://r42q4tm72e36" path="res://UI/volume_slider.gd" id="1_q6x1i"]
+[ext_resource type="Theme" uid="uid://7djrxk26tv12" path="res://Resources/options_theme.tres" id="2_442dt"]
+[ext_resource type="Texture2D" uid="uid://ben4yruq68erk" path="res://Assets/UI/libreta menu opciones.png" id="2_odouo"]
 [ext_resource type="Script" uid="uid://di7311bk4thsv" path="res://UI/full_screen_control.gd" id="2_onhes"]
+[ext_resource type="Theme" uid="uid://bjw00yir5fuui" path="res://Resources/menu_theme.tres" id="3_442dt"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
 process_mode = 3
 layer = 120
 script = ExtResource("1_onhes")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -284.5
+offset_top = -352.5
+offset_right = 284.5
+offset_bottom = 352.5
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_442dt")
+texture = ExtResource("2_odouo")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 60
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "OPCIONES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 90
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 90
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 60
+alignment = 1
+
+[node name="Pantalla" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label2" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "- Pantalla -"
+horizontal_alignment = 1
+
+[node name="FullScreenControl" type="CheckButton" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla"]
+layout_mode = 2
+text = "Pantalla Completa"
+script = ExtResource("2_onhes")
+
+[node name="Volumen" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "- Volumen -"
+horizontal_alignment = 1
+
+[node name="VolumenGeneral" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral"]
+layout_mode = 2
+text = "General"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HSlider" type="HSlider" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_q6x1i")
+audio_bus_name = "Master"
+
+[node name="VolumenMusica" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica"]
+layout_mode = 2
+text = "Música"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HSlider" type="HSlider" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_q6x1i")
+audio_bus_name = "Music"
+
+[node name="VolumenDialogo" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo"]
+layout_mode = 2
+text = "Dialogos"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HSlider" type="HSlider" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_q6x1i")
+audio_bus_name = "Dialogue"
+
+[node name="VolumenAmbiente" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente"]
+layout_mode = 2
+text = "Ambiente"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HSlider" type="HSlider" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_q6x1i")
+audio_bus_name = "SoundEffect"
+
+[node name="VolumenSonidoUI" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI"]
+layout_mode = 2
+text = "Sonido UI"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HSlider" type="HSlider" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource("1_q6x1i")
+audio_bus_name = "SoundUI"
+
+[node name="Back" type="Button" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volver"
+
 [node name="Panel" type="Panel" parent="."]
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -21,167 +197,12 @@ offset_right = 241.125
 offset_bottom = 307.3125
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("3_442dt")
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 1
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 51.5
-grow_horizontal = 2
-text = "OPCIONES"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="MarginContainer" type="MarginContainer" parent="Panel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 60
-theme_override_constants/margin_top = 60
-theme_override_constants/margin_right = 60
-theme_override_constants/margin_bottom = 50
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-alignment = 1
-
-[node name="Pantalla" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 10
-
-[node name="Label2" type="Label" parent="Panel/MarginContainer/VBoxContainer/Pantalla"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "- Pantalla -"
-horizontal_alignment = 1
-
-[node name="FullScreenControl" type="CheckButton" parent="Panel/MarginContainer/VBoxContainer/Pantalla"]
-layout_mode = 2
-text = "Pantalla Completa"
-script = ExtResource("2_onhes")
-
-[node name="Volumen" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 15
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Volumen"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 18
-text = "- Volumen -"
-horizontal_alignment = 1
-
-[node name="VolumenGeneral" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenGeneral"]
-layout_mode = 2
-text = "General"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenGeneral"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenGeneral/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("1_q6x1i")
-audio_bus_name = "Master"
-
-[node name="VolumenMusica" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenMusica"]
-layout_mode = 2
-text = "Música"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenMusica"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenMusica/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("1_q6x1i")
-audio_bus_name = "Music"
-
-[node name="VolumenDialogo" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenDialogo"]
-layout_mode = 2
-text = "Dialogos"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenDialogo"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenDialogo/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("1_q6x1i")
-audio_bus_name = "Dialogue"
-
-[node name="VolumenAmbiente" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente"]
-layout_mode = 2
-text = "Ambiente"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("1_q6x1i")
-audio_bus_name = "SoundEffect"
-
-[node name="VolumenSonidoUI" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI"]
-layout_mode = 2
-text = "Sonido UI"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI"]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="HSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-max_value = 1.0
-step = 0.05
-value = 1.0
-script = ExtResource("1_q6x1i")
-audio_bus_name = "SoundUI"
-
-[node name="Back" type="Button" parent="Panel/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Volver"
-
-[connection signal="toggled" from="Panel/MarginContainer/VBoxContainer/Pantalla/FullScreenControl" to="Panel/MarginContainer/VBoxContainer/Pantalla/FullScreenControl" method="_on_toggled"]
-[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/Volumen/VolumenGeneral/HBoxContainer/HSlider" to="Panel/MarginContainer/VBoxContainer/Volumen/VolumenGeneral/HBoxContainer/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/Volumen/VolumenMusica/HBoxContainer/HSlider" to="Panel/MarginContainer/VBoxContainer/Volumen/VolumenMusica/HBoxContainer/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/Volumen/VolumenDialogo/HBoxContainer/HSlider" to="Panel/MarginContainer/VBoxContainer/Volumen/VolumenDialogo/HBoxContainer/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente/HBoxContainer/HSlider" to="Panel/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente/HBoxContainer/HSlider" method="_on_value_changed"]
-[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI/HBoxContainer/HSlider" to="Panel/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI/HBoxContainer/HSlider" method="_on_value_changed"]
-[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="toggled" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla/FullScreenControl" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla/FullScreenControl" method="_on_toggled"]
+[connection signal="value_changed" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral/HBoxContainer/HSlider" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica/HBoxContainer/HSlider" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo/HBoxContainer/HSlider" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente/HBoxContainer/HSlider" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI/HBoxContainer/HSlider" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI/HBoxContainer/HSlider" method="_on_value_changed"]
+[connection signal="pressed" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Back" to="." method="_on_back_pressed"]

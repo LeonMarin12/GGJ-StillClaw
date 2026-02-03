@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccjblp40i052t"
-path="res://.godot/imported/icon256.png-055c885de9e25a481048ffa36a0667fb.ctex"
+uid="uid://dw0q7or2trm26"
+path="res://.godot/imported/opciones dialogo_hover.png-bd6f6a5dc2a2c155e7ba82a40df81875.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon256.png"
-dest_files=["res://.godot/imported/icon256.png-055c885de9e25a481048ffa36a0667fb.ctex"]
+source_file="res://Assets/UI/opciones dialogo_hover.png"
+dest_files=["res://.godot/imported/opciones dialogo_hover.png-bd6f6a5dc2a2c155e7ba82a40df81875.ctex"]
 
 [params]
 

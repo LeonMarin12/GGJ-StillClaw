@@ -1,0 +1,39 @@
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cg22itn3c4dkc"]
+
+[ext_resource type="FontFile" uid="uid://uhvhb0171m2b" path="res://Assets/Fonts/SilkRemington-SBold.ttf" id="1_dft28"]
+[ext_resource type="Texture2D" uid="uid://bri06tlc00dbs" path="res://Assets/UI/libreta_hover.png" id="2_x8mvm"]
+[ext_resource type="Texture2D" uid="uid://bmip5k41s6r4m" path="res://Assets/UI/libreta_normal.png" id="3_2gakr"]
+[ext_resource type="Texture2D" uid="uid://cov6swqqyl73w" path="res://Assets/UI/libreta_click.png" id="4_ifbtx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1ldrr"]
+texture = ExtResource("2_x8mvm")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7sr56"]
+texture = ExtResource("3_2gakr")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_niktw"]
+texture = ExtResource("4_ifbtx")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[resource]
+Button/colors/font_color = Color(0.36862746, 0.20784314, 0.105882354, 1)
+Button/colors/font_focus_color = Color(0.36862746, 0.20784314, 0.105882354, 1)
+Button/colors/font_hover_color = Color(0.36862746, 0.20784314, 0.105882354, 1)
+Button/colors/font_hover_pressed_color = Color(0.36862746, 0.20784314, 0.105882354, 1)
+Button/colors/font_outline_color = Color(0, 0, 0, 0)
+Button/colors/font_pressed_color = Color(0.36862746, 0.20784314, 0.105882354, 1)
+Button/fonts/font = ExtResource("1_dft28")
+Button/styles/hover = SubResource("StyleBoxTexture_1ldrr")
+Button/styles/normal = SubResource("StyleBoxTexture_7sr56")
+Button/styles/pressed = SubResource("StyleBoxTexture_niktw")

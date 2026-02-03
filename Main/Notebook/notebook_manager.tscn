@@ -192,10 +192,10 @@ stretch_mode = 0
 
 [node name="ChangePageButton" type="TextureButton" parent="NotebookLayer"]
 unique_name_in_owner = true
-offset_left = 1457.0
-offset_top = 880.0
-offset_right = 1550.0
-offset_bottom = 940.0
+offset_left = 1474.0
+offset_top = 905.0
+offset_right = 1567.0
+offset_bottom = 965.0
 texture_normal = ExtResource("7_74ocg")
 ignore_texture_size = true
 stretch_mode = 0

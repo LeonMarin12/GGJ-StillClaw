@@ -186,6 +186,7 @@ func _on_cross_pressed(index: int):
 			# Cerrar la libreta
 			notebook.visible = false
 			display_notebook_button.visible = true
+			change_page_button.visible = false
 			
 			#asesiono elegido
 			choose_killer = false

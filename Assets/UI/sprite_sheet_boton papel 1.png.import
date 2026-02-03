@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duy3vsa8raebq"
-path="res://.godot/imported/icon144.png-d7aaa3d2f60f63e5b814c092851039b5.ctex"
+uid="uid://cjsua6nx5kr3s"
+path="res://.godot/imported/sprite_sheet_boton papel 1.png-cfae4bf17e29346228faf8cf206b811e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/icon144.png"
-dest_files=["res://.godot/imported/icon144.png-d7aaa3d2f60f63e5b814c092851039b5.ctex"]
+source_file="res://Assets/UI/sprite_sheet_boton papel 1.png"
+dest_files=["res://.godot/imported/sprite_sheet_boton papel 1.png-cfae4bf17e29346228faf8cf206b811e.ctex"]
 
 [params]
 

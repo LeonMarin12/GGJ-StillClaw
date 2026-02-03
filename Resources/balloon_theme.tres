@@ -1,53 +1,41 @@
-[gd_resource type="Theme" load_steps=20 format=4 uid="uid://boefw1p2bmlf1"]
+[gd_resource type="Theme" load_steps=25 format=4 uid="uid://boefw1p2bmlf1"]
 
+[ext_resource type="Texture2D" uid="uid://dqukfy5pwkf40" path="res://Assets/UI/opciones dialogo_normal.png" id="1_j15fw"]
 [ext_resource type="FontFile" uid="uid://bow7urg8v57s1" path="res://Assets/Fonts/Alegreya-VariableFont_wght.ttf" id="1_u0cyx"]
+[ext_resource type="Texture2D" uid="uid://dw0q7or2trm26" path="res://Assets/UI/opciones dialogo_hover.png" id="2_dtdl4"]
+[ext_resource type="Texture2D" uid="uid://bah7sv02fc1py" path="res://Assets/UI/opciones diaologo_click.png" id="3_6bgjb"]
+[ext_resource type="Texture2D" uid="uid://bt64yce38q70u" path="res://Assets/UI/cajas dialogos.png" id="4_osctd"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.329412, 0.329412, 0.329412, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1lg84"]
+texture = ExtResource("1_j15fw")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
-bg_color = Color(0.121569, 0.121569, 0.121569, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gftd0"]
+texture = ExtResource("2_dtdl4")
+texture_margin_left = 35.0
+texture_margin_top = 15.0
+texture_margin_right = 35.0
+texture_margin_bottom = 15.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.6, 0.6, 0.6, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rqm4"]
+texture = ExtResource("1_j15fw")
+texture_margin_left = 35.0
+texture_margin_top = 15.0
+texture_margin_right = 35.0
+texture_margin_bottom = 15.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkmqt"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hevjp"]
+texture = ExtResource("3_6bgjb")
+texture_margin_left = 40.0
+texture_margin_top = 15.0
+texture_margin_right = 40.0
+texture_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5y2in"]
+texture = ExtResource("4_osctd")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
 
 [sub_resource type="Image" id="Image_gv1tn"]
 data = {
@@ -1804,7 +1792,7 @@ variation_transform = Transform2D(1, 0.2, 0, 1, 0, 0)
 base_font = SubResource("FontFile_dtdl4")
 variation_transform = Transform2D(1, 0.2, 0, 1, 0, 0)
 
-[sub_resource type="Image" id="Image_dtdl4"]
+[sub_resource type="Image" id="Image_vmg4p"]
 data = {
 "data": PackedByteArray("/////////////////////w=="),
 "format": "RGBA8",
@@ -1814,7 +1802,7 @@ data = {
 }
 
 [sub_resource type="ImageTexture" id="ImageTexture_0rqm4"]
-image = SubResource("Image_dtdl4")
+image = SubResource("Image_vmg4p")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hevjp"]
 content_margin_left = 4.0
@@ -1846,16 +1834,21 @@ content_margin_bottom = 0.0
 [resource]
 default_font = ExtResource("1_u0cyx")
 default_font_size = 30
-Button/colors/font_color = Color(1, 1, 1, 1)
-Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
-Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
-Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
+Button/colors/font_color = Color(0.4117647, 0.30980393, 0.23137255, 0.92941177)
+Button/colors/font_focus_color = Color(0.4117647, 0.30980393, 0.23137255, 0.92941177)
+Button/colors/font_hover_color = Color(0.4117647, 0.30980393, 0.23137255, 0.92941177)
+Button/colors/font_hover_pressed_color = Color(0.4117647, 0.30980393, 0.23137255, 0.92941177)
+Button/colors/font_pressed_color = Color(0.4117647, 0.30980393, 0.23137255, 0.92941177)
+Button/styles/disabled = SubResource("StyleBoxTexture_1lg84")
+Button/styles/hover = SubResource("StyleBoxTexture_gftd0")
+Button/styles/normal = SubResource("StyleBoxTexture_0rqm4")
+Button/styles/pressed = SubResource("StyleBoxTexture_hevjp")
 MarginContainer/constants/margin_bottom = 15
-MarginContainer/constants/margin_left = 30
-MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_left = 40
+MarginContainer/constants/margin_right = 40
 MarginContainer/constants/margin_top = 15
-PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
-RichTextLabel/colors/default_color = Color(1, 1, 1, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_5y2in")
+RichTextLabel/colors/default_color = Color(0.34901962, 0.18431373, 0.078431375, 0.8627451)
 RichTextLabel/colors/font_outline_color = Color(0, 0, 0, 1)
 RichTextLabel/colors/font_selected_color = Color(0, 0, 0, 0)
 RichTextLabel/colors/font_shadow_color = Color(0, 0, 0, 0)

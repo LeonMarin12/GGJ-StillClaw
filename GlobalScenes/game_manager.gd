@@ -152,7 +152,8 @@ func get_clue_text() -> String:
 			print("¿Pista correcta?: ", is_correct)
 			
 			if not is_correct:
-				clue_string = "Estoy seguro que no " + clue_string
+				clue_string = "NO " + clue_string
+			else: clue_string = "SÍ, " + clue_string
 			
 			print("Texto final de pista: ", clue_string)
 			

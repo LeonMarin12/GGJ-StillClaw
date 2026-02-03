@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byymt84enq5kt"
-path="res://.godot/imported/placeholder caja texto.png-3c45bf1ea4819925ff952e1776b8bd60.ctex"
+uid="uid://duy3vsa8raebq"
+path="res://.godot/imported/icon144.png-4a2d0eaa024986dafc6d60c5eb096c69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/placeholder caja texto.png"
-dest_files=["res://.godot/imported/placeholder caja texto.png-3c45bf1ea4819925ff952e1776b8bd60.ctex"]
+source_file="res://Assets/icon/icon144.png"
+dest_files=["res://.godot/imported/icon144.png-4a2d0eaa024986dafc6d60c5eb096c69.ctex"]
 
 [params]
 

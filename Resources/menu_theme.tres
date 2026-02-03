@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://bjw00yir5fuui"]
+
+[ext_resource type="FontFile" uid="uid://uhvhb0171m2b" path="res://Assets/Fonts/SilkRemington-SBold.ttf" id="1_4usjb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4usjb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xs7v1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f6rp6"]
+
+[resource]
+Button/colors/font_color = Color(0.3882353, 0.23137255, 0.13725491, 1)
+Button/colors/font_focus_color = Color(0.34901962, 0.20392157, 0.10980392, 1)
+Button/colors/font_hover_color = Color(0.34901962, 0.20392157, 0.10980392, 1)
+Button/colors/font_hover_pressed_color = Color(0.34901962, 0.20392157, 0.10980392, 1)
+Button/colors/font_outline_color = Color(0.36862746, 0.24705882, 0.16470589, 0)
+Button/colors/font_pressed_color = Color(0.34901962, 0.20392157, 0.10980392, 0.85882354)
+Button/font_sizes/font_size = 40
+Button/fonts/font = ExtResource("1_4usjb")
+Button/styles/hover = SubResource("StyleBoxEmpty_4usjb")
+Button/styles/normal = SubResource("StyleBoxEmpty_xs7v1")
+Button/styles/pressed = SubResource("StyleBoxEmpty_f6rp6")
