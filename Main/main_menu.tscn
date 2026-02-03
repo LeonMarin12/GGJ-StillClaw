@@ -78,7 +78,7 @@ offset_top = -51.0
 offset_right = 242.0
 offset_bottom = 49.0
 theme = ExtResource("1_bprq1")
-text = "Empezar"
+text = "btn_start"
 metadata/_edit_use_anchors_ = true
 
 [node name="OptionsButton" type="AnimatedSprite2D" parent="."]
@@ -94,7 +94,7 @@ offset_top = -51.0
 offset_right = 242.0
 offset_bottom = 49.0
 theme = ExtResource("1_bprq1")
-text = "Opciones"
+text = "btn_options"
 metadata/_edit_use_anchors_ = true
 
 [node name="CreditsButton" type="AnimatedSprite2D" parent="."]
@@ -110,7 +110,7 @@ offset_top = -51.0
 offset_right = 242.0
 offset_bottom = 49.0
 theme = ExtResource("1_bprq1")
-text = "Creditos"
+text = "btn_credits"
 metadata/_edit_use_anchors_ = true
 
 [node name="ExitButton" type="AnimatedSprite2D" parent="."]
@@ -126,7 +126,7 @@ offset_top = -51.0
 offset_right = 242.0
 offset_bottom = 49.0
 theme = ExtResource("1_bprq1")
-text = "Salir"
+text = "btn_exit"
 
 [node name="Credits" parent="." instance=ExtResource("3_bprq1")]
 unique_name_in_owner = true

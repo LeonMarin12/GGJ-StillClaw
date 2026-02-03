@@ -3,6 +3,8 @@
 [ext_resource type="FontFile" uid="uid://uhvhb0171m2b" path="res://Assets/Fonts/SilkRemington-SBold.ttf" id="1_l6rtl"]
 
 [resource]
+CheckButton/colors/button_checked_color = Color(0.34509805, 0.24313726, 0.18039216, 1)
+CheckButton/colors/button_unchecked_color = Color(0.34509805, 0.24313726, 0.18039216, 1)
 CheckButton/colors/font_color = Color(0.34612644, 0.24190041, 0.18092707, 1)
 CheckButton/fonts/font = ExtResource("1_l6rtl")
 Label/colors/font_color = Color(0.27450982, 0.105882354, 0.02745098, 1)

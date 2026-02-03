@@ -68,7 +68,7 @@ debug_2={
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://Dialogue/Dialogos/Traducciones/dialogue_escena1.es.translation")
+locale/translations=PackedStringArray("res://Translation/var_transalation.en.translation", "res://Translation/var_transalation.es.translation")
 locale/translations_pot_files=PackedStringArray("res://Dialogue/Dialogos/Scenes/dialogue_escena1.dialogue", "res://Dialogue/Dialogos/Scenes/dialogue_escena2.dialogue", "res://Dialogue/Dialogos/Scenes/dialogue_escena3.dialogue", "res://Dialogue/Dialogos/Endings/dialogue_finalbueno.dialogue", "res://Dialogue/Dialogos/Endings/dialogue_finalmalo.dialogue")
 
 [rendering]
