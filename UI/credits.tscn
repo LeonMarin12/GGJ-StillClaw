@@ -74,6 +74,6 @@ horizontal_alignment = 1
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("4_ftffn")
-text = "Volver"
+text = "btn_back"
 
 [connection signal="pressed" from="TextureRect/MarginContainer/Button" to="." method="_on_button_pressed"]

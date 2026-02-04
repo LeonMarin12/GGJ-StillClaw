@@ -48,7 +48,7 @@ theme_override_constants/margin_top = 60
 [node name="Label" type="Label" parent="TextureRect/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "OPCIONES"
+text = "lbl_options"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -69,7 +69,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Language"]
 layout_mode = 2
-text = "Lenguaje"
+text = "lbl_language"
 
 [node name="LanguageOptionButton" type="OptionButton" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Language"]
 layout_mode = 2
@@ -87,12 +87,12 @@ theme_override_constants/separation = 10
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "- Pantalla -"
+text = "lbl_screen"
 horizontal_alignment = 1
 
 [node name="FullScreenControl" type="CheckButton" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla"]
 layout_mode = 2
-text = "Pantalla Completa"
+text = "chb_full-screen"
 script = ExtResource("2_onhes")
 
 [node name="Volumen" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer"]
@@ -102,7 +102,7 @@ theme_override_constants/separation = 15
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "- Volumen -"
+text = "lbl_volume"
 horizontal_alignment = 1
 
 [node name="VolumenGeneral" type="VBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen"]
@@ -110,7 +110,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral"]
 layout_mode = 2
-text = "General"
+text = "lbl_global-volume"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenGeneral"]
 layout_mode = 2
@@ -130,7 +130,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica"]
 layout_mode = 2
-text = "Música"
+text = "lbl_music-volume"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenMusica"]
 layout_mode = 2
@@ -150,7 +150,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo"]
 layout_mode = 2
-text = "Dialogos"
+text = "lbl_dialogue-volume"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenDialogo"]
 layout_mode = 2
@@ -170,7 +170,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente"]
 layout_mode = 2
-text = "Ambiente"
+text = "lbl_ambient-volume"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenAmbiente"]
 layout_mode = 2
@@ -190,7 +190,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI"]
 layout_mode = 2
-text = "Sonido UI"
+text = "lbl_ui-volume"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Volumen/VolumenSonidoUI"]
 layout_mode = 2
@@ -208,7 +208,7 @@ audio_bus_name = "SoundUI"
 [node name="Back" type="Button" parent="TextureRect/MarginContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme = ExtResource("7_u5j4i")
-text = "Volver"
+text = "btn_back"
 
 [connection signal="item_selected" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Language/LanguageOptionButton" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Language/LanguageOptionButton" method="_on_item_selected"]
 [connection signal="toggled" from="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla/FullScreenControl" to="TextureRect/MarginContainer/MarginContainer/VBoxContainer/Pantalla/FullScreenControl" method="_on_toggled"]

@@ -178,7 +178,7 @@ theme_override_constants/separation = 20
 
 [node name="Pistas" type="Label" parent="NotebookLayer/Notebook/TextureLibreta/CluesMarginContainer/VScrollBar/CluesVBoxContainer"]
 layout_mode = 2
-text = "- Pistas:"
+text = "lbl_clues"
 
 [node name="DisplayNotebookButton" type="TextureButton" parent="NotebookLayer"]
 unique_name_in_owner = true

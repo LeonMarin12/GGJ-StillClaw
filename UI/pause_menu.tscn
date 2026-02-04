@@ -41,16 +41,16 @@ alignment = 1
 
 [node name="ResumeButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Volver"
+text = "btn_return"
 icon_alignment = 1
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Opciones"
+text = "btn_options"
 
 [node name="MainMenuButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-text = "Menú Principal"
+text = "btn_menu"
 icon_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/ResumeButton" to="." method="_on_resume_button_pressed"]

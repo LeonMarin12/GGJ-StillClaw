@@ -57,40 +57,43 @@ var _current_character: String = ""
 # Variable para controlar si es la primera vez en el interrogatorio
 var is_first_interrogation: bool = true
 
+var negative_clue :String = "negative_clue"
+var positive_clue :String = "positive_clue"
+
 # Diccionarios de pistas organizadas por categoría
 var color_clues :Dictionary[String, String] = {
-	"rojo": "era de color rojo",
-	"azul": "era de color azul",
-	"verde": "era color verde",
-	"amarillo": "era de color amarillo"
+	"rojo": "color_clues_rojo",
+	"azul": "color_clues_azul",
+	"verde": "color_clues_verde",
+	"amarillo": "color_clues_amarillo"
 }
 
 var forma_clues :Dictionary[String, String] = {
-	"luna": "tenía forma de luna",
-	"estrella": "tenía forma de estrella",
-	"alas": "tenía alas a los lados",
-	"corona": "tenía una corona de plumas"
+	"luna": "forma_clues_luna",
+	"estrella": "forma_clues_estrella",
+	"alas": "forma_clues_alas",
+	"corona": "forma_clues_corona"
 }
 
 var detalles_clues :Dictionary[String, String] = {
-	"corazon": "tenía detalles con forma de corazones",
-	"estrellas": "tenía detalles con forma de estrellas",
-	"gotas": "tenía detalles con forma de gotas",
-	"rombos": "tenía detalles con forma de rombos"
+	"corazon": "detalles_clues_corazon",
+	"estrellas": "detalles_clues_estrellas",
+	"gotas": "detalles_clues_gotas",
+	"rombos": "detalles_clues_rombos"
 }
 
 var expresion_clues :Dictionary[String, String] = {
-	"sonrisa": "mostraba una expresión de felicidad",
-	"triste": "mostraba una expresión de tristeza",
-	"neutral": "mostraba una expresión neutral",
-	"sin_boca": "le faltaba la boca"
+	"sonrisa": "expresion_clues_sonrisa",
+	"triste": "expresion_clues_triste",
+	"neutral": "expresion_clues_neutral",
+	"sin_boca": "expresion_clues_sin-boca"
 }
 
 var especial_clues :Dictionary[String, String] = {
-	'plumas': 'tenia plumas',
-	'calido': 'era un color calido',
-	'poker': 'tenia detalles de poker',
-	'emocion': 'mostraba una emocion'
+	'plumas': 'especial_clues_plumas',
+	'calido': 'especial_clues_calido',
+	'poker': 'especial_clues_poker',
+	'emocion': 'especial_clues_emocion'
 }
 
 var all_clues :Dictionary = {
@@ -152,8 +155,8 @@ func get_clue_text() -> String:
 			print("¿Pista correcta?: ", is_correct)
 			
 			if not is_correct:
-				clue_string = "NO " + clue_string
-			else: clue_string = "SÍ, " + clue_string
+				clue_string = tr(negative_clue) + tr(clue_string)
+			else: clue_string = tr(positive_clue) + tr(clue_string)
 			
 			print("Texto final de pista: ", clue_string)
 			

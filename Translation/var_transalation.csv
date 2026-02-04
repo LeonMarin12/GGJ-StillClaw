@@ -1,5 +1,47 @@
 keys,es,en
+MAIN MENU,,
 btn_start,Empezar,Start
 btn_options,Opciones,Options
 btn_credits,Creditos,Credits
 btn_exit,Salir,Exit
+NOTEBOOK,,
+lbl_clues,-Pistas:,-Clues:
+PAUSE MENU,,
+btn_menu,Menu Principal,Main Menu
+btn_return,Volver,Return
+OPTIONS MENU,,
+lbl_options,OPCIONES,OPTIONS
+lbl_language,Lenguaje,Language
+lbl_screen,- Pantalla -,- Screen -
+chb_full-screen,Pantalla Completa,Full Screen
+lbl_volume,- Volumen -,- Volume -
+lbl_global-volume,General,General
+lbl_music-volume,Musica,Music
+lbl_dialogue-volume,Dialogos,Dialogues
+lbl_ambient-volume,Ambiente,Ambient
+lbl_ui-volume,Sonido UI,UI Sound
+btn_back,Volver,Return
+,,
+CLUES,,
+negative_clue,NO ,It WAS NOT 
+positive_clue,"SÍ, ",It WAS 
+color_clues_rojo,era de color rojo,red
+color_clues_azul,era de color azul,blue
+color_clues_verde,era color verde,green
+color_clues_amarillo,era de color amarillo,yellow
+forma_clues_luna,tenía forma de luna,shaped like a moon
+forma_clues_estrella,tenía forma de estrella,shaped like a star
+forma_clues_alas,tenía alas a los lados,adorned with wings
+forma_clues_corona,tenía una corona de plumas,adorned with feathers
+detalles_clues_corazon,tenía detalles con forma de corazones,decorated with heart details
+detalles_clues_estrellas,tenía detalles con forma de estrellas,decorated with star details
+detalles_clues_gotas,tenía detalles con forma de gotas,decorated with drop details
+detalles_clues_rombos,tenía detalles con forma de rombos,decorated with diamond details
+expresion_clues_sonrisa,mostraba una expresión de felicidad,showing a happy expression
+expresion_clues_triste,mostraba una expresión de tristeza,showing a sad expression
+expresion_clues_neutral,mostraba una expresión neutral,showing a neutral expression
+expresion_clues_sin-boca,le faltaba la boca,missing a mouth
+especial_clues_plumas,tenia plumas,decked out in feathers
+especial_clues_calido,era un color calido,of a warm color
+especial_clues_poker,tenia detalles de poker,decorated with poker details
+especial_clues_emocion,mostraba una emocion,showing an emotion

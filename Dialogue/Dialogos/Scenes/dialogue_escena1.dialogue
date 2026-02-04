@@ -2,83 +2,83 @@
 #ESCENA 1 - OFICINA DEL DETECTIVE
 #MÚSICA - Tema misterioso
 #do play_music('oficina_inicio') #se empeiza a repoducir en el menu de inicio
-[speed=0.2]Julio - 20XX[/speed]
-[speed=0.2]20:32 hs[/speed]
+[speed=0.2]Julio - 20XX[/speed] [ID:SPEED_0_2_JULIO_20XX_SPEED_227AC0]
+[speed=0.2]20:32 hs[/speed] [ID:32_HS_SPEED_4150C5]
 #SONIDO - Aire acondicionado andando
 do play_sound_effect('aire_acondicionado_loop', true)
-Era de noche y el frío se colaba entre las persianas. El ambiente estaba quieto y silencioso, solo lo acompañaba el susurro del aire acondicionado que hacía poco y nada por calentar el pequeño monoambiente.
+Era de noche y el frío se colaba entre las persianas. El ambiente estaba quieto y silencioso, solo lo acompañaba el susurro del aire acondicionado que hacía poco y nada por calentar el pequeño monoambiente. [ID:ERA_DE_NOCHE_Y_EL_FR_O_SE_COLA_70A78E]
 do change_sprite('default_oscuro')
 do change_sprite('enojado_oscuro')
-Detective: “Llévese este aire" decía, " le aseguro que no se arrepentirá” decía.
-Detective: Ya me lo voy a cruzar y se lo voy a revolear por la cabeza.
+Detective: “Llévese este aire" decía, " le aseguro que no se arrepentirá” decía. [ID:LL_VESE_ESTE_AIRE_DEC_A_LE_AS_0F28CC]
+Detective: Ya me lo voy a cruzar y se lo voy a revolear por la cabeza. [ID:YA_ME_LO_VOY_A_CRUZAR_Y_SE_LO_78D4D9]
 #SONIDO - Aire acondicionado se empieza a apagar
 do stop_sound_effect_loop()
 do play_sound_effect('aire_acondicionado_muere')
 #MÚSICA - Música misteriosa se detiene
 do stop_music()
-¡Clack!
-¡Crack!
+¡Clack! [ID:CLACK_B1F818]
+¡Crack! [ID:CRACK_30AA9C]
 do change_sprite('default_oscuro')
-Detective: ...No puede ser.
+Detective: ...No puede ser. [ID:NO_PUEDE_SER_03C5D4]
 #EXPRESIÓN - Detective enojado
 do change_sprite('enojado_oscuro')
 #MÚSICA - Comienza tono más relajado o gracioso
 do play_music('comic_sans')
-Detective: [shake rate=20 level=10]¡¿Ya se rompió!?[/shake]
-En efecto, se rompió.
+Detective: [shake rate=20 level=10]¡¿Ya se rompió!?[/shake] [ID:SHAKE_RATE_20_LEVEL_10_YA_SE_CECDC4]
+En efecto, se rompió. [ID:EN_EFECTO_SE_ROMPI_925882]
 #EXPRESIÓN - Detective sigue enojado
 do change_sprite('enojado_oscuro')
-Detective: ¡Pero todavía no terminé de pagar todas las cuotas!
-Detective: ¡Y ya no me queda un mango para comprar uno mejor!
+Detective: ¡Pero todavía no terminé de pagar todas las cuotas! [ID:PERO_TODAV_A_NO_TERMIN_DE_PAG_CE1EFA]
+Detective: ¡Y ya no me queda un mango para comprar uno mejor! [ID:Y_YA_NO_ME_QUEDA_UN_MANGO_PAR_8085E2]
 #EXPRESIÓN - Detective vuelve a la normalidad
 do change_sprite('default_oscuro')
 do stop_music()
 do play_music('oficina_inicio')
-En ese instante, por lo menos por un momento, el deseo de que algo pasara en las inseguras calles de Buenos Aires se coló en su inconsciente.
-Sacudió la cabeza.
-Era un montón, incluso para él.
+En ese instante, por lo menos por un momento, el deseo de que algo pasara en las inseguras calles de Buenos Aires se coló en su inconsciente. [ID:EN_ESE_INSTANTE_POR_LO_MENOS_P_803D02]
+Sacudió la cabeza. [ID:SACUDI_LA_CABEZA_FC9778]
+Era un montón, incluso para él. [ID:ERA_UN_MONT_N_INCLUSO_PARA_L_2C0E97]
 #SONIDO - Teléfono suena
 do play_sound_effect('telefono_suena')
-...
+... [ID:_150B40]
 #SONIDO - Detective contesta
 do play_sound_effect('telefono_atiende')
 do change_sprite('default_oscuro')
-Detective: ¿Sí?
-...
+Detective: ¿Sí? [ID:S_C11520]
+... [ID:_150B40]
 do change_sprite('default_oscuro')
-Jefe: Venite para el Teatro Colón ya.
-El Detective estaba sorprendido.
+Jefe: Venite para el Teatro Colón ya. [ID:VENITE_PARA_EL_TEATRO_COL_N_YA_230D58]
+El Detective estaba sorprendido. [ID:EL_DETECTIVE_ESTABA_SORPRENDID_6192FA]
 do change_sprite('default_oscuro')
-Detective: ¿El Teatro?
+Detective: ¿El Teatro? [ID:EL_TEATRO_60FF83]
 ~ opciones
-- ¿Qué pasó?
+- ¿Qué pasó? [ID:QU_PAS_231178]
 	do change_sprite('default_oscuro')
-	Detective: ¿Pero qué pasó?
-	Detective: ¡No me deje con la intriga Jefe!
-	...
+	Detective: ¿Pero qué pasó? [ID:PERO_QU_PAS_C1230D]
+	Detective: ¡No me deje con la intriga Jefe! [ID:NO_ME_DEJE_CON_LA_INTRIGA_JEF_3FF625]
+	... [ID:_150B40]
 	do change_sprite('default_oscuro')
-	Jefe: No hay tiempo para explicaciones. ¡Solo salí rajando para acá!
-- ¿Es una cita?
+	Jefe: No hay tiempo para explicaciones. ¡Solo salí rajando para acá! [ID:NO_HAY_TIEMPO_PARA_EXPLICACION_B1EF7D]
+- ¿Es una cita? [ID:ES_UNA_CITA_6C8E3C]
 	do change_sprite('default_oscuro')
-	Detective: Si me iba a invitar a una cita por lo menos podría ser más amable.
+	Detective: Si me iba a invitar a una cita por lo menos podría ser más amable. [ID:SI_ME_IBA_A_INVITAR_A_UNA_CITA_BC26AD]
 	do change_sprite('default_oscuro')
-	...
+	... [ID:_150B40]
 	do change_sprite('enojado_oscuro')
-	Jefe: Dejá de decir pelotudeces.
+	Jefe: Dejá de decir pelotudeces. [ID:DEJ_DE_DECIR_PELOTUDECES_3F4003]
 	do change_sprite('default_oscuro')
-	Jefe: Esto es serio... Mataron a alguien.
-	...[i]Ups[/i].
-- ¡Modales!
+	Jefe: Esto es serio... Mataron a alguien. [ID:ESTO_ES_SERIO_MATARON_A_ALGUIE_09CDDC]
+	...[i]Ups[/i]. [ID:I_UPS_I_F8FD26]
+- ¡Modales! [ID:MODALES_61F8FB]
 	do change_sprite('default_oscuro')
-	Detective: Hola, Jefe, ¿cómo va su día? Yo me estoy cagando de frío.
-	...
+	Detective: Hola, Jefe, ¿cómo va su día? Yo me estoy cagando de frío. [ID:HOLA_JEFE_C_MO_VA_SU_D_A_YO_ME_FFF72B]
+	... [ID:_150B40]
 	do change_sprite('default_oscuro')
-	Jefe: De mil colores.
+	Jefe: De mil colores. [ID:DE_MIL_COLORES_2E1FFB]
 	do change_sprite('enojado_oscuro')
-	Jefe: ¡Vení ya!
-Un poco de mala gana, el Detective fue por su libreta.
+	Jefe: ¡Vení ya! [ID:VEN_YA_2C9CCD]
+Un poco de mala gana, el Detective fue por su libreta. [ID:UN_POCO_DE_MALA_GANA_EL_DETECT_4373BE]
 do change_sprite('default_oscuro')
-Detective: Bien. Ahí salgo.
+Detective: Bien. Ahí salgo. [ID:BIEN_AH_SALGO_D757D0]
 do play_sound_effect('telefono_cuelga')
 do change_scene(scene_2_path)
 => END
