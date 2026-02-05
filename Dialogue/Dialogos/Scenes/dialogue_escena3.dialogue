@@ -5,127 +5,127 @@ do play_music('teatro_colon')
 if GameManager.is_first_interrogation == false:
 	#si ya tuvo este dialogo alguna vez va por aca
 	if GameManager.winned_minigame == true:
-		Testigo: Y-yo...
+		Testigo: Y-yo... [ID:Y_YO_B7A5BD]
 		do change_sprite('sorprendido')
-		Testigo: ¡S-sí! Ahora lo recuerdo. {{get_clue_text()}}.
+		Testigo: ¡S-sí! Ahora lo recuerdo. {{get_clue_text()}}. [ID:S_S_AHORA_LO_RECUERDO_GET_CLU_0E02B6]
 	else:
-		Testigo: Y-yo...
+		Testigo: Y-yo... [ID:Y_YO_B7A5BD]
 		do change_sprite('triste')
-		Testigo: N-no... no logro recordar... lo siento.
-	Jefe: ¿Ya tenés al asesino?
-	- Creo que sí...
-		Jefe: ¡Al fin! Entonces, ¿quién es?
+		Testigo: N-no... no logro recordar... lo siento. [ID:N_NO_NO_LOGRO_RECORDAR_LO_SIEN_89AAC4]
+	Jefe: ¿Ya tenés al asesino? [ID:YA_TEN_S_AL_ASESINO_E52D6E]
+	- Creo que sí... [ID:CREO_QUE_S_11AAD6]
+		Jefe: ¡Al fin! Entonces, ¿quién es? [ID:AL_FIN_ENTONCES_QUI_N_ES_43EFBD]
 		~ choose_killer
 		do GameManager.choose_killer() #se abre la libreta y elegis una mascara
-		...
-		Jefe: ¿Estás seguro que el asesino llevaba esa máscara?
-		- Sí, totalmente seguro.
-			Jefe: Genial, hacé el arresto entonces.
+		... [ID:_944252]
+		Jefe: ¿Estás seguro que el asesino llevaba esa máscara? [ID:EST_S_SEGURO_QUE_EL_ASESINO_L_AEA4BB]
+		- Sí, totalmente seguro. [ID:S_TOTALMENTE_SEGURO_703CC9]
+			Jefe: Genial, hacé el arresto entonces. [ID:GENIAL_HAC_EL_ARRESTO_ENTONCES_52A648]
 			do change_scene(final_scene)
-		- Espere, déjeme revisar otra vez...
+		- Espere, déjeme revisar otra vez... [ID:ESPERE_D_JEME_REVISAR_OTRA_VE_2AEF39]
 			=> choose_killer
-		- No, necesito más informacion.
-			Jefe: ...
+		- No, necesito más informacion. [ID:NO_NECESITO_M_S_INFORMACION_C22593]
+			Jefe: ... [ID:_91D740]
 			do change_sprite('enojado')
-			Jefe: ¿¡Entonces por qué me haces perder el tiempo!?
+			Jefe: ¿¡Entonces por qué me haces perder el tiempo!? [ID:ENTONCES_POR_QU_ME_HACES_PERD_70EAC7]
 			=> opciones_1
 		=> END
-	- Aún no.
-		Detective: Necesito hacerle unas preguntas más.
+	- Aún no. [ID:A_N_NO_267142]
+		Detective: Necesito hacerle unas preguntas más. [ID:NECESITO_HACERLE_UNAS_PREGUNTA_E54C88]
 		=> opciones_1
 else:
 	#si es la primera vez que hace este dialogo va por aca
 	do GameManager.is_first_interrogation = false
-	Detective: Bien, esto va a ser rápido.
+	Detective: Bien, esto va a ser rápido. [ID:BIEN_ESTO_VA_A_SER_R_PIDO_59C3BB]
 	=> opciones_1
 ~ opciones_1
-Detective: Necesito que me hable sobre...
-- Preguntas básicas
+Detective: Necesito que me hable sobre... [ID:NECESITO_QUE_ME_HABLE_SOBRE_591DBB]
+- Preguntas básicas [ID:PREGUNTAS_B_SICAS_58970C]
 	~ opciones_1_1
 	do GameManager.set_clue_difficulty('facil')
-	- Color
+	- Color [ID:COLOR_C19BD8]
 		do GameManager.set_clue_characteristic("color")
-		Hábleme sobre el color.
-		- Rojo
+		Hábleme sobre el color. [ID:H_BLEME_SOBRE_EL_COLOR_32DA7E]
+		- Rojo [ID:ROJO_7C4C59]
 			do GameManager.set_clue_variety("rojo")
-			¿Era de color rojo?
-		- Azul
+			¿Era de color rojo? [ID:ERA_DE_COLOR_ROJO_4E1486]
+		- Azul [ID:AZUL_1094A1]
 			do GameManager.set_clue_variety("azul")
-			¿Era de color azul?
-		- Verde
+			¿Era de color azul? [ID:ERA_DE_COLOR_AZUL_B19684]
+		- Verde [ID:VERDE_01CE15]
 			do GameManager.set_clue_variety("verde")
-			¿Era de color verde?
-		- Amarillo
+			¿Era de color verde? [ID:ERA_DE_COLOR_VERDE_9B2299]
+		- Amarillo [ID:AMARILLO_7ABD24]
 			do GameManager.set_clue_variety("amarillo")
-			¿Era de color amarillo?
-		- Volver => opciones_1_1
-	- Detalles
+			¿Era de color amarillo? [ID:ERA_DE_COLOR_AMARILLO_1731A3]
+		- Volver [ID:VOLVER_B337ED] => opciones_1_1
+	- Detalles [ID:DETALLES_BF0254]
 		do GameManager.set_clue_characteristic("detalles")
-		Hábleme sobre los detalles de la mascara.
-		- Corazones
+		Hábleme sobre los detalles de la mascara. [ID:H_BLEME_SOBRE_LOS_DETALLES_DE_A96258]
+		- Corazones [ID:CORAZONES_620CD2]
 			do GameManager.set_clue_variety("corazon")
-			¿Tenía corazones?
-		- Estrellas
+			¿Tenía corazones? [ID:TEN_A_CORAZONES_29DFCB]
+		- Estrellas [ID:ESTRELLAS_F911B9]
 			do GameManager.set_clue_variety("estrellas")
-			¿Tenía estrellas?
-		- Rombos
+			¿Tenía estrellas? [ID:TEN_A_ESTRELLAS_16ECB6]
+		- Rombos [ID:ROMBOS_FBED26]
 			do GameManager.set_clue_variety("rombos")
-			¿Tenía rombos?
-		- Gotitas
+			¿Tenía rombos? [ID:TEN_A_ROMBOS_A69A23]
+		- Gotitas [ID:GOTITAS_9EC98A]
 			do GameManager.set_clue_variety("gotas")
-			¿Tenía gotitas?
-		- Volver => opciones_1_1
-	- Forma
+			¿Tenía gotitas? [ID:TEN_A_GOTITAS_122724]
+		- Volver [ID:VOLVER_B337ED] => opciones_1_1
+	- Forma [ID:FORMA_D3C14A]
 		do GameManager.set_clue_characteristic("forma")
-		¿Qué tal si intenta recordar alguna forma en particular?
-		- Alas
+		¿Qué tal si intenta recordar alguna forma en particular? [ID:QU_TAL_SI_INTENTA_RECORDAR_AL_D5BA6B]
+		- Alas [ID:ALAS_F21A95]
 			do GameManager.set_clue_variety("alas")
-			¿Tenía alas?
-		- Corona
+			¿Tenía alas? [ID:TEN_A_ALAS_891779]
+		- Corona [ID:CORONA_6AF13A]
 			do GameManager.set_clue_variety("corona")
-			¿Tenía una corona de plumas?
-		- Estrella
+			¿Tenía una corona de plumas? [ID:TEN_A_UNA_CORONA_DE_PLUMAS_35F0D6]
+		- Estrella [ID:ESTRELLA_334444]
 			do GameManager.set_clue_variety("estrella")
-			¿Tenía forma de estrella?
-		- Luna
+			¿Tenía forma de estrella? [ID:TEN_A_FORMA_DE_ESTRELLA_12BAD0]
+		- Luna [ID:LUNA_F780C3]
 			do GameManager.set_clue_variety("luna")
-			¿Tenía forma de luna?
-		- Volver => opciones_1_1
-	- Expresión
+			¿Tenía forma de luna? [ID:TEN_A_FORMA_DE_LUNA_C15388]
+		- Volver [ID:VOLVER_B337ED] => opciones_1_1
+	- Expresión [ID:EXPRESI_N_0EA369]
 		do GameManager.set_clue_characteristic("expresion")
-		¡Tal vez recuerde algo sobre la boca!
-		- Sonriente
+		¡Tal vez recuerde algo sobre la boca! [ID:TAL_VEZ_RECUERDE_ALGO_SOBRE_L_771750]
+		- Sonriente [ID:SONRIENTE_B70A47]
 			do GameManager.set_clue_variety("sonrisa")
-			¿Tenía una sonrisa?
-		- Triste
+			¿Tenía una sonrisa? [ID:TEN_A_UNA_SONRISA_56DC39]
+		- Triste [ID:TRISTE_79194B]
 			do GameManager.set_clue_variety("triste")
-			¿Estaba triste?
-		- Neutral
+			¿Estaba triste? [ID:ESTABA_TRISTE_95A9ED]
+		- Neutral [ID:NEUTRAL_0FCFD4]
 			do GameManager.set_clue_variety("neutral")
-			¿Era neutral?
-		- Sin boca
+			¿Era neutral? [ID:ERA_NEUTRAL_F1F568]
+		- Sin boca [ID:SIN_BOCA_765046]
 			do GameManager.set_clue_variety("sin_boca")
-			¿Le faltaba la boca?
-		- Volver => opciones_1
-	- Volver => opciones_1
-- Preguntas especiales
+			¿Le faltaba la boca? [ID:LE_FALTABA_LA_BOCA_B9FCB4]
+		- Volver [ID:VOLVER_B337ED] => opciones_1
+	- Volver [ID:VOLVER_B337ED] => opciones_1
+- Preguntas especiales [ID:PREGUNTAS_ESPECIALES_2B0FD9]
 	
 	~ opciones_1_2
 	do GameManager.set_clue_difficulty('dificil')
 	do GameManager.set_clue_characteristic("especial")
-	- Color cálido
+	- Color cálido [ID:COLOR_C_LIDO_079951]
 		do GameManager.set_clue_variety("calido")
-		¿El tono de la máscara era cálido?
-	- Forma emplumada
+		¿El tono de la máscara era cálido? [ID:EL_TONO_DE_LA_M_SCARA_ERA_C_L_F290FF]
+	- Forma emplumada [ID:FORMA_EMPLUMADA_06DB5F]
 		do GameManager.set_clue_variety("plumas")
-		¿Tenía plumas?
-	- Detalles de poker
+		¿Tenía plumas? [ID:TEN_A_PLUMAS_4E7D6B]
+	- Detalles de poker [ID:DETALLES_DE_POKER_C793CA]
 		do GameManager.set_clue_variety("poker")
-		¿Tenía algún detalle de poker?
-	- Boca con emocion
+		¿Tenía algún detalle de poker? [ID:TEN_A_ALG_N_DETALLE_DE_POKER_4CF56E]
+	- Boca con emocion [ID:BOCA_CON_EMOCION_6D1BD7]
 		do GameManager.set_clue_variety("emocion")
-		¿Mostraba alguna emoción?
-	- Volver => opciones_1
-...
+		¿Mostraba alguna emoción? [ID:MOSTRABA_ALGUNA_EMOCI_N_28F264]
+	- Volver [ID:VOLVER_B337ED] => opciones_1
+... [ID:_944252]
 do GameManager.start_minigame()
 => END

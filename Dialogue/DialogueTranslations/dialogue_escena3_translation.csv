@@ -1,0 +1,70 @@
+keys,es,en
+Y_YO_B7A5BD,Y-yo...,I…
+S_S_AHORA_LO_RECUERDO_GET_CLU_0E02B6,¡S-sí! Ahora lo recuerdo. {{get_clue_text()}}.,Y-yes! I remember. {{get_clue_text()}}.
+N_NO_NO_LOGRO_RECORDAR_LO_SIEN_89AAC4,N-no... no logro recordar... lo siento.,"N-no… sorry, I don't remember. "
+YA_TEN_S_AL_ASESINO_E52D6E,¿Ya tenés al asesino?,Do you know who did it?
+AL_FIN_ENTONCES_QUI_N_ES_43EFBD,"¡Al fin! Entonces, ¿quién es?","Finally! So, who is it?"
+_944252,...,…
+EST_S_SEGURO_QUE_EL_ASESINO_L_AEA4BB,¿Estás seguro que el asesino llevaba esa máscara?,Are you sure the murderer was wearing that mask?
+GENIAL_HAC_EL_ARRESTO_ENTONCES_52A648,"Genial, hacé el arresto entonces.","Great, make the arrest then."
+S_TOTALMENTE_SEGURO_703CC9,"Sí, totalmente seguro.","Yes, I am sure."
+ESPERE_D_JEME_REVISAR_OTRA_VE_2AEF39,"Espere, déjeme revisar otra vez...","Wait, I need to check again..."
+_91D740,...,…
+ENTONCES_POR_QU_ME_HACES_PERD_70EAC7,¿¡Entonces por qué me haces perder el tiempo!?,Then what are you doing wasting my time!?
+NO_NECESITO_M_S_INFORMACION_C22593,"No, necesito más informacion.","No, I need more info."
+CREO_QUE_S_11AAD6,Creo que sí...,I think so…
+NECESITO_HACERLE_UNAS_PREGUNTA_E54C88,Necesito hacerle unas preguntas más.,I need to make him a couple more questions.
+A_N_NO_267142,Aún no.,Not yet.
+BIEN_ESTO_VA_A_SER_R_PIDO_59C3BB,"Bien, esto va a ser rápido.","Great, this will be quicker than I thought."
+NECESITO_QUE_ME_HABLE_SOBRE_591DBB,Necesito que me hable sobre...,I need you to tell me about…
+H_BLEME_SOBRE_EL_COLOR_32DA7E,Hábleme sobre el color.,Tell me about the color.
+ERA_DE_COLOR_ROJO_4E1486,¿Era de color rojo?,Was it red?
+ROJO_7C4C59,Rojo,Red
+ERA_DE_COLOR_AZUL_B19684,¿Era de color azul?,Was it blue?
+AZUL_1094A1,Azul,Blue
+ERA_DE_COLOR_VERDE_9B2299,¿Era de color verde?,Was it green?
+VERDE_01CE15,Verde,Green
+ERA_DE_COLOR_AMARILLO_1731A3,¿Era de color amarillo?,Was it yellow?
+AMARILLO_7ABD24,Amarillo,Yellow
+VOLVER_B337ED,Volver,Go back
+COLOR_C19BD8,Color,Color
+H_BLEME_SOBRE_LOS_DETALLES_DE_A96258,Hábleme sobre los detalles de la mascara.,Tell me about the mask's details.
+TEN_A_CORAZONES_29DFCB,¿Tenía corazones?,Was it decorated with heart details?
+CORAZONES_620CD2,Corazones,Hearts
+TEN_A_ESTRELLAS_16ECB6,¿Tenía estrellas?,Was it decorated with star details?
+ESTRELLAS_F911B9,Estrellas,Stars
+TEN_A_ROMBOS_A69A23,¿Tenía rombos?,Was it decorated with diamond details?
+ROMBOS_FBED26,Rombos,Diamonds
+TEN_A_GOTITAS_122724,¿Tenía gotitas?,Was it decorated with drop details?
+GOTITAS_9EC98A,Gotitas,Drops
+DETALLES_BF0254,Detalles,Details
+QU_TAL_SI_INTENTA_RECORDAR_AL_D5BA6B,¿Qué tal si intenta recordar alguna forma en particular?,How about you try to remember the shape?
+TEN_A_ALAS_891779,¿Tenía alas?,Was it adorned with wings?
+ALAS_F21A95,Alas,Wings
+TEN_A_UNA_CORONA_DE_PLUMAS_35F0D6,¿Tenía una corona de plumas?,Was it adorned with a feather crown?
+CORONA_6AF13A,Corona,Crown
+TEN_A_FORMA_DE_ESTRELLA_12BAD0,¿Tenía forma de estrella?,Was it shaped like a star?
+ESTRELLA_334444,Estrella,Stars
+TEN_A_FORMA_DE_LUNA_C15388,¿Tenía forma de luna?,Was it shaped like a moon?
+LUNA_F780C3,Luna,Moon
+FORMA_D3C14A,Forma,Shape
+TAL_VEZ_RECUERDE_ALGO_SOBRE_L_771750,¡Tal vez recuerde algo sobre la boca!,Maybe you remember something about the mouth!
+TEN_A_UNA_SONRISA_56DC39,¿Tenía una sonrisa?,Was it showing a happy expression?
+SONRIENTE_B70A47,Sonriente,Smile
+ESTABA_TRISTE_95A9ED,¿Estaba triste?,Was it showing a sad expression?
+TRISTE_79194B,Triste,Sad
+ERA_NEUTRAL_F1F568,¿Era neutral?,Was it showing a neutral expression?
+NEUTRAL_0FCFD4,Neutral,Neutral
+LE_FALTABA_LA_BOCA_B9FCB4,¿Le faltaba la boca?,Was it missing a mouth?
+SIN_BOCA_765046,Sin boca,No mouth
+EXPRESI_N_0EA369,Expresión,Expression
+PREGUNTAS_B_SICAS_58970C,Preguntas básicas,Basic questions
+EL_TONO_DE_LA_M_SCARA_ERA_C_L_F290FF,¿El tono de la máscara era cálido?,Was the color tone of the mask warm?
+COLOR_C_LIDO_079951,Color cálido,Warm color
+TEN_A_PLUMAS_4E7D6B,¿Tenía plumas?,Was the mask decked out in feathers?
+FORMA_EMPLUMADA_06DB5F,Forma emplumada,Feathers
+TEN_A_ALG_N_DETALLE_DE_POKER_4CF56E,¿Tenía algún detalle de poker?,Was the mask decorated with poker details?
+DETALLES_DE_POKER_C793CA,Detalles de poker,Poker details
+MOSTRABA_ALGUNA_EMOCI_N_28F264,¿Mostraba alguna emoción?,Was the mouth showing an emotion?
+BOCA_CON_EMOCION_6D1BD7,Boca con emocion,Emotion
+PREGUNTAS_ESPECIALES_2B0FD9,Preguntas especiales,Special questions

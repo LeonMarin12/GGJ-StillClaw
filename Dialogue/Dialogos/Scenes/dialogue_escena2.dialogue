@@ -3,110 +3,110 @@ do stop_music()
 #ESCENA 2 - EL TEATRO
 #SONIDO - Murmullos, sonido de gente en multitud de fondo
 do play_sound_effect('gente_hablando')
-[wait=5]
-...
-[speed=0.2]21:23 hs[/speed]
+[wait=5] [ID:WAIT_5_A926BC]
+... [ID:_98D979]
+[speed=0.2]21:23 hs[/speed] [ID:23_HS_SPEED_BA9F8A]
 #MÚSICA - Clásica de salón
 do play_music('teatro_colon')
-Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personas con máscaras venecianas siendo interrogadas por la policía.
-Detective: ...
-Detective: [i]Bueno, no es lo más raro que he visto en mi vida.[/i]
+Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personas con máscaras venecianas siendo interrogadas por la policía. [ID:AL_ENTRAR_AL_OSTENTOSO_SAL_N_E_A7A263]
+Detective: ... [ID:_472068]
+Detective: [i]Bueno, no es lo más raro que he visto en mi vida.[/i] [ID:I_BUENO_NO_ES_LO_M_S_RARO_QUE_1A5389]
 #SONIDO – Teléfono suena y Detective contesta
 do play_sound_effect('telefono_suena')
-...
+... [ID:_98D979]
 do play_sound_effect('telefono_atiende')
-Jefe: ¡Al fin! ¿Por qué tardaste tanto?
-Detective: Soy de Moreno...
-Detective: Lo que me recuerda que salió algo caro el rem-
-Jefe: En fin. Esta es la situación.
-Jefe: Me contactó un cliente anónimo que necesita que este caso se resuelva de inmediato.
-Detective: Ah, ¿sí? ¿Quién?
-Jefe: ...
+Jefe: ¡Al fin! ¿Por qué tardaste tanto? [ID:AL_FIN_POR_QU_TARDASTE_TANTO_ADCD67]
+Detective: Soy de Moreno... [ID:SOY_DE_MORENO_B29847]
+Detective: Lo que me recuerda que salió algo caro el rem- [ID:LO_QUE_ME_RECUERDA_QUE_SALI_AL_D753BA]
+Jefe: En fin. Esta es la situación. [ID:EN_FIN_ESTA_ES_LA_SITUACI_N_95DCAC]
+Jefe: Me contactó un cliente anónimo que necesita que este caso se resuelva de inmediato. [ID:ME_CONTACT_UN_CLIENTE_AN_NIMO_DB1F4F]
+Detective: Ah, ¿sí? ¿Quién? [ID:AH_S_QUI_N_174127]
+Jefe: ... [ID:_472068]
 do change_sprite('enojado')
-Jefe: ¡Es anónimo por algo, tonto!
+Jefe: ¡Es anónimo por algo, tonto! [ID:ES_AN_NIMO_POR_ALGO_TONTO_329D7C]
 do change_sprite('default')
-Jefe: Lo único que debe importarte es que, para el final de la noche, el culpable debe estar tras las rejas.
-Jefe: El nombre de la víctima es Osvaldo González.
-Jefe: Llegó con su mujer a la fiesta a eso de las 19:00 hs.
-Jefe: Alrededor de las 20:00 hs se retiró al baño. A las 20:15 hs encontraron su cuerpo.
-Detective: ¿Quién lo encontró?
-Jefe: Uno de los mozos contratados para el evento. Parece que no le vió la cara, pero sí la máscara.
-Jefe: Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto.
-Detective: Déjemelo a mí Jefe. 
-Detective: Yo me encargo.
-Jefe: ¡Para!
+Jefe: Lo único que debe importarte es que, para el final de la noche, el culpable debe estar tras las rejas. [ID:LO_NICO_QUE_DEBE_IMPORTARTE_ES_F6A83D]
+Jefe: El nombre de la víctima es Osvaldo González. [ID:EL_NOMBRE_DE_LA_V_CTIMA_ES_OSV_1EB1BF]
+Jefe: Llegó con su mujer a la fiesta a eso de las 19:00 hs. [ID:LLEG_CON_SU_MUJER_A_LA_FIESTA_2770E0]
+Jefe: Alrededor de las 20:00 hs se retiró al baño. A las 20:15 hs encontraron su cuerpo. [ID:ALREDEDOR_DE_LAS_20_00_HS_SE_R_35A6E4]
+Detective: ¿Quién lo encontró? [ID:QUI_N_LO_ENCONTR_8E7940]
+Jefe: Uno de los mozos contratados para el evento. Parece que no le vió la cara, pero sí la máscara. [ID:UNO_DE_LOS_MOZOS_CONTRATADOS_P_262A11]
+Jefe: Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto. [ID:EST_ALGO_CONMOCIONADO_PERO_TEN_D79B5F]
+Detective: Déjemelo a mí Jefe. [ID:D_JEMELO_A_M_JEFE_86015A] 
+Detective: Yo me encargo. [ID:YO_ME_ENCARGO_18EAF0]
+Jefe: ¡Para! [ID:PARA_541A97]
 do change_sprite('pregunta')
-Jefe: ¿Estás seguro que recordás como hacer esto?
+Jefe: ¿Estás seguro que recordás como hacer esto? [ID:EST_S_SEGURO_QUE_RECORD_S_COM_877897]
 ~ opciones
-- Sí (Dale, ¡ya quiero jugar!)
-	Detective: Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?
-- No (Recomendado si nunca jugaste)
+- Sí (Dale, ¡ya quiero jugar!) [ID:S_DALE_YA_QUIERO_JUGAR_75436E]
+	Detective: Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo? [ID:QU_PREGUNTA_JEFE_C_MO_NO_VOY_A_7E1A78]
+- No (Recomendado si nunca jugaste) [ID:NO_RECOMENDADO_SI_NUNCA_JUGAS_41ADAD]
 	do change_sprite('default')
-	Jefe: El Testigo está asustado, así que no lo abrumes con las preguntas.
-	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b]
-	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta y te responden sí o no. Cortito y al pie.
-	Jefe: La desventaja es que generalmente vas a tardar más en dar con la pregunta correcta.
-	Jefe: Yo te recomiendo que vayas por las [b]PREGUNTAS ESPECIALES[/b], con estas vas a sacar información más interesante. Aunque requieren un razonamiento más profundo.
-	Jefe: Bueno, la verdad no me interesa los métodos que utilices. Interrogá al testigo, encontrá al asesino, resolvé el caso.
-Jefe: No te olvidaste de tu [b]libreta[/b], ¿no? La vas a necesitar para anotar todo.
+	Jefe: El Testigo está asustado, así que no lo abrumes con las preguntas. [ID:EL_TESTIGO_EST_ASUSTADO_AS_QUE_077F4C]
+	Jefe: Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b] [ID:RECORD_QUE_POD_S_HACER_DOS_TIP_A723A2]
+	Jefe: Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta y te responden sí o no. Cortito y al pie. [ID:LAS_B_B_SICAS_B_YA_LAS_CONOC_S_7FEE06]
+	Jefe: La desventaja es que generalmente vas a tardar más en dar con la pregunta correcta. [ID:LA_DESVENTAJA_ES_QUE_GENERALME_889E52]
+	Jefe: Yo te recomiendo que vayas por las [b]PREGUNTAS ESPECIALES[/b], con estas vas a sacar información más interesante. Aunque requieren un razonamiento más profundo. [ID:YO_TE_RECOMIENDO_QUE_VAYAS_POR_9C62BD]
+	Jefe: Bueno, la verdad no me interesa los métodos que utilices. Interrogá al testigo, encontrá al asesino, resolvé el caso. [ID:BUENO_LA_VERDAD_NO_ME_INTERESA_583CAA]
+Jefe: No te olvidaste de tu [b]libreta[/b], ¿no? La vas a necesitar para anotar todo. [ID:NO_TE_OLVIDASTE_DE_TU_B_LIBRET_27BDB2]
 #ARTE: Detective se ve irritado.
 do change_sprite('enojado')
-Detective: Pero por supuesto que tengo mi libreta.
+Detective: Pero por supuesto que tengo mi libreta. [ID:PERO_POR_SUPUESTO_QUE_TENGO_MI_E15A55]
 #ARTE: Detective vuelve a la normalidad.
-Aun así, el Detective se palmó el bolsillo para asegurarse de que tenía la libreta.
+Aun así, el Detective se palmó el bolsillo para asegurarse de que tenía la libreta. [ID:AUN_AS_EL_DETECTIVE_SE_PALM_EL_F4336F]
 do pick_notebook()
-Jefe: Y la dividiste bien, ¿no?
-Detective: Sí, Jefe. 
-Detective: En una página están las [b]máscaras[/b] de los sospechosos. Iré tachando las que parezcan inocentes. 
-Detective: En la otra anotaré las [b]pistas[/b] que consiga.
-Jefe: Bien. Entonces ya podés empezar.
-Jefe: Y recordá... tomate tu tiempo. No te apures.
+Jefe: Y la dividiste bien, ¿no? [ID:Y_LA_DIVIDISTE_BIEN_NO_199B13]
+Detective: Sí, Jefe. [ID:S_JEFE_A8B188] 
+Detective: En una página están las [b]máscaras[/b] de los sospechosos. Iré tachando las que parezcan inocentes. [ID:EN_UNA_P_GINA_EST_N_LAS_B_M_SC_A765AF] 
+Detective: En la otra anotaré las [b]pistas[/b] que consiga. [ID:EN_LA_OTRA_ANOTAR_LAS_B_PISTAS_A0885F]
+Jefe: Bien. Entonces ya podés empezar. [ID:BIEN_ENTONCES_YA_POD_S_EMPEZAR_C25B9A]
+Jefe: Y recordá... tomate tu tiempo. No te apures. [ID:Y_RECORD_TOMATE_TU_TIEMPO_NO_T_309217]
 #SONIDO: Teléfono se corta.
 do play_sound_effect('telefono_cuelga')
 #SONIDO: Pasos (Detective se acerca a Testigo)
-Siguiendo las órdenes de su jefe, Detective se acercó a la figura vestida de mozo.
+Siguiendo las órdenes de su jefe, Detective se acercó a la figura vestida de mozo. [ID:SIGUIENDO_LAS_RDENES_DE_SU_JEF_2E967A]
 do play_sound_effect('pasos_detective', true)
-Detective: Hola, Testigo ¿no?
+Detective: Hola, Testigo ¿no? [ID:HOLA_TESTIGO_NO_60BF93]
 do stop_sound_effect_loop()
-Testigo: S-sí, ¿usted es?
-Detective: Soy Detective, vine para ayudar con el caso.
+Testigo: S-sí, ¿usted es? [ID:S_S_USTED_ES_EBD263]
+Detective: Soy Detective, vine para ayudar con el caso. [ID:SOY_DETECTIVE_VINE_PARA_AYUDAR_37F942]
 #ARTE: Detective con anotador en la mano.
 do change_sprite('pensando')
-Detective: Dígame, ¿qué pasó?
-Testigo: Y-yo estaba en mi descanso y me dieron ganas de ir al baño. Cuando estaba por entrar, u-una persona salió de golpe y me tiró al suelo.
+Detective: Dígame, ¿qué pasó? [ID:D_GAME_QU_PAS_3E2384]
+Testigo: Y-yo estaba en mi descanso y me dieron ganas de ir al baño. Cuando estaba por entrar, u-una persona salió de golpe y me tiró al suelo. [ID:Y_YO_ESTABA_EN_MI_DESCANSO_Y_M_BDEB26]
 do change_sprite('pensando')
-Detective: Ajá... ¿Y?
-Testigo: Se me quedó mirando y luego salió disparado para no sé dónde.
-Testigo: Me levanté... y cuando entré al baño... ¡Ahí estaba!
+Detective: Ajá... ¿Y? [ID:AJ_Y_55359E]
+Testigo: Se me quedó mirando y luego salió disparado para no sé dónde. [ID:SE_ME_QUED_MIRANDO_Y_LUEGO_SAL_B0C76D]
+Testigo: Me levanté... y cuando entré al baño... ¡Ahí estaba! [ID:ME_LEVANT_Y_CUANDO_ENTR_AL_BA_D506F4]
 #ARTE – Testigo se dobla sobre sí mismo y llora sobre sus manos.
 do change_sprite('triste')
-Testigo: ¡El cuerpo del señor Osvaldo!
-Testigo: ¡Fue horrible!
-Detective: Entiendo la conmoción, pero necesito que coopere conmigo para poder atrapar al asesino.
-Detective: Respire profundo, y piense ¿recuerda cómo se veía?
+Testigo: ¡El cuerpo del señor Osvaldo! [ID:EL_CUERPO_DEL_SE_OR_OSVALDO_F79D1D]
+Testigo: ¡Fue horrible! [ID:FUE_HORRIBLE_0D8DB5]
+Detective: Entiendo la conmoción, pero necesito que coopere conmigo para poder atrapar al asesino. [ID:ENTIENDO_LA_CONMOCI_N_PERO_NEC_C81CD6]
+Detective: Respire profundo, y piense ¿recuerda cómo se veía? [ID:RESPIRE_PROFUNDO_Y_PIENSE_RECU_326A8B]
 #ARTE: Testigo vuelve a la normalidad
 do change_sprite('default')
-Testigo: ...
-Testigo: Estaba vestido como un invitado. Llevaba una máscara.
-Detective: Bien, ¿recuerda algún detalle en particular?
-Testigo: Ehm...
+Testigo: ... [ID:_472068]
+Testigo: Estaba vestido como un invitado. Llevaba una máscara. [ID:ESTABA_VESTIDO_COMO_UN_INVITAD_2129CB]
+Detective: Bien, ¿recuerda algún detalle en particular? [ID:BIEN_RECUERDA_ALG_N_DETALLE_EN_405972]
+Testigo: Ehm... [ID:EHM_9CA28D]
 do change_sprite('sorprendido')
-Testigo: ¡Sí! {{give_first_clue()}}.
+Testigo: ¡Sí! {{give_first_clue()}}. [ID:S_GIVE_FIRST_CLUE_7417F9]
 ###CÓDIGO: La libreta se abre automáticamente o hay algo que la señala?
 do change_sprite('pensando')
-Detective: Espere, lo voy a anotar...
+Detective: Espere, lo voy a anotar... [ID:ESPERE_LO_VOY_A_ANOTAR_391289]
 #ARTE: Detective abre la libreta y marca las máscaras
-Detective: Muy bien.
-Detective: ¿Qué más recuerda?
-Testigo: Y-yo... eh...
+Detective: Muy bien. [ID:MUY_BIEN_A7DC41]
+Detective: ¿Qué más recuerda? [ID:QU_M_S_RECUERDA_BE08E1]
+Testigo: Y-yo... eh... [ID:Y_YO_EH_72C156]
 #ARTE: Testigo vuelve a doblarse y llorar
 do change_sprite('triste')
-Testigo: Discúlpeme, ¡soy un inútil!
-Testigo: ¡No logro recordar!
-Detective: Tranquilo, yo lo voy a ayudar. Podemos empezar de a poco.
+Testigo: Discúlpeme, ¡soy un inútil! [ID:DISC_LPEME_SOY_UN_IN_TIL_805ADB]
+Testigo: ¡No logro recordar! [ID:NO_LOGRO_RECORDAR_D101C1]
+Detective: Tranquilo, yo lo voy a ayudar. Podemos empezar de a poco. [ID:TRANQUILO_YO_LO_VOY_A_AYUDAR_P_12B6E9]
 #ARTE: Testigo vuelve a la normalidad
 do change_sprite('default')
-Testigo: E-está bien. 
-Con el objetivo de llevar una interrogación más tranquila, Detective llevó a Testigo a una zona menos concurrida para hacerle las preguntas.
+Testigo: E-está bien. [ID:E_EST_BIEN_AC16D4] 
+Con el objetivo de llevar una interrogación más tranquila, Detective llevó a Testigo a una zona menos concurrida para hacerle las preguntas. [ID:CON_EL_OBJETIVO_DE_LLEVAR_UNA_7641CE]
 do change_scene(scene_3_path)
 => END
