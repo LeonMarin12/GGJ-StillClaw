@@ -2,7 +2,7 @@ keys,es,en
 WAIT_5_A926BC,[wait=5],[wait=5]
 _98D979,...,…
 23_HS_SPEED_BA9F8A,[speed=0.2]21:23 hs[/speed],[speed=0.2]09:23 p. m.[/speed]
-AL_ENTRAR_AL_OSTENTOSO_SAL_N_E_A7A263,"Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personas con máscaras venecianas siendo interrogadas por la policía.","When the Detective entered the sumptuous salon, he stumbled upong a very peculiar scene: people with Venetian masks being interrogated by the police."
+AL_ENTRAR_AL_OSTENTOSO_SAL_N_E_A7A263,"Al entrar al ostentoso salón, el Detective se encontró con una escena bastante bizarra... personas con máscaras venecianas siendo interrogadas por la policía.","When the Detective entered the sumptuous salon, he stumbled upon a very peculiar scene: people with Venetian masks being interrogated by the police."
 _472068,...,…
 I_BUENO_NO_ES_LO_M_S_RARO_QUE_1A5389,"[i]Bueno, no es lo más raro que he visto en mi vida.[/i]","[i]Well, I have to admit this isn't the craziest thing I've seen this year.[/i]"
 AL_FIN_POR_QU_TARDASTE_TANTO_ADCD67,¡Al fin! ¿Por qué tardaste tanto?,Finally! What took you so long?
@@ -18,26 +18,26 @@ LLEG_CON_SU_MUJER_A_LA_FIESTA_2770E0,Llegó con su mujer a la fiesta a eso de la
 ALREDEDOR_DE_LAS_20_00_HS_SE_R_35A6E4,Alrededor de las 20:00 hs se retiró al baño. A las 20:15 hs encontraron su cuerpo.,He went to the bathroom around 8:00 p.m and his body was found at 08:15 p. m.
 QUI_N_LO_ENCONTR_8E7940,¿Quién lo encontró?,Who found him?
 UNO_DE_LOS_MOZOS_CONTRATADOS_P_262A11,"Uno de los mozos contratados para el evento. Parece que no le vió la cara, pero sí la máscara.","One of the servers hired for the event. Apparently, he did not see the culprit's face, but the mask they were wearing."
-EST_ALGO_CONMOCIONADO_PERO_TEN_D79B5F,"Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto.","He is sort of shaken at the moment, but I believe that, with your abilities, you can get the necessary information out of him."
-D_JEMELO_A_M_JEFE_86015A,Déjemelo a mí Jefe.,Leave it to me Boss.
+EST_ALGO_CONMOCIONADO_PERO_TEN_D79B5F,"Está algo conmocionado, pero tengo fe de que con tus habilidades podrás sacarle la información necesaria para resolver esto.","He is sort of shaken at the moment, but I believe have what it takes to get the necessary information out of him."
+D_JEMELO_A_M_JEFE_86015A,Déjemelo a mí Jefe.,"Leave it to me, Boss."
 YO_ME_ENCARGO_18EAF0,Yo me encargo.,I'll handle it.
 PARA_541A97,¡Para!,Wait!
-EST_S_SEGURO_QUE_RECORD_S_COM_877897,¿Estás seguro que recordás como hacer esto?,Are you sure you know what to dot?
+EST_S_SEGURO_QUE_RECORD_S_COM_877897,¿Estás seguro que recordás como hacer esto?,Are you sure you know what to do?
 QU_PREGUNTA_JEFE_C_MO_NO_VOY_A_7E1A78,"Qué pregunta Jefe, ¿cómo no voy a saber hacer mi trabajo?","Ha ha! Good one, Boss! How would I not remember how to do my job?"
 S_DALE_YA_QUIERO_JUGAR_75436E,"Sí (Dale, ¡ya quiero jugar!)","Yes (C'mon, I want to play already!)"
 EL_TESTIGO_EST_ASUSTADO_AS_QUE_077F4C,"El Testigo está asustado, así que no lo abrumes con las preguntas.","The Witness is scared, so do not overwhelm him with questions."
-RECORD_QUE_POD_S_HACER_DOS_TIP_A723A2,Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b],"Remember, you can ask two types of questions: [b]BASIC QUESTIONS[/b] y [b]SPECIAL QUESTIONS[/b]"
-LAS_B_B_SICAS_B_YA_LAS_CONOC_S_7FEE06,"Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta y te responden sí o no. Cortito y al pie.",You are quite familiar with the [b]BASIC[/b] ones. You ask a question and the Witness responds yes or no. Simple enough.
+RECORD_QUE_POD_S_HACER_DOS_TIP_A723A2,Recordá que podés hacer dos tipos de preguntas: [b]PREGUNTAS BÁSICAS[/b] y [b]PREGUNTAS ESPECIALES[/b],"Remember, you can ask two types of questions: [b]BASIC QUESTIONS[/b] and [b]SPECIAL QUESTIONS[/b]"
+LAS_B_B_SICAS_B_YA_LAS_CONOC_S_7FEE06,"Las [b]BÁSICAS[/b] ya las conocés, hacés una pregunta y te responden sí o no. Cortito y al pie.",You are quite familiar with the [b]BASIC[/b] ones. You ask a question and the witness responds yes or no. Simple enough.
 LA_DESVENTAJA_ES_QUE_GENERALME_889E52,La desventaja es que generalmente vas a tardar más en dar con la pregunta correcta.,The downside is you might take longer to find the culprit.
 YO_TE_RECOMIENDO_QUE_VAYAS_POR_9C62BD,"Yo te recomiendo que vayas por las [b]PREGUNTAS ESPECIALES[/b], con estas vas a sacar información más interesante. Aunque requieren un razonamiento más profundo.","If I were you, I would go for the [b]SPECIAL QUESTIONS[/b]. You will get more information, although they do require a deeper reasoning."
 BUENO_LA_VERDAD_NO_ME_INTERESA_583CAA,"Bueno, la verdad no me interesa los métodos que utilices. Interrogá al testigo, encontrá al asesino, resolvé el caso.","Well, to be honest, I don't really care the methods you use. Just get the info from the witness, find the murderer, close the case."
 NO_RECOMENDADO_SI_NUNCA_JUGAS_41ADAD,No (Recomendado si nunca jugaste),No (Recommended if this is your first playthrough)
 NO_TE_OLVIDASTE_DE_TU_B_LIBRET_27BDB2,"No te olvidaste de tu [b]libreta[/b], ¿no? La vas a necesitar para anotar todo.","You didn't forget your [b]notebook[/b], right? You will need it to take notes of everything."
 PERO_POR_SUPUESTO_QUE_TENGO_MI_E15A55,Pero por supuesto que tengo mi libreta.,But of course I have my notebook!
-AUN_AS_EL_DETECTIVE_SE_PALM_EL_F4336F,"Aun así, el Detective se palmó el bolsillo para asegurarse de que tenía la libreta.","Nevertheless, the Detective pat his pocket to assure he had brought his notebook."
+AUN_AS_EL_DETECTIVE_SE_PALM_EL_F4336F,"Aun así, el Detective se palpó el bolsillo para asegurarse de que tenía la libreta.","Still, the Detective pat his pocket to make sure he had brought his notebook."
 Y_LA_DIVIDISTE_BIEN_NO_199B13,"Y la dividiste bien, ¿no?",And did you divide it?
 S_JEFE_A8B188,"Sí, Jefe.","Yes, Boss."
-EN_UNA_P_GINA_EST_N_LAS_B_M_SC_A765AF,En una página están las [b]máscaras[/b] de los sospechosos. Iré tachando las que parezcan inocentes.,On one page I have the suspect's [b]masks[/b]. I will be discarging those that do not match the description.
+EN_UNA_P_GINA_EST_N_LAS_B_M_SC_A765AF,En una página están las [b]máscaras[/b] de los sospechosos. Iré descartando las que no coincidan con lo que diga el testigo.,On one page I have the suspect's [b]masks[/b]. I will rule out those that do not match the description.
 EN_LA_OTRA_ANOTAR_LAS_B_PISTAS_A0885F,En la otra anotaré las [b]pistas[/b] que consiga.,On the other I will note down the [b]clues[/b] I get.
 BIEN_ENTONCES_YA_POD_S_EMPEZAR_C25B9A,Bien. Entonces ya podés empezar.,"Great. Then, you can start."
 Y_RECORD_TOMATE_TU_TIEMPO_NO_T_309217,Y recordá... tomate tu tiempo. No te apures.,And remember… take your time. Do not rush.
