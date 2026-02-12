@@ -24,22 +24,22 @@ btn_back,Volver,Return
 ,,
 CLUES,,
 negative_clue,NO ,It WAS NOT 
-positive_clue,"SÕ, ",It WAS 
+positive_clue,"S√ç, ",It WAS 
 color_clues_rojo,era de color rojo,red
 color_clues_azul,era de color azul,blue
 color_clues_verde,era color verde,green
 color_clues_amarillo,era de color amarillo,yellow
-forma_clues_luna,tenÌa forma de luna,shaped like a moon
-forma_clues_estrella,tenÌa forma de estrella,shaped like a star
-forma_clues_alas,tenÌa alas a los lados,adorned with wings
-forma_clues_corona,tenÌa una corona de plumas,adorned with feathers
-detalles_clues_corazon,tenÌa detalles con forma de corazones,decorated with heart details
-detalles_clues_estrellas,tenÌa detalles con forma de estrellas,decorated with star details
-detalles_clues_gotas,tenÌa detalles con forma de gotas,decorated with drop details
-detalles_clues_rombos,tenÌa detalles con forma de rombos,decorated with diamond details
-expresion_clues_sonrisa,mostraba una expresiÛn de felicidad,showing a happy expression
-expresion_clues_triste,mostraba una expresiÛn de tristeza,showing a sad expression
-expresion_clues_neutral,mostraba una expresiÛn neutral,showing a neutral expression
+forma_clues_luna,ten√≠a forma de luna,shaped like a moon
+forma_clues_estrella,ten√≠a forma de estrella,shaped like a star
+forma_clues_alas,ten√≠a alas a los lados,adorned with wings
+forma_clues_corona,ten√≠a una corona de plumas,adorned with feathers
+detalles_clues_corazon,ten√≠a detalles con forma de corazones,decorated with heart details
+detalles_clues_estrellas,ten√≠a detalles con forma de estrellas,decorated with star details
+detalles_clues_gotas,ten√≠a detalles con forma de gotas,decorated with drop details
+detalles_clues_rombos,ten√≠a detalles con forma de rombos,decorated with diamond details
+expresion_clues_sonrisa,mostraba una expresi√≥n de felicidad,showing a happy expression
+expresion_clues_triste,mostraba una expresi√≥n de tristeza,showing a sad expression
+expresion_clues_neutral,mostraba una expresi√≥n neutral,showing a neutral expression
 expresion_clues_sin-boca,le faltaba la boca,missing a mouth
 especial_clues_plumas,tenia plumas,decked out in feathers
 especial_clues_calido,era un color calido,of a warm color
